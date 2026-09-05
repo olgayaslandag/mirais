@@ -1,0 +1,9 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "default_agent": "senior-backend-architect",
+  "instructions": [
+    ".kilo/rules/**/*.md",
+    ".kilo/project-context.md"
+  ],
+  "plugin": []
+}
