@@ -11,12 +11,26 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-  title: "Kayra Metal | Üretiyoruz. Güven inşa ediyoruz.",
+  title: "Mira İş Sağlığı ve Güvenliği Ekipmanları | İnovatif Metal Çözümleri",
   description:
-    "Kayra Metal, yapı sektörüne güvenilir alüminyum çözümleri sunar.",
-  // Site amblemi: kayrametal.com site ikonu yerelleştirildi
+    "Mira İş Sağlığı ve Güvenliği Ekipmanları, yapı ve endüstriyel projeler için yüksek kaliteli alüminyum sistemler ve özel metal işçiliği sunar.",
+  metadataBase: new URL("https://mirais.com.tr"),
+  // Site amblemi: mirais.com.tr site ikonu
   icons: {
-    icon: "/assets/img/kayra-amblem.png",
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon-270x270.png", sizes: "270x270", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "Mira İş Sağlığı ve Güvenliği Ekipmanları | İnovatif Metal Çözümleri",
+    description:
+      "Mira İş Sağlığı ve Güvenliği Ekipmanları, yapı ve endüstriyel projeler için yüksek kaliteli alüminyum sistemler ve özel metal işçiliği sunar.",
+    url: "https://mirais.com.tr",
+    images: [{ url: "/og-image.png" }],
   },
 };
 

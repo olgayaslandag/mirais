@@ -4,19 +4,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Instagram } from "lucide-react";
 import { fallbackPosts, type InstaPost } from "@/lib/instagram";
 
-const PROFILE_URL = "https://www.instagram.com/kayrametal/";
-
-// Tarih etiketi: geçersiz/boş tarihlerde satır gizlenir
-function formatDate(iso: string): string {
-  if (!iso) return "";
-  const date = new Date(iso);
-  if (Number.isNaN(date.getTime())) return "";
-  return date.toLocaleDateString("tr-TR", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-}
+const PROFILE_URL = "https://www.instagram.com/mirais/";
 
 // Instagram akışı: canlı API, yoksa yedek gönderiler
 export default function InstagramFeed() {
@@ -51,7 +39,7 @@ export default function InstagramFeed() {
         <div className="section-heading">
           <div className="section-heading-left">
             <p className="eyebrow">SOSYAL MEDYA</p>
-            <h2 id="instagram-title">Instagram&apos;da Kayra Metal</h2>
+            <h2 id="instagram-title">Instagram&apos;da MİRAİS</h2>
             <p className="section-desc">
               Üretimden, projelerden ve fabrika yaşamından güncel kareler
               için bizi takip edin.
@@ -63,13 +51,13 @@ export default function InstagramFeed() {
             target="_blank"
             rel="noopener"
           >
-            @KAYRAMETAL <ArrowRight size={16} />
+            @MIRAİS <ArrowRight size={16} />
           </a>
         </div>
 
         <div className="insta-grid" aria-live="polite">
           {loading
-            ? Array.from({ length: 4 }).map((_, i) => (
+            ? Array.from({ length: 12 }).map((_, i) => (
                 <div
                   key={`skeleton-${i}`}
                   className="insta-card insta-skeleton"
@@ -81,7 +69,7 @@ export default function InstagramFeed() {
                   key={post.id}
                   className="insta-card reveal"
                   data-reveal="deal"
-                  style={{ ["--reveal-delay" as string]: `${(i % 4) * 140}ms` }}
+                  style={{ ["--reveal-delay" as string]: `${(i % 6) * 140}ms` }}
                   href={post.permalink}
                   target="_blank"
                   rel="noopener"
@@ -90,21 +78,13 @@ export default function InstagramFeed() {
                   <div className="insta-image">
                     <img
                       src={post.image}
-                      alt={post.caption.slice(0, 120) || "Kayra Metal Instagram gönderisi"}
+                      alt={post.caption.slice(0, 120) || "Mira İş Sağlığı ve Güvenliği Ekipmanları Instagram gönderisi"}
                       loading="lazy"
                       decoding="async"
                     />
                     <span className="insta-badge" aria-hidden="true">
                       <Instagram size={18} />
                     </span>
-                  </div>
-                  <div className="insta-body">
-                    <p>{post.caption || "@kayrametal"}</p>
-                    {formatDate(post.timestamp) && (
-                      <time dateTime={post.timestamp}>
-                        {formatDate(post.timestamp)}
-                      </time>
-                    )}
                   </div>
                 </a>
               ))}

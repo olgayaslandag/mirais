@@ -2,7 +2,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { products } from "@/data/content";
 import CarouselControls from "./CarouselControls";
 
-// Çözümler: 4 ürün kartı + başlık + navigasyon
+// Çözümler: 8 ürün kartı + başlık + navigasyon
 export default function Solutions() {
   return (
     <section
@@ -16,7 +16,7 @@ export default function Solutions() {
             <p className="eyebrow">ÇÖZÜMLER</p>
             <h2 id="solutions-title">Fonksiyonel ve kaliteli çözümler</h2>
             <p className="section-desc">
-              Kayra Metal A.Ş. olarak değişen müşteri ihtiyaçlarına fonksiyonel
+              Mira İş Sağlığı ve Güvenliği Ekipmanları A.Ş. olarak değişen müşteri ihtiyaçlarına fonksiyonel
               ve kaliteli ürünler sunuyor, güvenilir çözüm ortağı olmaya devam
               ediyoruz.
             </p>
@@ -32,7 +32,7 @@ export default function Solutions() {
                 key={product.alt}
                 className="product-card reveal"
                 data-reveal="deal"
-                data-delay={i * 140}
+                data-delay={(i % 4) * 140}
                 href={product.href}
                 aria-label={product.alt}
               >

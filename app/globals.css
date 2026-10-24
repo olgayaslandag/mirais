@@ -56,7 +56,7 @@ img{max-width:100%}
 .brand-logo{display:block;height:3rem;width:auto}
 .site-header .brand-logo-dark{display:none}
 .site-header .brand-logo-light{display:block;width:200px;height:120px;margin-left:-1rem}
-.site-header.scrolled .brand-logo-dark{display:block;width:auto;max-width:none;height:70px;object-fit:contain;margin-left:-1rem;position:relative;top:-0.4rem}
+.site-header.scrolled .brand-logo-dark{display:block;width:200px;height:120px;margin-left:-1rem}
 .site-header.scrolled .brand-logo-light{display:none}
 .main-nav{display:flex;align-items:center;gap:1.5rem}
 .main-nav a{
@@ -69,18 +69,6 @@ img{max-width:100%}
 }
 .main-nav a:hover{color:var(--blue)}
 .main-nav a:hover::after{width:100%}
-.language{
-  font-size:0.85rem;font-weight:600;color:var(--navy);
-  border:0;background:none;padding:0.5rem 0;cursor:pointer;
-  display:flex;align-items:center;gap:0.4rem;font-family:inherit;
-}
-.nav-amanos{display:inline-grid;align-items:center;padding:0}
-.nav-amanos::after{display:none}
-.nav-amanos img{display:block;height:1.5rem;width:auto;grid-area:1/1;transition:opacity .3s ease}
-.site-header .nav-amanos-light{opacity:1;visibility:visible;filter:brightness(0) invert(1)}
-.site-header .nav-amanos-dark{opacity:0;visibility:hidden;filter:none}
-.site-header.scrolled .nav-amanos-light{opacity:0;visibility:hidden}
-.site-header.scrolled .nav-amanos-dark{opacity:1;visibility:visible}
 .menu-toggle{border:0;background:none;color:var(--navy);font-size:1.5rem;display:none;cursor:pointer}
 
 /* ---------- Hero ---------- */
@@ -177,14 +165,12 @@ img{max-width:100%}
 .hero-arrows button:hover{background:var(--blue);border-color:var(--blue)}
 .site-header:not(.scrolled) .brand,
 .site-header:not(.scrolled) .main-nav a,
-.site-header:not(.scrolled) .language,
 .site-header:not(.scrolled) .menu-toggle{color:#fff}
 
 /* ---------- Sections ---------- */
 .section{padding:6.5rem 0}
 .section.solutions{background:var(--soft)}
 .section.services{background:#fff}
-.section.projects{background:#fff}
 .section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:3rem}
 .section-heading-left{max-width:48rem}
 .section-heading-left h2{font-size:2.2rem;font-weight:800;margin:0}
@@ -197,6 +183,12 @@ img{max-width:100%}
 
 /* ---------- Corporate ---------- */
 .corporate-intro{position:relative;overflow:hidden;padding:5.5rem 0;background:#fff}
+.corporate-video{position:absolute;inset:0;z-index:0;overflow:hidden;background:#0b1526}
+.corporate-video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.corporate-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg,rgba(8,18,32,.35) 0%,rgba(8,18,32,.22) 45%,rgba(8,18,32,.10) 70%,rgba(8,18,32,.05) 100%);
+}
 .corporate-intro__grid{display:grid;grid-template-columns:2fr 3fr;min-height:25rem}
 .corporate-intro__statement{padding:1rem 0 1rem 2rem}
 .corporate-intro__statement h2{max-width:38rem;margin:0;color:var(--navy);font-size:2.2rem;line-height:1.15;font-weight:800}
@@ -248,26 +240,6 @@ img{max-width:100%}
 .card-body{padding:1.5rem;position:relative}
 .card-body h3{font-size:1rem;line-height:1.35;font-weight:700;margin:0}
 
-/* ---------- Amanos ---------- */
-.amanos{
-  width:100%;box-sizing:border-box;
-  margin:0;padding:5rem 0;
-  background:linear-gradient(90deg,#f4f8fc 20%,#e3effc 60%,#d8e9fa);
-  position:relative;overflow:hidden;
-}
-.amanos:after{
-  content:'';position:absolute;inset:0;
-  background:url('/assets/img/projects/gsa130.jpg') center right/cover no-repeat;
-  opacity:.32;
-}
-.amanos-grid{
-  display:grid;grid-template-columns:1fr auto;align-items:center;gap:3rem;
-  position:relative;z-index:1;
-}
-.amanos-copy,.amanos-logo{position:relative;z-index:1}
-/* Amanos bandı başlığı: mavi yerine danger */
-.amanos .eyebrow{color:var(--danger)}
-.amanos h2{font-size:2rem;line-height:1.2;font-weight:800;margin:0 0 2rem}
 .outline-btn{
   display:inline-flex;align-items:center;gap:0.5rem;
   border:2px solid #9bbbe0;color:var(--blue);background:transparent;
@@ -275,16 +247,8 @@ img{max-width:100%}
   font-size:0.95rem;font-weight:600;text-decoration:none;font-family:inherit;cursor:pointer;
 }
 .outline-btn:hover{border-color:var(--blue);background:var(--blue);color:#fff}
-/* Amanos bandı: mavi yerine danger */
-.outline-btn-danger{
-  border-color:var(--danger);
-  color:var(--danger);
-}
-.outline-btn-danger:hover{border-color:var(--danger);background:var(--danger);color:#fff}
-.amanos-logo{white-space:nowrap}
-.amanos-logo img{display:block;height:3.5rem;width:auto;max-width:100%}
 
-/* ---------- Services / Projects ---------- */
+/* ---------- Services ---------- */
 .service-card{
   display:block;border:1px solid var(--line);border-radius:0.75rem;overflow:hidden;
   text-decoration:none;color:var(--navy);background:#fff;
@@ -300,42 +264,7 @@ img{max-width:100%}
   color:var(--muted);font-size:1rem;line-height:1.6;margin:0;
   display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
 }
-.project-wrap{position:relative;--project-bleed:max(1.5rem, calc((100vw - 1320px) / 2 + 1.5rem))}
 .product-wrap,.service-wrap{position:relative}
-/* ---------- Projeler carousel ---------- */
-/* Kayar pencere: taşan kartlar yatayda dizilir, oklar sayfa sayfa kaydırır */
-.project-viewport{
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  scroll-padding-block:0;
-  scroll-padding-inline:var(--project-bleed);
-  scrollbar-width:none;
-  -ms-overflow-style:none;
-  /* Tam genişlik şerit: ilk kart başlıkla hizalı, yan gölgeler ekran
-     kenarına kadar görünür (kesik izi kalmaz); dikey eksi boşluk ritmi korur.
-     Sağda son karttan sonra ekrana 3rem boşluk bırakılır. */
-  padding:2rem var(--project-bleed) 4.5rem;
-  padding-right:3rem;
-  margin:-2rem calc(-1 * var(--project-bleed)) -4.5rem;
-}
-.project-viewport::-webkit-scrollbar{display:none}
-.project-viewport:focus-visible{outline:none;box-shadow:0 0 0 3px var(--focus-ring);border-radius:0.75rem}
-.project-viewport .project-grid{display:flex;gap:1.5rem}
-.project-grid .project-card{
-  flex:0 0 calc((100% - 4.5rem) / 4);
-  scroll-snap-align:start;
-}
-.project-card{
-  display:block;border:1px solid var(--line);border-radius:0.75rem;overflow:hidden;
-  text-decoration:none;color:var(--navy);background:#fff;
-  /* Ürün/hizmet kartlarıyla birebir aynı hover */
-  transition:transform .3s ease,box-shadow .3s ease;
-}
-.project-card:hover{transform:translateY(-0.5rem);box-shadow:0 1.5rem 3rem rgba(20,40,68,.18)}
-.project-card > div{position:relative;width:100%;height:300px;overflow:hidden;background:#eef2f6}
-.project-card > div img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .3s ease,opacity .4s ease}
-.project-card:hover > div img{transform:scale(1.05)}
-.project-card strong{display:block;padding:1rem 1.5rem;font-size:0.95rem;font-weight:600}
 .carousel-controls{display:flex;gap:0.5rem;justify-content:flex-end;margin-top:1.5rem;position:relative}
 .carousel-controls button{
   display:inline-flex;align-items:center;justify-content:center;
@@ -355,6 +284,36 @@ img{max-width:100%}
 }
 .carousel-dots button:hover{background:var(--blue);border:0}
 .carousel-dots button[aria-current="true"]{background:var(--blue);transform:scale(1.25)}
+
+/* ---------- Katalog bandı ---------- */
+.catalog-band{
+  background:
+    radial-gradient(50rem 20rem at 80% 0%,rgba(37,169,232,.14),transparent 60%),
+    linear-gradient(160deg,#0b1526,#142844 60%,#0b1526);
+  padding:4rem 0;color:#fff;
+}
+.catalog-band__grid{display:grid;grid-template-columns:1.6fr 1fr;gap:3rem;align-items:center}
+/* Koyu zemin varyantı: eyebrow mavi yerine açık cyan, section-desc beyaza yakın */
+.catalog-band .eyebrow{color:#7cc4ff;margin:0 0 1rem}
+.catalog-band h2{font-size:2.2rem;font-weight:800;line-height:1.15;margin:0 0 1rem}
+.catalog-band .section-desc{color:rgba(255,255,255,.8)}
+.catalog-band__action{display:flex;flex-direction:column;align-items:flex-start;gap:0.75rem;justify-self:end}
+.catalog-band__btn{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  border:2px solid #fff;color:#fff;background:transparent;
+  padding:1rem 2rem;border-radius:0.25rem;
+  font-size:0.95rem;font-weight:600;text-decoration:none;
+  transition:background .3s ease,color .3s ease,transform .3s ease,box-shadow .3s ease;
+}
+.catalog-band__btn svg{transition:transform .3s ease}
+.catalog-band__btn:hover{background:#fff;color:var(--navy);transform:translateY(-2px);box-shadow:0 .8rem 1.8rem rgba(0,0,0,.35)}
+.catalog-band__btn:hover svg{transform:translateY(2px)}
+.catalog-band__note{color:rgba(255,255,255,.65);font-size:.8rem;margin:0}
+@media(max-width:62rem){
+  .catalog-band__grid{grid-template-columns:1fr;gap:2rem;text-align:center}
+  .catalog-band__content{display:flex;flex-direction:column;align-items:center}
+  .catalog-band__action{align-items:center;justify-self:center}
+}
 
 /* ---------- Footer ---------- */
 footer{border-top:1px solid var(--line);padding:5rem 0 2rem;background:var(--soft);margin-top:0}
@@ -474,15 +433,6 @@ footer{border-top:1px solid var(--line);padding:5rem 0 2rem;background:var(--sof
 @keyframes visual-breathe{from{transform:scale(1)}to{transform:scale(1.06)}}
 .corporate-intro__facts strong{display:inline-block;transition:transform .3s ease}
 .corporate-intro__facts div:hover strong{transform:scale(1.1)}
-/* ---------- Amanos bandı: akan zemin + logo float ---------- */
-.amanos:after{animation:amanos-pan 26s ease-in-out infinite alternate}
-@keyframes amanos-pan{from{transform:scale(1) translateX(0)}to{transform:scale(1.12) translateX(-2%)}}
-.amanos-logo img{animation:float-y 5s ease-in-out infinite;filter:drop-shadow(0 .8rem 1.5rem rgba(20,40,68,.18))}
-@keyframes float-y{0%,100%{transform:translateY(0)}50%{transform:translateY(-.6rem)}}
-/* ---------- Referanslar: hover'da dur, karta kalkış ---------- */
-.refs-viewport:hover .refs-track{animation-play-state:paused}
-.refs-item{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
-.refs-item:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 .8rem 1.6rem rgba(20,40,68,.14);border-color:#bcd6f2}
 /* ---------- Carousel okları ---------- */
 .carousel-controls button{transition:background .3s ease,color .3s ease,border-color .3s ease,transform .3s ease}
 .carousel-controls button:not(:disabled):hover{transform:translateY(-2px) scale(1.06)}
@@ -504,6 +454,7 @@ img{transition:filter .4s ease}
 
 /* ---------- Focus ---------- */
 .btn-primary:focus-visible,.text-link:focus-visible,.outline-btn:focus-visible,
+.catalog-band__btn:focus-visible,
 .main-nav a:focus-visible,.project-card:focus-visible,
 .service-card:focus-visible,.product-card:focus-visible{
   outline:none;box-shadow:0 0 0 3px var(--focus-ring);
@@ -511,7 +462,7 @@ img{transition:filter .4s ease}
 
 /* ---------- Instagram ---------- */
 .section.instagram{background:linear-gradient(180deg,#e7f0fb 0%,#f3f8fd 100%)}
-.insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.5rem}
 .insta-card{
   display:block;border:1px solid var(--line);border-radius:0.75rem;overflow:hidden;
   text-decoration:none;color:var(--navy);background:#fff;
@@ -541,40 +492,25 @@ img{transition:filter .4s ease}
 .product-card:hover .card-badge,.product-card:focus-visible .card-badge,
 .service-card:hover .card-badge,.service-card:focus-visible .card-badge,
 .project-card:hover .card-badge,.project-card:focus-visible .card-badge{opacity:1}
-.insta-body{padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:0.5rem}
-.insta-body p{
-  color:var(--muted);font-size:0.9rem;line-height:1.6;margin:0;
-  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
-}
-.insta-body time{color:#8a94a1;font-size:0.78rem}
 .insta-skeleton{
-  min-height:22rem;border:1px solid var(--line);border-radius:0.75rem;
+  aspect-ratio:1/1;border:1px solid var(--line);border-radius:0.75rem;
   background:linear-gradient(100deg,#eef2f6 40%,#f7f9fb 50%,#eef2f6 60%);
   background-size:200% 100%;animation:insta-shimmer 1.4s infinite linear;
 }
 @keyframes insta-shimmer{to{background-position:-200% 0}}
 
-/* ---------- References ---------- */
-.section.references{background:#fff;overflow:hidden}
-.refs-viewport{
-  max-width:1320px;margin-inline:auto;
-  overflow:hidden;position:relative;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
-  mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+/* ---------- Brands (Temsilciliklerimiz) ---------- */
+.section.brands{background:#fff}
+.brands-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.25rem}
+.brand-card{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.9rem;
+  min-height:9rem;padding:1.75rem 1.25rem;background:#fff;
+  border:1px solid var(--line);border-radius:0.75rem;
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
 }
-.refs-track{display:flex;width:max-content;animation:refs-scroll 55s linear infinite}
-.refs-group{display:flex;align-items:center;gap:1.25rem;padding-right:1.25rem}
-.refs-item{
-  display:flex;align-items:center;justify-content:center;
-  min-width:12rem;height:6rem;padding:0.8rem 1.3rem;
-  background:#fff;border:1px solid var(--line);border-radius:0.75rem;flex-shrink:0;
-}
-.refs-item img{
-  display:block;max-width:100%;max-height:100%;width:auto;height:3.75rem;object-fit:contain;
-  filter:grayscale(1);opacity:.72;transition:filter .3s ease,opacity .3s ease,transform .3s ease;
-}
-.refs-item:hover img{filter:none;opacity:1;transform:scale(1.05)}
-@keyframes refs-scroll{to{transform:translateX(-50%)}}
+.brand-card:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 .8rem 1.6rem rgba(20,40,68,.14);border-color:#bcd6f2}
+.brand-card img{display:block;max-width:100%;height:4rem;object-fit:contain}
+.brand-card__name{font-size:0.9rem;font-weight:600;color:var(--navy)}
 
 /* ---------- Preloader ---------- */
 .preloader{
@@ -632,8 +568,7 @@ img{transition:filter .4s ease}
     gap:1rem;border-radius:0.75rem;border:1px solid var(--line);
   }
   .main-nav.open{display:flex}
-  .main-nav a,.language{color:var(--navy) !important}
-  .site-header .nav-amanos-light{filter:none;opacity:1;visibility:visible}
+  .main-nav a{color:var(--navy) !important}
   .menu-toggle{display:block}
   .hero{height:100vh;height:100svh;min-height:38rem}
   .hero-content{flex-direction:column;justify-content:center;text-align:center;gap:2.5rem;padding:4rem 1rem;transform:none}
@@ -647,11 +582,8 @@ img{transition:filter .4s ease}
   .corporate-intro__statement{padding:0 0 3rem}
   .section-heading{flex-direction:column;align-items:flex-start;gap:1.5rem}
   .section-heading-left{max-width:100%}
-  .amanos{padding:3.5rem 0}
-  .amanos-grid{grid-template-columns:1fr;text-align:center;justify-items:center}
-  .product-grid,.service-grid,.insta-grid{grid-template-columns:repeat(2,1fr)}
-  /* Carousel tablette 2 kart gösterir */
-  .project-grid .project-card{flex-basis:calc((100% - 1.5rem) / 2)}
+  .product-grid,.service-grid{grid-template-columns:repeat(2,1fr)}
+  .insta-grid{grid-template-columns:repeat(3,1fr)}
   .card-image,.service-image,.project-card > div{height:340px}
   .footer-grid{grid-template-columns:repeat(2,1fr);gap:2.5rem}
 }
@@ -666,14 +598,10 @@ img{transition:filter .4s ease}
   .lead{font-size:1rem}
   .desktop-only{display:none}
   .product-grid,.service-grid,.insta-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
-  .project-viewport .project-grid{gap:1rem;padding-bottom:1rem}
-  /* Mobilde 2 kart görünür */
-  .project-grid .project-card{flex:0 0 calc((100% - 1rem) / 2);min-width:0}
   .product-card,.service-card,.insta-card{min-width:0}
   /* Mobilde noktalar gizli, oklar yeterli */
   .carousel-dots{display:none}
   .card-image,.service-image{height:180px}
-  .project-card > div{height:240px}
   .footer-grid{grid-template-columns:1fr;gap:2rem}
   .footer-bottom{flex-direction:column;text-align:center}
   .back-top{margin-left:0}
@@ -692,6 +620,4 @@ img{transition:filter .4s ease}
   .hero-copy .hero-anim,.hero-side.hero-anim,.section-heading-left .eyebrow,.section-heading-left h2,.section-heading-left .section-desc{opacity:1;animation:none}
   .hero-video{display:none}
   .hero-progress,.hero-scroll{display:none}
-  .refs-track{animation:none}
-  .refs-viewport{overflow-x:auto}
 }

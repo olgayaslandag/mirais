@@ -104,8 +104,8 @@ export default function Preloader() {
         <span className="preloader__logo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/assets/img/logo_white.svg"
-            alt="Kayra Metal"
+            src="/assets/img/mirais-logo-white.svg"
+            alt="Mira İş Sağlığı ve Güvenliği Ekipmanları A.Ş."
             width={220}
             height={120}
             draggable={false}
@@ -118,7 +118,7 @@ export default function Preloader() {
           />
         </span>
         <span className="preloader__meta">
-          <span className="preloader__name">KAYRA METAL</span>
+          <span className="preloader__name">MİRA İŞ SAĞLIĞI VE GÜVENLİĞİ EKİPMANALARI</span>
           <span className="preloader__pct">{progress}%</span>
         </span>
       </div>

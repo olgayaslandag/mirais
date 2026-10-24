@@ -48,10 +48,10 @@ function disableCaptions(player: YTPlayer) {
 // UNSTARTED=-1, ENDED=0, PAUSED=2, CUED=5
 const RESUME_STATES = new Set([-1, 0, 2, 5]);
 
-// Üretilen iframe'i klavye odağından ve tıklamadan tamamen çıkar
-function hardenIframe(player: YTPlayer) {
-  try {
-    const frame = player.getIframe?.() ?? document.getElementById("hero-yt");
+  // Üretilen iframe'i klavye odağından ve tıklamadan tamamen çıkar
+  function hardenIframe(player: YTPlayer, playerId: string) {
+    try {
+      const frame = player.getIframe?.() ?? document.getElementById(playerId);
     if (frame instanceof HTMLIFrameElement) {
       frame.setAttribute("tabindex", "-1");
       frame.setAttribute("aria-hidden", "true");
@@ -95,11 +95,13 @@ function loadYouTubeApi(): Promise<void> {
 }
 
 // Hero zemin videosu: iframe HTML'e gömülmez, JS ile YT Player olarak üretilir
-export default function HeroVideo({ videoId }: { videoId: string }) {
+export default function HeroVideo({ videoId, playerId = "hero-yt" }: { videoId: string; playerId?: string }) {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const playerRef = useRef<YTPlayer | null>(null);
   const videoIdRef = useRef(videoId);
+  const playerIdRef = useRef(playerId);
   videoIdRef.current = videoId;
+  playerIdRef.current = playerId;
 
   // Player'ı bir kez üret
   useEffect(() => {
@@ -129,10 +131,10 @@ export default function HeroVideo({ videoId }: { videoId: string }) {
             playlist: videoIdRef.current,
           },
           events: {
-            onReady: ({ target }) => {
+             onReady: ({ target }) => {
               // Otomatik oynatma politikası için sesi kapatıp başlat
               target.mute();
-              hardenIframe(target);
+              hardenIframe(target, playerIdRef.current);
               disableCaptions(target);
               target.playVideo();
             },
@@ -171,5 +173,5 @@ export default function HeroVideo({ videoId }: { videoId: string }) {
     }
   }, [videoId]);
 
-  return <div ref={mountRef} id="hero-yt" aria-hidden="true" />;
+  return <div ref={mountRef} id={playerId} aria-hidden="true" />;
 }

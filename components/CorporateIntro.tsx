@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Plus } from "lucide-react";
 import { corporateAccordion, corporateFacts } from "@/data/content";
-
 // Sayı animasyonu: `start` gelince 0'dan hedefe sayar ("23K+" → 23 + "K+")
 // Başlatma kararı ebeveyndeki tek observer'a ait — her sayı kendi dar
 // elementini ayrı izlemeye kalkınca bazıları tetiklenemiyordu
@@ -71,26 +70,28 @@ export default function CorporateIntro() {
         <div
           className="corporate-intro__visuals reveal"
           data-reveal="left"
-          aria-label="Kayra Metal üretim ve mimari uygulamaları"
+          aria-label="Mira İş Sağlığı ve Güvenliği Ekipmanları iş güvenliği ekipmanları ve güvenlik sistemleri"
         >
-          <figure className="corporate-photo corporate-photo-main">
+          <div className="corporate-video" aria-hidden="true">
             <img
-              src="/assets/img/services/toz-boya-2.jpg"
-              alt="Kayra Metal elektrostatik toz boya tesisi"
+              src="/assets/img/corporate/baretler-renkli.jpg"
+              alt=""
               loading="lazy"
               decoding="async"
             />
-          </figure>
+          </div>
+          <div className="corporate-overlay" aria-hidden="true" />
         </div>
         <div className="corporate-intro__statement reveal" data-reveal="right">
           <p className="eyebrow">KURUMSAL</p>
-          <h2 id="corporate-title">Metali hassasiyetle işliyor, güvene dönüştürüyoruz.</h2>
+          <h2 id="corporate-title">Güvencesi bizde, işinizde güvenliğiniz.</h2>
           <p className="section-desc">
-            2006&apos;dan bu yana alüminyum profil, aksesuar ve kompozit panel
-            çözümlerimizle yapı sektörünün ihtiyaçlarına değer katıyoruz.
-            Yüksek hacimli stok, hızlı tedarik gücümüz ve Amanos System
-            markamızla yurt içi ve yurt dışında yüzlerce projede güvenilir
-            üretim ortağı olmaya devam ediyoruz.
+            Mira İş Sağlığı ve Güvenliği Ekipmanları olarak, iş güvenliğinde
+            Martor, Justrite ve Röetzmeier markalarıyla Türkiye'nin ve bölgenin
+            lider iş sağlığı ve güvenlik ekipmanları distribütörüyüz.
+            Kaliteli toz boyama, izolasyon ve mekanik işlem çözümlerimizle, yapı ve
+            endüstriyel sektörlerde çalışanların iş güvenliğini sağlıyor, işletmelerin
+            risklerini en aza indiriyoruz.
           </p>
           <div className="corporate-intro__details">
             <div className="corporate-intro__content">

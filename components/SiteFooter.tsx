@@ -58,14 +58,14 @@ export default function SiteFooter() {
           <h3>ADRESLERİMİZ</h3>
           <p className="contact-line">
             <span>
-              <strong>Merkez:</strong> Akçaburgaz, 592. Sk No:14/1, PK34522
-              Esenyurt / İstanbul
+              <strong>İstanbul:</strong> Yenişehir Mah. Sümbül Sk. Atlantis
+              Premium İş. Mrk. A Bl. D:18 Pendik/İstanbul
             </span>
           </p>
           <p className="contact-line">
             <span>
-              <strong>Fabrika:</strong> Sarıcaali Küme Evler No:311/1, 39750
-              Lüleburgaz / Kırklareli
+              <strong>İzmir:</strong> 1203/12 Sk. No:2/F Merkez Çarşı
+              Yenişehir-İzmir
             </span>
           </p>
         </div>
@@ -74,19 +74,19 @@ export default function SiteFooter() {
           <p className="contact-line">
             <Mail aria-hidden="true" />{" "}
             <a
-              href="mailto:kayra@kayrametal.com"
+              href="mailto:bilgi@mirais.com.tr"
               style={{ color: "inherit", textDecoration: "none" }}
             >
-              kayra@kayrametal.com
+              bilgi@mirais.com.tr
             </a>
           </p>
           <p className="contact-line">
             <Phone aria-hidden="true" />{" "}
             <a
-              href="tel:+902124520050"
+              href="tel:+902166840575"
               style={{ color: "inherit", textDecoration: "none" }}
             >
-              0(212) 452 00 50
+              +90 (216) 684 05 75
             </a>
           </p>
           <p className="contact-line">
@@ -102,7 +102,7 @@ export default function SiteFooter() {
           </p>
           <div className="socials">
             <a
-              href="https://www.linkedin.com/company/kayra-metal-san-tic-ltd-ti/"
+              href="https://www.linkedin.com/company/mirais/"
               target="_blank"
               rel="noopener"
               aria-label="LinkedIn"
@@ -110,7 +110,7 @@ export default function SiteFooter() {
               <Linkedin />
             </a>
             <a
-              href="http://instagram.com/kayrametal"
+              href="https://www.instagram.com/mirais/"
               target="_blank"
               rel="noopener"
               aria-label="Instagram"
@@ -118,21 +118,21 @@ export default function SiteFooter() {
               <Instagram />
             </a>
             <a
-              href="https://www.facebook.com/Kayrametal/?locale=tr_TR"
+              href="https://www.facebook.com/mirais/"
               target="_blank"
               rel="noopener"
               aria-label="Facebook"
             >
               <Youtube />
             </a>
-            <a href="mailto:kayra@kayrametal.com" aria-label="E-posta">
+            <a href="mailto:bilgi@mirais.com.tr" aria-label="E-posta">
               <Mail />
             </a>
           </div>
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>© 2024 Kayra Metal A.Ş. Tüm hakları saklıdır.</span>
+          <span>© 2024 Mira İş Sağlığı ve Güvenliği Ekipmanları A.Ş. Tüm hakları saklıdır.</span>
         <div>
           <a href="#">KVKK</a>
           <a href="#">Gizlilik Politikası</a>

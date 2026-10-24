@@ -4,11 +4,10 @@ import SiteHeader from "@/components/SiteHeader";
 import Hero from "@/components/Hero";
 import CorporateIntro from "@/components/CorporateIntro";
 import Solutions from "@/components/Solutions";
-import AmanosBanner from "@/components/AmanosBanner";
+import CatalogBand from "@/components/CatalogBand";
 import Services from "@/components/Services";
-import Projects from "@/components/Projects";
 import InstagramFeed from "@/components/InstagramFeed";
-import ReferencesCarousel from "@/components/ReferencesCarousel";
+import BrandsSection from "@/components/BrandsSection";
 import SiteFooter from "@/components/SiteFooter";
 import { useRevealRoot, useSmoothAnchors } from "@/hooks/useSiteEffects";
 
@@ -24,11 +23,10 @@ export default function HomePage() {
         <Hero />
         <CorporateIntro />
         <Solutions />
+        <CatalogBand />
         <Services />
-        <AmanosBanner />
-        <Projects />
         <InstagramFeed />
-        <ReferencesCarousel />
+        <BrandsSection />
       </main>
       <SiteFooter />
     </div>
