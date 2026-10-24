@@ -10,6 +10,19 @@ import {
   Phone,
   Youtube,
 } from "lucide-react";
+import { products, services } from "@/data/content";
+
+// Hizmet başlıkları veride büyük harf tutulur; footer linklerinde başlık düzenine çevrilir.
+const toTitleCase = (value: string) =>
+  value
+    .toLocaleLowerCase("tr-TR")
+    .split(" ")
+    .map((word, index) =>
+      index > 0 && word === "ve"
+        ? word
+        : word.charAt(0).toLocaleUpperCase("tr-TR") + word.slice(1)
+    )
+    .join(" ");
 
 // Alt bilgi: kurumsal linkler + adres + iletişim + yukarı dön
 export default function SiteFooter() {
@@ -42,17 +55,19 @@ export default function SiteFooter() {
         </div>
         <div className="reveal" data-reveal="up" data-delay="80">
           <h3>ÜRÜNLER</h3>
-          <a href="#solutions">Alüminyum Profiller</a>
-          <a href="#solutions">Aksesuarlar</a>
-          <a href="#solutions">Kompozit Paneller</a>
-          <a href="#solutions">Kupeste Profilleri</a>
+          {products.map((product) => (
+            <a key={product.href + product.title.join(" ")} href="#solutions">
+              {product.title.join(" ")}
+            </a>
+          ))}
         </div>
         <div className="reveal" data-reveal="up" data-delay="160">
           <h3>HİZMETLER</h3>
-          <a href="#services">Yüzey İşlemleri</a>
-          <a href="#services">Mekanik İşlemler</a>
-          <a href="#services">İzomat</a>
-          <a href="#services">Proje Hizmetleri</a>
+          {services.map((service) => (
+            <a key={service.title} href="#services">
+              {toTitleCase(service.title)}
+            </a>
+          ))}
         </div>
         <div className="reveal" data-reveal="up" data-delay="240">
           <h3>ADRESLERİMİZ</h3>
@@ -132,7 +147,7 @@ export default function SiteFooter() {
         </div>
       </div>
       <div className="container footer-bottom">
-          <span>© 2024 Mira İş Sağlığı ve Güvenliği Ekipmanları A.Ş. Tüm hakları saklıdır.</span>
+          <span>© 2026 Mira İş Sağlığı ve Güvenliği Ekipmanları A.Ş. Tüm hakları saklıdır.</span>
         <div>
           <a href="#">KVKK</a>
           <a href="#">Gizlilik Politikası</a>

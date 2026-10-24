@@ -190,7 +190,7 @@ export const services: Service[] = [
     href: "#",
   },
   {
-    title: "EKİTİM VE DANIŞMANLIK",
+    title: "EĞİTİM VE DANIŞMANLIK",
     description:
       "İş sağlığı ve güvenlik konusunda eğitim programları ve danışmanlık hizmetleri sunuyoruz.",
     image: "/assets/img/services/proje-hizmet-1.png",

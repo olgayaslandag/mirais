@@ -367,20 +367,15 @@ footer{border-top:1px solid var(--line);padding:5rem 0 2rem;background:var(--sof
 .reveal[data-reveal="right"]{transform:translateX(3rem)}
 .reveal[data-reveal="zoom"]{transform:scale(.92)}
 .reveal[data-reveal="blur"]{transform:none;filter:blur(14px)}
-.reveal[data-reveal="flip"]{transform:perspective(800px) rotateX(10deg) translateY(1.5rem)}
-.reveal.visible,.reveal.is-visible{opacity:1;filter:blur(0)}
-/* :hover dışında: belirme sonu konumu; hover'da kartın kendi kalkışı ezilmesin */
-.reveal.visible:not(:hover),.reveal.is-visible:not(:hover){transform:none}
+.reveal[data-reveal="flip"]{transform:translateY(1.5rem)}
+.reveal.visible,.reveal.is-visible{opacity:1;filter:blur(0);transform:none}
 /* Kademeli kart girişinde pop hissi (deal varyantı hariç: onun kendi dağıtma animasyonu var) */
 .product-card.reveal.visible:not([data-reveal="deal"]),.service-card.reveal.visible:not([data-reveal="deal"]),.project-card.reveal.visible:not([data-reveal="deal"]),.insta-card.reveal.visible:not([data-reveal="deal"]){animation:card-pop .5s cubic-bezier(.22,.61,.36,1) both;animation-delay:var(--reveal-delay,0s)}
 @keyframes card-pop{0%{scale:.96}60%{scale:1.012}100%{scale:1}}
-/* ---------- Kağıt dağıtma: kartlar soldan sağa teker teker, yatık + kayarak gelir ---------- */
-.product-grid,.service-grid,.insta-grid,.project-grid{perspective:1100px}
+/* ---------- Kart girişi: kartlar teker teker, hafif yükselerek gelir (yatay taşma yok) ---------- */
 .reveal[data-reveal="deal"]{
   opacity:0;
-  transform:translate3d(-4.5rem,1.8rem,0) rotate(-7deg) scale(.93);
   filter:blur(6px);
-  transform-origin:left bottom;
   /* Giriş animasyonla oynar; hover kalkışı bu geçişle süzülerek olur (gecikmesiz) */
   transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .35s ease,border-color .35s ease;
   transition-delay:0s;
@@ -392,9 +387,9 @@ footer{border-top:1px solid var(--line);padding:5rem 0 2rem;background:var(--sof
   will-change:transform,opacity,filter;
 }
 @keyframes deal-in{
-  from{opacity:0;transform:translate3d(-4.5rem,1.8rem,0) rotate(-7deg) scale(.93);filter:blur(6px)}
+  from{opacity:0;transform:translateY(1.8rem) scale(.96);filter:blur(6px)}
   55%{opacity:1;filter:blur(0)}
-  75%{transform:translate3d(.35rem,-.15rem,0) rotate(1deg) scale(1.01)}
+  75%{transform:translateY(-.15rem) scale(1.01)}
   to{opacity:1;transform:none;filter:blur(0)}
 }
 /* ---------- Header giriş ---------- */
@@ -441,8 +436,7 @@ footer{border-top:1px solid var(--line);padding:5rem 0 2rem;background:var(--sof
 /* ---------- Footer ---------- */
 .socials a{transition:background .3s ease,color .3s ease,border-color .3s ease,transform .3s ease}
 .socials a:hover{transform:translateY(-3px) scale(1.08)}
-.footer-grid a{transition:color .25s ease,transform .25s ease}
-.footer-grid > div a:hover{transform:translateX(3px)}
+.footer-grid a{transition:color .25s ease}
 .back-top{transition:transform .3s ease,background .3s ease,opacity .3s ease;animation:back-top-in .4s cubic-bezier(.22,.61,.36,1) both}
 @keyframes back-top-in{from{opacity:0;transform:translateY(1rem) scale(.8)}to{opacity:1;transform:none}}
 /* ---------- Akordeon gövde girişi ---------- */
@@ -612,8 +606,7 @@ img{transition:filter .4s ease}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
-  .reveal{opacity:1;transition:none;filter:none}
-  .reveal:not(:hover){transform:none}
+  .reveal{opacity:1;transform:none;transition:none;filter:none}
   .reveal[data-reveal="deal"]{opacity:1;transform:none;filter:none;transition:none}
   .reveal[data-reveal="deal"].visible,.reveal[data-reveal="deal"].is-visible{animation:none}
   .corporate-accordion__panel,.corporate-accordion__item.is-open .corporate-accordion__panel{transition:none}
