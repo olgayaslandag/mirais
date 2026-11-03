@@ -49,7 +49,7 @@ export default async function CorporatePage({
   const productCount = getProducts(activeLocale).length;
   const categoryCount = getRootCategories().length;
 
-  return (
+return (
     <main id="top">
       <PageHero
         eyebrow="TARİHÇE"
@@ -62,7 +62,7 @@ export default async function CorporatePage({
         title={content.corporate.title}
         text={content.corporate.intro}
         facts={content.corporate.facts}
-        accordion={content.corporate.accordion}
+        accordion={[]}
         imageAlt={content.corporate.title}
       />
 

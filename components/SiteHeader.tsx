@@ -34,7 +34,7 @@ export default function SiteHeader({ locale, categories, navLinks }: SiteHeaderP
       className={`site-header${scrolled ? " scrolled" : ""}`}
     >
       <div className="container header-inner">
-        <a className="brand" href="#top" aria-label="Mira İş Sağlığı ve Güvenliği Ekipmanları ana sayfa">
+        <a className="brand" href="/" aria-label="Mira İş Sağlığı ve Güvenliği Ekipmanları ana sayfa">
           <Image
             className="brand-logo brand-logo-dark"
             src="/assets/img/logo.svg"

@@ -44,6 +44,26 @@ img{max-width:100%}
 }
 .d-lg-none{font-family:inherit}
 
+/* ---------- Process Steps ---------- */
+.process-steps{
+  list-style: none;
+  padding: 0;
+}
+.process-steps > li{
+  margin-bottom: 2rem;
+}
+.process-steps > li > .process-step__index {
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: var(--blue);
+}
+.process-steps > li > h3{
+  margin-top: 0;
+}
+.process-steps > li:last-child{
+  margin-bottom: 0;
+}
+
 /* ---------- Header ---------- */
 .site-header{
   position:absolute;
@@ -293,6 +313,10 @@ img{max-width:100%}
 .section-heading-left h2{font-size:2.2rem;font-weight:800;margin:0}
 .section-heading-left .eyebrow{margin-bottom:0}
 .section-desc{color:var(--muted);font-size:1rem;line-height:1.7;margin:0}
+.section-desc.careers-note {
+font-size: 0.8rem;
+margin-top: 1rem;
+}
 
 .two-column{
   display:grid;
@@ -370,6 +394,10 @@ img{max-width:100%}
 .corporate-page__text{padding:1rem 0 1rem 2rem}
 .corporate-page__text h2{max-width:38rem;margin:0;color:var(--navy);font-size:2.2rem;line-height:1.15;font-weight:800}
 .corporate-page__text .section-desc{color:var(--muted);font-size:1rem;line-height:1.7;margin:0}
+.section-desc.careers-note {
+font-size: 0.8rem;
+margin-top: 1rem;
+}
 .corporate-page__text dl{display:flex;gap:2.5rem;margin:2rem 0}
 .corporate-page__text dl div{display:flex;flex-direction:column;gap:.25rem;min-width:5rem}
 .corporate-page__text dl strong{color:var(--blue);font-size:2.5rem;line-height:1;font-weight:800}

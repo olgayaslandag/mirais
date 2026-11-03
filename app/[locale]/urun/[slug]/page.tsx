@@ -151,7 +151,6 @@ export default async function ProductPage({
 
             {product.specs ? (
               <div className="product-detail__specs">
-                <h2>{t("specs")}</h2>
                 <SpecTable specs={product.specs} />
               </div>
             ) : null}
@@ -160,7 +159,6 @@ export default async function ProductPage({
               <div className="product-detail__tabs">
                 {product.tabs.map((tab, index) => (
                   <section className="product-tab" key={`${tab.title}-${index}`}>
-                    <h2>{tab.title}</h2>
                     {tab.specs && !sameSpecs(tab.specs, product.specs) ? (
                       <SpecTable specs={tab.specs} />
                     ) : null}
@@ -185,7 +183,8 @@ export default async function ProductPage({
                   </dd>
                 </div>
               ) : null}
-            </dl>
+</dl>
+
 
             <div className="product-detail__cta">
               <Link className="btn btn-sm btn-primary" href="/iletisim">
