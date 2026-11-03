@@ -3,10 +3,21 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { navLinks } from "@/data/content";
+import { Link } from "@/lib/i18n/navigation";
+import type { RouteHref } from "@/lib/i18n/navigation";
 
-// Üst menü: scroll'da .scrolled, mobilde açılır menü
-export default function SiteHeader() {
+type NavLink = {
+  label: string;
+  href: RouteHref;
+};
+
+type SiteHeaderProps = {
+  locale: string;
+  categories: any[];
+  navLinks: NavLink[];
+};
+
+export default function SiteHeader({ locale, categories, navLinks }: SiteHeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -58,9 +69,9 @@ export default function SiteHeader() {
           className={`main-nav${open ? " open" : ""}`}
         >
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} onClick={() => setOpen(false)}>
+            <Link key={link.label} href={link.href}>
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>

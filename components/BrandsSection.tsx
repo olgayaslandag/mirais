@@ -1,7 +1,15 @@
-import { brands } from "@/data/content";
+type Brand = {
+  name: string;
+  logo: string;
+};
 
-// Temsilciliklerimiz: bağlantısız durağan marka kartları
-export default function BrandsSection() {
+type BrandsSectionProps = {
+  eyebrow: string;
+  title: string;
+  brands: Brand[];
+};
+
+export default function BrandsSection({ eyebrow, title, brands }: BrandsSectionProps) {
   return (
     <section
       className="section brands"
@@ -11,8 +19,8 @@ export default function BrandsSection() {
       <div className="container">
         <div className="section-heading reveal" data-reveal="up">
           <div className="section-heading-left">
-            <p className="eyebrow">MARKALAR</p>
-            <h2 id="brands-title">Temsilciliklerimiz</h2>
+            <p className="eyebrow">{eyebrow}</p>
+            <h2 id="brands-title">{title}</h2>
           </div>
         </div>
         <div className="brands-grid reveal" data-reveal="blur" data-delay="150">

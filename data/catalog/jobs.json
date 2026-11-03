@@ -1,0 +1,71 @@
+{
+  "updatedAt": "2026-10-27",
+  "jobs": [
+    {
+      "slug": "satis-muhendisi",
+      "title": { "tr": "Satış Mühendisi (Bölge / Kurumsal)", "en": "Sales Engineer (Regional / Key Accounts)" },
+      "location": { "tr": "İstanbul veya İzmir", "en": "Istanbul or Izmir" },
+      "department": { "tr": "Satış", "en": "Sales" },
+      "experience": { "tr": "En az 3 yıl", "en": "At least 3 years" },
+      "type": { "tr": "Tam zamanlı", "en": "Full time" },
+      "skills": {
+        "tr": [
+          "Endüstriyel iş güvenliği ürünleri satış deneyimi",
+          "Müşteri portföy yönetimi ve satış tahmini",
+          "Teknik şartname okuma ve teklif hazırlama",
+          "Tercihen seyahat ve saha çalışmasına uygun"
+        ],
+        "en": [
+          "Sales experience in industrial occupational safety products",
+          "Customer portfolio management and sales forecasting",
+          "Reading technical specifications and preparing quotations",
+          "Willingness to travel and work on site is an asset"
+        ]
+      }
+    },
+    {
+      "slug": "teknik-destek-muhendisi",
+      "title": { "tr": "Teknik Destek Mühendisi", "en": "Technical Support Engineer" },
+      "location": { "tr": "İstanbul", "en": "Istanbul" },
+      "department": { "tr": "Teknik Destek", "en": "Technical Support" },
+      "experience": { "tr": "En az 2 yıl", "en": "At least 2 years" },
+      "type": { "tr": "Tam zamanlı", "en": "Full time" },
+      "skills": {
+        "tr": [
+          "Makine ve metal güvenlik ürünleri teknik bilgisi",
+          "Ürün kurulumu, devreye alma ve arıza tespiti",
+          "Saha eğitimleri ve kullanıcı anlatımları",
+          "İngilizce teknik iletişim"
+        ],
+        "en": [
+          "Technical knowledge of machinery and metal safety products",
+          "Product installation, commissioning and troubleshooting",
+          "Site training and user briefings",
+          "Technical communication in English"
+        ]
+      }
+    },
+    {
+      "slug": "depo-lojistik-sorumlusu",
+      "title": { "tr": "Depo ve Lojistik Sorumlusu", "en": "Warehouse and Logistics Specialist" },
+      "location": { "tr": "İstanbul (Pendik)", "en": "Istanbul (Pendik)" },
+      "department": { "tr": "Lojistik", "en": "Logistics" },
+      "experience": { "tr": "En az 2 yıl", "en": "At least 2 years" },
+      "type": { "tr": "Tam zamanlı", "en": "Full time" },
+      "skills": {
+        "tr": [
+          "Stok yönetimi ve sayım süreçleri",
+          "Sevkiyat planlama ve taşıyıcı firma takibi",
+          "ERP kullanımı ve raporlama",
+          "Düzenli ve disiplinli çalışma alışkanlığı"
+        ],
+        "en": [
+          "Stock management and stocktaking processes",
+          "Shipment planning and carrier follow-up",
+          "ERP usage and reporting",
+          "Consistent and disciplined working habits"
+        ]
+      }
+    }
+  ]
+}

@@ -1,9 +1,25 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { services } from "@/data/content";
-import CarouselControls from "./CarouselControls";
+import { Link } from "@/lib/i18n/navigation";
+import CarouselControls from "@/components/CarouselControls";
 
-// Hizmetler: 4 kart + başlık + navigasyon
-export default function Services() {
+type Service = {
+  title: string;
+  description: string;
+  image: string;
+  alt: string;
+  href: string;
+};
+
+type ServicesProps = {
+  eyebrow: string;
+  title: string;
+  text: string;
+  services: Service[];
+  allLabel: string;
+  ctaLabel: string;
+};
+
+export default function Services({ eyebrow, title, text, services, allLabel, ctaLabel }: ServicesProps) {
   return (
     <section
       className="section services"
@@ -13,15 +29,12 @@ export default function Services() {
       <div className="container">
         <div className="section-heading">
           <div className="section-heading-left">
-            <p className="eyebrow">YAŞAMINIZA ÖZEL</p>
-            <h2 id="services-title">Hizmetler</h2>
-            <p className="section-desc">
-              Yüzey işlemleri, mekanik işlemler ve size özel imalat çözümleri
-              ile güçlü projeler oluşturuyoruz.
-            </p>
+            <p className="eyebrow">{eyebrow}</p>
+            <h2 id="services-title">{title}</h2>
+            <p className="section-desc">{text}</p>
           </div>
           <a className="text-link" href="#contact">
-            TÜM HİZMETLER <ArrowRight size={16} />
+            {allLabel} <ArrowRight size={16} />
           </a>
         </div>
         <div className="service-wrap">
@@ -63,3 +76,9 @@ export default function Services() {
     </section>
   );
 }
+
+type CarouselControlsProps = {
+  targetSelector: string;
+  label: string;
+  itemCount: number;
+};

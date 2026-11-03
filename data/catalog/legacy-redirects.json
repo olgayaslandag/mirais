@@ -1,0 +1,962 @@
+[
+  {
+    "source": "/en/cart",
+    "destination": "/en/contact",
+    "permanent": false
+  },
+  {
+    "source": "/en/cart/",
+    "destination": "/en/contact",
+    "permanent": false
+  },
+  {
+    "source": "/en/checkout",
+    "destination": "/en/contact",
+    "permanent": false
+  },
+  {
+    "source": "/en/checkout/",
+    "destination": "/en/contact",
+    "permanent": false
+  },
+  {
+    "source": "/en/my-account",
+    "destination": "/en/contact",
+    "permanent": false
+  },
+  {
+    "source": "/en/my-account/",
+    "destination": "/en/contact",
+    "permanent": false
+  },
+  {
+    "source": "/en/urun-kategori/industrial-ashtrays",
+    "destination": "/en/products/endustriyel-kullukler",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/industrial-ashtrays/",
+    "destination": "/en/products/endustriyel-kullukler",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/platforms",
+    "destination": "/en/products/hazneli-platformlar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/platforms/",
+    "destination": "/en/products/hazneli-platformlar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/platforms/barrel-safety-products",
+    "destination": "/en/products/hazneli-platformlar/varil-emniyet-urunleri",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/platforms/barrel-safety-products/",
+    "destination": "/en/products/hazneli-platformlar/varil-emniyet-urunleri",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-cabinets",
+    "destination": "/en/products/guvenli-dolaplar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-cabinets/",
+    "destination": "/en/products/guvenli-dolaplar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-containers",
+    "destination": "/en/products/emniyetli-kaplar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-containers/",
+    "destination": "/en/products/emniyetli-kaplar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-containers/stainless-steel-containers",
+    "destination": "/en/products/emniyetli-kaplar/paslanmaz-celik-kaplar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-containers/stainless-steel-containers/",
+    "destination": "/en/products/emniyetli-kaplar/paslanmaz-celik-kaplar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes",
+    "destination": "/en/products/emniyetli-bicaklar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/",
+    "destination": "/en/products/emniyetli-bicaklar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/accessories",
+    "destination": "/en/products/emniyetli-bicaklar/aksesuarlar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/accessories/",
+    "destination": "/en/products/emniyetli-bicaklar/aksesuarlar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/knives-detectable-in-metal-detectors",
+    "destination": "/en/products/emniyetli-bicaklar/mdp-metal-dedektorunde-algilanabilen-bicaklar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/knives-detectable-in-metal-detectors/",
+    "destination": "/en/products/emniyetli-bicaklar/mdp-metal-dedektorunde-algilanabilen-bicaklar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/safe-scissors",
+    "destination": "/en/products/emniyetli-bicaklar/guvenli-makaslar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/safe-scissors/",
+    "destination": "/en/products/emniyetli-bicaklar/guvenli-makaslar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/secumax-hidden-cutting-edge",
+    "destination": "/en/products/emniyetli-bicaklar/secumax-gizli-kesici-uc",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/secumax-hidden-cutting-edge/",
+    "destination": "/en/products/emniyetli-bicaklar/secumax-gizli-kesici-uc",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/secunorm-semi-automatic-insert-retraction",
+    "destination": "/en/products/emniyetli-bicaklar/secunorm-yari-otomatik-kesici-uc-geri-cekme",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/secunorm-semi-automatic-insert-retraction/",
+    "destination": "/en/products/emniyetli-bicaklar/secunorm-yari-otomatik-kesici-uc-geri-cekme",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/secupro-fully-automatic-cutter-retraction",
+    "destination": "/en/products/emniyetli-bicaklar/secupro-tam-otomatik-kesici-uc-geri-cekme",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun-kategori/safety-knifes/secupro-fully-automatic-cutter-retraction/",
+    "destination": "/en/products/emniyetli-bicaklar/secupro-tam-otomatik-kesici-uc-geri-cekme",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/769",
+    "destination": "/en/product/secumax-350",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/769/",
+    "destination": "/en/product/secumax-350",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/antistatic-cables",
+    "destination": "/en/product/antistatic-cables",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/antistatic-cables/",
+    "destination": "/en/product/antistatic-cables",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/barrel-funnels",
+    "destination": "/en/product/barrel-funnels",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/barrel-funnels/",
+    "destination": "/en/product/barrel-funnels",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/barrel-safety-valves",
+    "destination": "/en/product/barrel-safety-valves",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/barrel-safety-valves/",
+    "destination": "/en/product/barrel-safety-valves",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/barrel-stacking-systems",
+    "destination": "/en/product/barrel-stacking-systems",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/barrel-stacking-systems/",
+    "destination": "/en/product/barrel-stacking-systems",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/barrel-valves",
+    "destination": "/en/product/barrel-valves",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/barrel-valves/",
+    "destination": "/en/product/barrel-valves",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/belt-bag-l",
+    "destination": "/en/product/belt-bag-l",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/belt-bag-l/",
+    "destination": "/en/product/belt-bag-l",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/belt-bag-m",
+    "destination": "/en/product/belt-bag-m",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/belt-bag-m/",
+    "destination": "/en/product/belt-bag-m",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/belt-bag-s",
+    "destination": "/en/product/belt-bag-s",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/belt-bag-s/",
+    "destination": "/en/product/belt-bag-s",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/belt-bag-xxl",
+    "destination": "/en/product/belt-bag-xxl",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/belt-bag-xxl/",
+    "destination": "/en/product/belt-bag-xxl",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/bench-can",
+    "destination": "/en/product/bench-can",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/bench-can/",
+    "destination": "/en/product/bench-can",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/cans-for-laboratory",
+    "destination": "/en/product/cans-for-laboratory",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/cans-for-laboratory/",
+    "destination": "/en/product/cans-for-laboratory",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/connector-set",
+    "destination": "/en/product/connector-set",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/connector-set/",
+    "destination": "/en/product/connector-set",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/dip-tanks",
+    "destination": "/en/product/dip-tanks",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/dip-tanks/",
+    "destination": "/en/product/dip-tanks",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/dispensing-cans",
+    "destination": "/en/product/dispensing-cans",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/dispensing-cans/",
+    "destination": "/en/product/dispensing-cans",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/industrial-ashtrays",
+    "destination": "/en/product/industrial-ashtrays",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/industrial-ashtrays/",
+    "destination": "/en/product/industrial-ashtrays",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/oily-waste-cans",
+    "destination": "/en/product/oily-waste-cans",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/oily-waste-cans/",
+    "destination": "/en/product/oily-waste-cans",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/plunger-2",
+    "destination": "/en/product/plunger",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/plunger-2/",
+    "destination": "/en/product/plunger",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/polyethylene-safe-cabinets",
+    "destination": "/en/product/polyethylene-safe-cabinets",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/polyethylene-safe-cabinets/",
+    "destination": "/en/product/polyethylene-safe-cabinets",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/safe-barrels",
+    "destination": "/en/product/safe-barrels",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/safe-barrels/",
+    "destination": "/en/product/safe-barrels",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/safety-can-polyethylene",
+    "destination": "/en/product/safety-can-polyethylene",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/safety-can-polyethylene/",
+    "destination": "/en/product/safety-can-polyethylene",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/safety-cans",
+    "destination": "/en/product/safety-cans",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/safety-cans/",
+    "destination": "/en/product/safety-cans",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-145-2",
+    "destination": "/en/product/secumax-145",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-145-2/",
+    "destination": "/en/product/secumax-145",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-145-mdp-2",
+    "destination": "/en/product/secumax-145-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-145-mdp-2/",
+    "destination": "/en/product/secumax-145-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-150-mdp-2",
+    "destination": "/en/product/secumax-150-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-150-mdp-2/",
+    "destination": "/en/product/secumax-150-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-320-2",
+    "destination": "/en/product/secumax-320",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-320-2/",
+    "destination": "/en/product/secumax-320",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-320-mdp-2",
+    "destination": "/en/product/secumax-320-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-320-mdp-2/",
+    "destination": "/en/product/secumax-320-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-363-2",
+    "destination": "/en/product/secumax-363",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-363-2/",
+    "destination": "/en/product/secumax-363",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-564-2",
+    "destination": "/en/product/secumax-564",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-564-2/",
+    "destination": "/en/product/secumax-564",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-565-2",
+    "destination": "/en/product/secumax-565",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-565-2/",
+    "destination": "/en/product/secumax-565",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-cardycut-2",
+    "destination": "/en/product/secumax-cardycut",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-cardycut-2/",
+    "destination": "/en/product/secumax-cardycut",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-easysafe-2",
+    "destination": "/en/product/secumax-easysafe",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-easysafe-2/",
+    "destination": "/en/product/secumax-easysafe",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-opticut-3",
+    "destination": "/en/product/secumax-opticut",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-opticut-3/",
+    "destination": "/en/product/secumax-opticut",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-plasticut-2",
+    "destination": "/en/product/secumax-plasticut",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-plasticut-2/",
+    "destination": "/en/product/secumax-plasticut",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-polycut-2",
+    "destination": "/en/product/secumax-polycut",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-polycut-2/",
+    "destination": "/en/product/secumax-polycut",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-ring-cutter-mdp",
+    "destination": "/en/product/secumax-ring-cutter-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-ring-cutter-mdp/",
+    "destination": "/en/product/secumax-ring-cutter-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-salvex-sos-2",
+    "destination": "/en/product/secumax-salvex-sos",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secumax-salvex-sos-2/",
+    "destination": "/en/product/secumax-salvex-sos",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-380-2",
+    "destination": "/en/product/secunorm-380",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-380-2/",
+    "destination": "/en/product/secunorm-380",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-500-2",
+    "destination": "/en/product/secunorm-500",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-500-2/",
+    "destination": "/en/product/secunorm-500",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-540-2",
+    "destination": "/en/product/secunorm-540",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-540-2/",
+    "destination": "/en/product/secunorm-540",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-610-xdr-2",
+    "destination": "/en/product/secunorm-610-xdr",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-610-xdr-2/",
+    "destination": "/en/product/secunorm-610-xdr",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-handy-2",
+    "destination": "/en/product/secunorm-handy",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-handy-2/",
+    "destination": "/en/product/secunorm-handy",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-handy-mdp-2",
+    "destination": "/en/product/secunorm-handy-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-handy-mdp-2/",
+    "destination": "/en/product/secunorm-handy-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-mizar-2",
+    "destination": "/en/product/secunorm-mizar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-mizar-2/",
+    "destination": "/en/product/secunorm-mizar",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-multisafe-2",
+    "destination": "/en/product/secunorm-multisafe",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-multisafe-2/",
+    "destination": "/en/product/secunorm-multisafe",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-profi25-mdp-2",
+    "destination": "/en/product/secunorm-profi25-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-profi25-mdp-2/",
+    "destination": "/en/product/secunorm-profi25-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-profi40-mdp-2",
+    "destination": "/en/product/secunorm-profi40-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-profi40-mdp-2/",
+    "destination": "/en/product/secunorm-profi40-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-smartcut-mdp-2",
+    "destination": "/en/product/secunorm-smartcut-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secunorm-smartcut-mdp-2/",
+    "destination": "/en/product/secunorm-smartcut-mdp",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secuplus-rippex-210-2",
+    "destination": "/en/product/secuplus-rippex-210",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secuplus-rippex-210-2/",
+    "destination": "/en/product/secuplus-rippex-210",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secuplus-rippex-220-2",
+    "destination": "/en/product/secuplus-rippex-220",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secuplus-rippex-220-2/",
+    "destination": "/en/product/secuplus-rippex-220",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secupro-625-2",
+    "destination": "/en/product/secupro-625",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secupro-625-2/",
+    "destination": "/en/product/secupro-625",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secupro-martego-2",
+    "destination": "/en/product/secupro-martego",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secupro-martego-2/",
+    "destination": "/en/product/secupro-martego",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secupro-maxisafe-2",
+    "destination": "/en/product/secupro-maxisafe",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secupro-maxisafe-2/",
+    "destination": "/en/product/secupro-maxisafe",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secupro-megasafe-2",
+    "destination": "/en/product/secupro-megasafe",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secupro-megasafe-2/",
+    "destination": "/en/product/secupro-megasafe",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secupro-merak-2",
+    "destination": "/en/product/secupro-merak",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/secupro-merak-2/",
+    "destination": "/en/product/secupro-merak",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/spill-containment-drum-caddy",
+    "destination": "/en/product/spill-containment-drum-caddy",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/spill-containment-drum-caddy/",
+    "destination": "/en/product/spill-containment-drum-caddy",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/spill-containment-pallet",
+    "destination": "/en/product/spill-containment-pallet",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/spill-containment-pallet/",
+    "destination": "/en/product/spill-containment-pallet",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/tool-retractor-2",
+    "destination": "/en/product/tool-retractor",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/tool-retractor-2/",
+    "destination": "/en/product/tool-retractor",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/uno-type-1",
+    "destination": "/en/product/uno-type-1",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/uno-type-1/",
+    "destination": "/en/product/uno-type-1",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/uno-type-2",
+    "destination": "/en/product/uno-type-2",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/uno-type-2/",
+    "destination": "/en/product/uno-type-2",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/waste-collection-box",
+    "destination": "/en/product/waste-collection-box",
+    "permanent": true
+  },
+  {
+    "source": "/en/urun/waste-collection-box/",
+    "destination": "/en/product/waste-collection-box",
+    "permanent": true
+  },
+  {
+    "source": "/hesabim",
+    "destination": "/iletisim",
+    "permanent": false
+  },
+  {
+    "source": "/hesabim/",
+    "destination": "/iletisim",
+    "permanent": false
+  },
+  {
+    "source": "/odeme",
+    "destination": "/iletisim",
+    "permanent": false
+  },
+  {
+    "source": "/odeme/",
+    "destination": "/iletisim",
+    "permanent": false
+  },
+  {
+    "source": "/referanslar",
+    "destination": "/kurumsal",
+    "permanent": true
+  },
+  {
+    "source": "/referanslar/",
+    "destination": "/kurumsal",
+    "permanent": true
+  },
+  {
+    "source": "/sepet",
+    "destination": "/iletisim",
+    "permanent": false
+  },
+  {
+    "source": "/sepet/",
+    "destination": "/iletisim",
+    "permanent": false
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar",
+    "destination": "/urunler/emniyetli-bicaklar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/",
+    "destination": "/urunler/emniyetli-bicaklar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/aksesuarlar",
+    "destination": "/urunler/emniyetli-bicaklar/aksesuarlar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/aksesuarlar/",
+    "destination": "/urunler/emniyetli-bicaklar/aksesuarlar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/guvenli-makaslar",
+    "destination": "/urunler/emniyetli-bicaklar/guvenli-makaslar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/guvenli-makaslar/",
+    "destination": "/urunler/emniyetli-bicaklar/guvenli-makaslar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/mdp-metal-dedektorunde-algilanabilen-bicaklar",
+    "destination": "/urunler/emniyetli-bicaklar/mdp-metal-dedektorunde-algilanabilen-bicaklar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/mdp-metal-dedektorunde-algilanabilen-bicaklar/",
+    "destination": "/urunler/emniyetli-bicaklar/mdp-metal-dedektorunde-algilanabilen-bicaklar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/secumax-gizli-kesici-uc",
+    "destination": "/urunler/emniyetli-bicaklar/secumax-gizli-kesici-uc",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/secumax-gizli-kesici-uc/",
+    "destination": "/urunler/emniyetli-bicaklar/secumax-gizli-kesici-uc",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/secunorm-yari-otomatik-kesici-uc-geri-cekme",
+    "destination": "/urunler/emniyetli-bicaklar/secunorm-yari-otomatik-kesici-uc-geri-cekme",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/secunorm-yari-otomatik-kesici-uc-geri-cekme/",
+    "destination": "/urunler/emniyetli-bicaklar/secunorm-yari-otomatik-kesici-uc-geri-cekme",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/secupro-tam-otomatik-kesici-uc-geri-cekme",
+    "destination": "/urunler/emniyetli-bicaklar/secupro-tam-otomatik-kesici-uc-geri-cekme",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-bicaklar/secupro-tam-otomatik-kesici-uc-geri-cekme/",
+    "destination": "/urunler/emniyetli-bicaklar/secupro-tam-otomatik-kesici-uc-geri-cekme",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-kaplar",
+    "destination": "/urunler/emniyetli-kaplar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-kaplar/",
+    "destination": "/urunler/emniyetli-kaplar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-kaplar/paslanmaz-celik-kaplar",
+    "destination": "/urunler/emniyetli-kaplar/paslanmaz-celik-kaplar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/emniyetli-kaplar/paslanmaz-celik-kaplar/",
+    "destination": "/urunler/emniyetli-kaplar/paslanmaz-celik-kaplar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/endustriyel-kullukler",
+    "destination": "/urunler/endustriyel-kullukler",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/endustriyel-kullukler/",
+    "destination": "/urunler/endustriyel-kullukler",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/guvenli-dolaplar",
+    "destination": "/urunler/guvenli-dolaplar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/guvenli-dolaplar/",
+    "destination": "/urunler/guvenli-dolaplar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/hazneli-platformlar",
+    "destination": "/urunler/hazneli-platformlar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/hazneli-platformlar/",
+    "destination": "/urunler/hazneli-platformlar",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/hazneli-platformlar/varil-emniyet-urunleri",
+    "destination": "/urunler/hazneli-platformlar/varil-emniyet-urunleri",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/hazneli-platformlar/varil-emniyet-urunleri/",
+    "destination": "/urunler/hazneli-platformlar/varil-emniyet-urunleri",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/seramik-uclu-kesiciler",
+    "destination": "/urunler/seramik-uclu-kesiciler",
+    "permanent": true
+  },
+  {
+    "source": "/urun-kategori/seramik-uclu-kesiciler/",
+    "destination": "/urunler/seramik-uclu-kesiciler",
+    "permanent": true
+  },
+  {
+    "source": "/urun/secumax-opticut-2",
+    "destination": "/urun/secumax-opticut",
+    "permanent": true
+  },
+  {
+    "source": "/urun/secumax-opticut-2/",
+    "destination": "/urun/secumax-opticut",
+    "permanent": true
+  }
+]

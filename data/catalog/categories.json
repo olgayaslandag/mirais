@@ -1,0 +1,794 @@
+[
+  {
+    "slug": "emniyetli-bicaklar",
+    "parent": null,
+    "brand": "Martor",
+    "names": {
+      "tr": "Emniyetli Bıçaklar",
+      "en": "Safety Knifes"
+    },
+    "descriptions": {
+      "tr": "Martor SECUMAX, SECUNORM ve SECUPRO serisi emniyetli bıçak ve kesicilerle el yaralanmalarını önleyin.",
+      "en": "Prevent hand injuries with Martor SECUMAX, SECUNORM and SECUPRO safety knives and cutters."
+    },
+    "image": "/assets/img/products/emniyetli-bicaklar.jpg",
+    "aliases": {
+      "tr": [],
+      "en": [
+        "safety-knifes"
+      ]
+    },
+    "intro": {
+      "tr": null,
+      "en": null
+    }
+  },
+  {
+    "slug": "aksesuarlar",
+    "parent": "emniyetli-bicaklar",
+    "brand": "Martor",
+    "names": {
+      "tr": "Aksesuarlar",
+      "en": "Accessories"
+    },
+    "descriptions": {
+      "tr": "Kemer çantaları, bağlantı setleri ve Martor kesici aksesuarları.",
+      "en": "Belt bags, connector sets and Martor cutter accessories."
+    },
+    "image": null,
+    "aliases": {
+      "tr": [],
+      "en": [
+        "accessories"
+      ]
+    },
+    "intro": {
+      "tr": null,
+      "en": null
+    }
+  },
+  {
+    "slug": "guvenli-makaslar",
+    "parent": "emniyetli-bicaklar",
+    "brand": "Martor",
+    "names": {
+      "tr": "Güvenli Makaslar",
+      "en": "Safe Scissors"
+    },
+    "descriptions": {
+      "tr": "SECUMAX 363, 564 ve 565 güvenli makaslarla kaza riski olmadan kesim yapın.",
+      "en": "Safe cutting without accident risk with SECUMAX 363, 564 and 565 scissors."
+    },
+    "image": null,
+    "aliases": {
+      "tr": [],
+      "en": [
+        "safe-scissors"
+      ]
+    },
+    "intro": {
+      "tr": {
+        "html": "Son derece hassas ve isabetli kesimler için güvenli makaslarımız. Parmaklarınızla kolayca yönetebilirsiniz. Hafif sıklet olarak karton, kağıt, folyo, kumaş, ip ve çemberleri kolayca keser. Kesici kenarların özel taşlaması ve ucunun körleştirilmesi sayesinde kapalı iken el ve parmaklar yaralanmaya karşı korunur. Sağ ve sol elini kullananlar için uygundur.",
+        "specs": {
+          "columns": [
+            "ÜRÜN ADI",
+            "ÜRÜN NO",
+            "KESME UZUNLUĞU",
+            "EBATLAR (U x G x Y)",
+            "Ürün ağırlığı",
+            "Temel malzemeler"
+          ],
+          "rows": [
+            [
+              "SECUMAX 565",
+              "565001",
+              "70 mm",
+              "216 x 13 x 83 mm",
+              "122 g",
+              "Paslanmaz çelik"
+            ],
+            [
+              "SECUMAX 564",
+              "564001",
+              "80 mm",
+              "218 x 12 x 82 mm",
+              "93 g",
+              "Paslanmaz çelik"
+            ],
+            [
+              "SECUMAX 363",
+              "363001",
+              "56 mm",
+              "134 x 8 x 65.5 mm",
+              "36,8 g",
+              "Paslanmaz çelik"
+            ]
+          ]
+        }
+      },
+      "en": null
+    }
+  },
+  {
+    "slug": "mdp-metal-dedektorunde-algilanabilen-bicaklar",
+    "parent": "emniyetli-bicaklar",
+    "brand": "Martor",
+    "names": {
+      "tr": "MDP – Metal Dedektöründe Algılanabilen Bıçaklar",
+      "en": "Knives Detectable in Metal Detectors"
+    },
+    "descriptions": {
+      "tr": "Metal dedektöründen geçebilen MDP bıçaklar; gıda ve ilaç üretimi için tasarlandı.",
+      "en": "MDP knives detectable in metal detectors; designed for food and pharmaceutical production."
+    },
+    "image": null,
+    "aliases": {
+      "tr": [],
+      "en": [
+        "knives-detectable-in-metal-detectors"
+      ]
+    },
+    "intro": {
+      "tr": {
+        "html": "MDP bıçaklarımız, aynı ismi taşıyan kesme aletlerimizle pek çok bakımdan aynıdır.  Bunlar da aynı güvenilir emniyet tekniklerine sahip ve aynı kesme malzemeleri için uygun.\nAma farklı olan nedir? MDP bıçaklarımız örneğin her zaman boyasızdır. Bu sayede boya parçalarının kopup düşmesi önlenir. Ayrıca MDP serimiz için yüksek kaliteli özel bir plastik kullanıyoruz. Bu plastiği plastik sanayisinden profesyonel bir iş ortağıyla geliştirdik.  Plastiğin dedektör tarafından algılanabildiği sayısız müşterideki gündelik çalışmalarda kendini kanıtladı.",
+        "specs": {
+          "columns": [
+            "ÜRÜN ADI",
+            "ÜRÜN NO",
+            "KESME DERİNLİĞİ",
+            "UÇ KULLANIMI",
+            "EBATLAR (U x G x Y)",
+            "Ürün ağırlığı",
+            "Temel malzemeler"
+          ],
+          "rows": [
+            [
+              "SECUMAX 320 MDP",
+              "32000771",
+              "4 mm",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "158 x 13 x 56 mm",
+              "60 g",
+              "Metal dedektörü tarafından algılanabilir plastik"
+            ],
+            [
+              "SECUNORM PROFI40 MDP",
+              "11900771",
+              "36 mm",
+              "TEK YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "143 x 17 x 31 mm",
+              "84,4 g",
+              "Metal dedektörü tarafından algılanabilir plastik, Alüminyum"
+            ],
+            [
+              "SECUNORM PROFI25 MDP",
+              "120700",
+              "21 mm",
+              "2 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "143 x 17 x 31 mm",
+              "84,5 g",
+              "Metal dedektörü tarafından algılanabilir plastik, Alüminyum"
+            ],
+            [
+              "SECUNORM HANDY MDP",
+              "447",
+              "9 mm",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "100 x 7.8 x 25.5 mm",
+              "37,5 g",
+              "Metal dedektörü tarafından algılanabilir plastik, Paslanmaz çelik"
+            ],
+            [
+              "SECUNORM SMARTCUT MDP",
+              "110700",
+              "12 mm",
+              "TEK YÖNLÜ, KULLAN-AT",
+              "110 x 12.5 x 25 mm",
+              "23,5 g",
+              "Metal dedektörü tarafından algılanabilir plastik"
+            ],
+            [
+              "SECUMAX 150 MDP",
+              "150007",
+              "6 mm",
+              "2 YÖNLÜ, KULLAN-AT",
+              "148 x 11 x 37.2 mm",
+              "31,2 g",
+              "Metal dedektörü tarafından algılanabilir plastik"
+            ],
+            [
+              "SECUMAX 145 MDP",
+              "145007",
+              "4 mm",
+              "2 YÖNLÜ, KULLAN-AT",
+              "118 x 4 x 35.4 mm",
+              "13,7 g",
+              "Metal dedektörü tarafından algılanabilir plastik"
+            ],
+            [
+              "SECUMAX POLYCUT MDP",
+              "8500772",
+              "3 mm",
+              "TEK YÖNLÜ, KULLAN-AT",
+              "76.1 x 3 x 45.1 mm",
+              "9,4 g",
+              "Metal dedektörü tarafından algılanabilir plastik"
+            ],
+            [
+              "SECUMAX HALKA BIÇAK MDP",
+              "307",
+              "6 mm",
+              "TEK YÖNLÜ, KULLAN-AT",
+              "34.3 x 23.2 x 18.4 mm",
+              "3,5 g",
+              "Metal dedektörü tarafından algılanabilir plastik"
+            ]
+          ]
+        }
+      },
+      "en": null
+    }
+  },
+  {
+    "slug": "secumax-gizli-kesici-uc",
+    "parent": "emniyetli-bicaklar",
+    "brand": "Martor",
+    "names": {
+      "tr": "SECUMAX – Gizli Kesici Uç",
+      "en": "SECUMAX – Hidden Cutting Edge"
+    },
+    "descriptions": {
+      "tr": "Kesici ucu gizlenen SECUMAX bıçaklar: yanlışlıkla temas edilemeyecek güvenlik.",
+      "en": "SECUMAX knives with hidden cutting edge: safety against accidental contact."
+    },
+    "image": null,
+    "aliases": {
+      "tr": [],
+      "en": [
+        "secumax-hidden-cutting-edge"
+      ]
+    },
+    "intro": {
+      "tr": {
+        "html": "Kesici uç açıkta değildir, kullanıcısının ve kesim işlemi hariç malzemenin değmeyeceği yerde bulunur.  Ek olarak kesici ucu dışarı çıkaran bir itici tuş bulunmaz. Bu da size en üst düzeyde güvenlik sağlar.  Hem kesme sonucu yaralanmalardan hem de hasardan korunur. Sağ ve sol elini kullananlar için uygundur.<br /><br />",
+        "specs": {
+          "columns": [
+            "ÜRÜN ADI",
+            "ÜRÜN NO",
+            "KESME DERİNLİĞİ",
+            "UÇ KULLANIMI",
+            "EBATLAR (U x G x Y)",
+            "Ürün ağırlığı",
+            "Temel malzemeler"
+          ],
+          "rows": [
+            [
+              "SECUMAX 350",
+              "350001",
+              "6 MM",
+              "2 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "154 x 12 x 40 mm",
+              "38 g",
+              "Cam elyaf takviyeli plastik"
+            ],
+            [
+              "SECUMAX 320",
+              "32000110",
+              "4 MM",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "158 x 13 x 56 mm",
+              "47,4 g",
+              "Cam elyaf takviyeli plastik"
+            ],
+            [
+              "SECUMAX EASYSAFE",
+              "121001",
+              "7 MM",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "207 x 10 x 66 mm",
+              "66,3 g",
+              "Cam elyaf takviyeli plastik"
+            ],
+            [
+              "SECUMAX OPTICUT",
+              "437",
+              "7 MM",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "112 x 19 x 84.5 mm",
+              "74 g",
+              "Plastik"
+            ],
+            [
+              "SECUMAX MOBILEX",
+              "45137",
+              "2-10 MM",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "114 x 15.5 x 59 mm",
+              "47,5 g",
+              "Plastik"
+            ],
+            [
+              "SECUMAX SNITTY",
+              "43037",
+              "2 MM",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "100 x 10.5 x 58 mm",
+              "28 g",
+              "Plastik"
+            ],
+            [
+              "SECUMAX COUPPY",
+              "43136",
+              "3 MM",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "88 x 10.5 x 58 mm",
+              "19 g",
+              "Plastik"
+            ],
+            [
+              "SECUMAX 150",
+              "150001",
+              "6 MM",
+              "2 YÖNLÜ, KULLAN-AT",
+              "148 x 11 x 37.2 mm",
+              "24,4 g",
+              "Cam elyaf takviyeli plastik"
+            ],
+            [
+              "SECUMAX 145",
+              "145001",
+              "4 MM",
+              "2 YÖNLÜ, KULLAN-AT",
+              "118 x 4 x 35.4 mm",
+              "12 g",
+              "Cam elyaf takviyeli plastik"
+            ],
+            [
+              "SECUMAX POLYCUT",
+              "85000",
+              "3 MM",
+              "TEK YÖNLÜ, KULLAN-AT",
+              "76.1 x 3 x 45.1 mm",
+              "6,6 g",
+              "Plastik"
+            ],
+            [
+              "SECUMAX PLASTICUT",
+              "3469",
+              "4 MM",
+              "TEK YÖNLÜ, KULLAN-AT",
+              "76 x 3 x 45.5 mm",
+              "7,2 g",
+              "Plastik"
+            ],
+            [
+              "SECUMAX CARDYCUT",
+              "7469",
+              "2 MM",
+              "TEK YÖNLÜ, KULLAN-AT",
+              "71.3 x 2 x 43 mm",
+              "6 g",
+              "Plastik"
+            ],
+            [
+              "SECUMAX TRENNEX",
+              "62000",
+              "3 MM",
+              "TEK YÖNLÜ, KULLAN-AT",
+              "76 x 3 x 45.1 mm",
+              "7 g",
+              "Plastik"
+            ],
+            [
+              "SECUMAX VISICUT",
+              "470",
+              "3 MM",
+              "TEK YÖNLÜ, KULLAN-AT",
+              "69.6 x 2.5 x 41.6 mm",
+              "6,6 g",
+              "Plastik"
+            ],
+            [
+              "SECUMAX SALVEX SOS",
+              "538",
+              "6 MM",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "187 x 24 x 77 mm",
+              "140 g",
+              "Plastik"
+            ]
+          ]
+        }
+      },
+      "en": null
+    }
+  },
+  {
+    "slug": "secunorm-yari-otomatik-kesici-uc-geri-cekme",
+    "parent": "emniyetli-bicaklar",
+    "brand": "Martor",
+    "names": {
+      "tr": "SECUNORM – Yarı Otomatik Kesici Uç Geri Çekme",
+      "en": "SECUNORM – Semi-Automatic Insert Retraction"
+    },
+    "descriptions": {
+      "tr": "Kesici ucu yarı otomatik geri çekilen SECUNORM bıçaklar.",
+      "en": "SECUNORM knives with semi-automatic blade retraction."
+    },
+    "image": null,
+    "aliases": {
+      "tr": [],
+      "en": [
+        "secunorm-semi-automatic-insert-retraction"
+      ]
+    },
+    "intro": {
+      "tr": {
+        "html": "Kesici uç dışarı çıkarılır, malzemeye saplanır, parmaklar itici tuştan çekilir; kesim işlemi tamamlandığında uç gövde içine çekilir ve kaybolur.",
+        "specs": {
+          "columns": [
+            "ÜRÜN ADI",
+            "ÜRÜN NO",
+            "KESME DERİNLİĞİ",
+            "UÇ KULLANIMI",
+            "EBATLAR (U x G x Y)",
+            "Ürün ağırlığı",
+            "Temel malzemeler"
+          ],
+          "rows": [
+            [
+              "SECUNORM MULTISAFE",
+              "8152",
+              "22 mm",
+              "2 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "142 x 17 x 38.5 mm",
+              "150 g",
+              "Çinko"
+            ],
+            [
+              "SECUNORM 500",
+              "50000110",
+              "17 mm",
+              "2 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "143 x 16 x 36 mm",
+              "72,5 g",
+              "Alüminyum"
+            ],
+            [
+              "SECUNORM 300",
+              "30000110",
+              "17 mm",
+              "2 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "143 x 16 x 36 mm",
+              "52 g",
+              "Cam elyaf takviyeli plastik"
+            ],
+            [
+              "SECUNORM 525",
+              "52500410",
+              "21 mm",
+              "2 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "143 x 17 x 31 mm",
+              "81 g",
+              "Alüminyum"
+            ],
+            [
+              "SECUNORM 540",
+              "54000410",
+              "36 mm",
+              "TEK YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "143 x 17 x 31 mm",
+              "79 g",
+              "Alüminyum"
+            ],
+            [
+              "SECUNORM 380",
+              "380001",
+              "73 mm",
+              "TEK YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "170.5 x 20 x 34 mm",
+              "78 g",
+              "Cam elyaf takviyeli plastik"
+            ],
+            [
+              "SECUNORM MIZAR",
+              "125001",
+              "15 mm",
+              "2 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "139 x 15.6 x 50.5 mm",
+              "59 g",
+              "Cam elyaf takviyeli plastik"
+            ],
+            [
+              "SECUNORM 175",
+              "175001",
+              "10 mm",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "109.5 x 13.5 x 34 mm",
+              "31 g",
+              "Cam elyaf takviyeli plastik"
+            ],
+            [
+              "SECUNORM 185",
+              "18500410",
+              "9 mm",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "102 x 26 x 7.2 mm",
+              "32 g",
+              "Paslanmaz çelik"
+            ],
+            [
+              "SECUNORM HANDY",
+              "445",
+              "9 mm",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "100 x 7.8 x 25.5 mm",
+              "35 g",
+              "Çelik"
+            ],
+            [
+              "SECUNORM SMARTCUT",
+              "110000",
+              "12 mm",
+              "TEK YÖNLÜ, KULLAN-AT",
+              "110 x 12.5 x 25 mm",
+              "17,2 g",
+              "Plastik"
+            ]
+          ]
+        }
+      },
+      "en": null
+    }
+  },
+  {
+    "slug": "secupro-tam-otomatik-kesici-uc-geri-cekme",
+    "parent": "emniyetli-bicaklar",
+    "brand": "Martor",
+    "names": {
+      "tr": "SECUPRO – Tam Otomatik Kesici Uç Geri Çekme",
+      "en": "SECUPRO – Fully Automatic Cutter Retraction"
+    },
+    "descriptions": {
+      "tr": "Kesici ucu tam otomatik geri çekilen SECUPRO bıçaklar.",
+      "en": "SECUPRO knives with fully automatic blade retraction."
+    },
+    "image": null,
+    "aliases": {
+      "tr": [],
+      "en": [
+        "secupro-fully-automatic-cutter-retraction"
+      ]
+    },
+    "intro": {
+      "tr": {
+        "html": "Akıllı bir kesme aleti. Kesici uç gövdeden çıkarılır, malzemeye saplanır, kesim işlemi yapılır, kesilen malzemeyi terk eden kesici uç gövde içine kendiliğinden geri çekilir. İtici tuşu veya kolu basılı tutmaya devam etseniz bile. Sağ ve sol elini kullananlar için uygundur.",
+        "specs": {
+          "columns": [
+            "ÜRÜN ADI",
+            "ÜRÜN NO",
+            "KESME DERİNLİĞİ",
+            "UÇ KULLANIMI",
+            "EBATLAR (U x G x Y)",
+            "Ürün ağırlığı",
+            "Temel malzemeler"
+          ],
+          "rows": [
+            [
+              "SECUPRO 625",
+              "625001",
+              "21 mm",
+              "2 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "154 x 22 x 59 mm",
+              "151 g",
+              "Alüminyum"
+            ],
+            [
+              "SECUPRO MARTEGO",
+              "122001",
+              "9 mm",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "155 x 18 x 48.5 mm",
+              "105 g",
+              "Alüminyum"
+            ],
+            [
+              "SECUPRO MERAK",
+              "124001",
+              "9 mm",
+              "4 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "128 x 18 x 50 mm",
+              "59 g",
+              "Cam elyaf takviyeli plastik"
+            ],
+            [
+              "SECUPRO MEGASAFE",
+              "116001",
+              "20 mm",
+              "2 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "153 x 26 x 38 mm",
+              "140 g",
+              "Alüminyum"
+            ],
+            [
+              "SECUPRO MAXISAFE",
+              "10139910",
+              "17 mm",
+              "2 YÖNLÜ DEĞİŞTİRİLEBİLİR UÇ",
+              "148 x 18 x 42 mm",
+              "64 g",
+              "Cam elyaf takviyeli plastik"
+            ]
+          ]
+        }
+      },
+      "en": null
+    }
+  },
+  {
+    "slug": "emniyetli-kaplar",
+    "parent": null,
+    "brand": "Justrite",
+    "names": {
+      "tr": "Emniyetli Kaplar",
+      "en": "Safety Containers"
+    },
+    "descriptions": {
+      "tr": "Justrite ve Röetzmeier emniyetli kaplarıyla yanıcı sıvıları güvenle depolayın ve aktarın.",
+      "en": "Store and transfer flammable liquids safely with Justrite and Röetzmeier safety containers."
+    },
+    "image": "/assets/img/products/emniyetli-kaplar.jpg",
+    "aliases": {
+      "tr": [],
+      "en": [
+        "safety-containers"
+      ]
+    },
+    "intro": {
+      "tr": null,
+      "en": null
+    }
+  },
+  {
+    "slug": "paslanmaz-celik-kaplar",
+    "parent": "emniyetli-kaplar",
+    "brand": "Röetzmeier",
+    "names": {
+      "tr": "Paslanmaz Çelik Kaplar",
+      "en": "Stainless Steel Containers"
+    },
+    "descriptions": {
+      "tr": "Röetzmeier paslanmaz çelik güvenli kaplar; hijyenik ve dayanıklı depolama.",
+      "en": "Röetzmeier stainless steel safety containers; hygienic and durable storage."
+    },
+    "image": "/assets/img/products/paslanmaz-celik-kaplar.jpg",
+    "aliases": {
+      "tr": [],
+      "en": [
+        "stainless-steel-containers"
+      ]
+    },
+    "intro": {
+      "tr": null,
+      "en": null
+    }
+  },
+  {
+    "slug": "hazneli-platformlar",
+    "parent": null,
+    "brand": "Justrite",
+    "names": {
+      "tr": "Hazneli Platformlar",
+      "en": "Platforms"
+    },
+    "descriptions": {
+      "tr": "Sızdırmaz hazneli platformlar ve varil istifleme sistemleriyle döküntüyü kontrol altında tutun.",
+      "en": "Control spills with spill containment pallets and barrel stacking systems."
+    },
+    "image": "/assets/img/products/hazneli-platformlar.jpg",
+    "aliases": {
+      "tr": [],
+      "en": [
+        "platforms"
+      ]
+    },
+    "intro": {
+      "tr": null,
+      "en": null
+    }
+  },
+  {
+    "slug": "varil-emniyet-urunleri",
+    "parent": "hazneli-platformlar",
+    "brand": "Justrite",
+    "names": {
+      "tr": "Varil Emniyet Ürünleri",
+      "en": "Barrel Safety Products"
+    },
+    "descriptions": {
+      "tr": "Varil hunileri, ventilleri, emniyet vanaları ve antistatik kablolar.",
+      "en": "Barrel funnels, valves, safety valves and antistatic cables."
+    },
+    "image": "/assets/img/products/varil-emniyet-urunleri.jpg",
+    "aliases": {
+      "tr": [],
+      "en": [
+        "barrel-safety-products"
+      ]
+    },
+    "intro": {
+      "tr": null,
+      "en": null
+    }
+  },
+  {
+    "slug": "guvenli-dolaplar",
+    "parent": null,
+    "brand": "Justrite",
+    "names": {
+      "tr": "Güvenli Dolaplar",
+      "en": "Safety Cabinets"
+    },
+    "descriptions": {
+      "tr": "Çelik ve polietilen güvenli dolaplarla kimyasal depolamayı standartlara uygun hale getirin.",
+      "en": "Make chemical storage compliant with steel and polyethylene safety cabinets."
+    },
+    "image": "/assets/img/products/guvenli-dolaplar.jpg",
+    "aliases": {
+      "tr": [],
+      "en": [
+        "safety-cabinets"
+      ]
+    },
+    "intro": {
+      "tr": null,
+      "en": null
+    }
+  },
+  {
+    "slug": "endustriyel-kullukler",
+    "parent": null,
+    "brand": "Justrite",
+    "names": {
+      "tr": "Endüstriyel Küllükler",
+      "en": "Industrial Ashtrays"
+    },
+    "descriptions": {
+      "tr": "Yangın güvenliğine uygun Justrite endüstriyel küllüklerle açık alan risklerini azaltın.",
+      "en": "Reduce open-area risks with fire-safe Justrite industrial ashtrays."
+    },
+    "image": "/assets/img/products/endustriyel-kullukler.jpg",
+    "aliases": {
+      "tr": [],
+      "en": [
+        "industrial-ashtrays"
+      ]
+    },
+    "intro": {
+      "tr": null,
+      "en": null
+    }
+  },
+  {
+    "slug": "seramik-uclu-kesiciler",
+    "parent": null,
+    "brand": "Martor",
+    "names": {
+      "tr": "Seramik Uçlu Kesiciler",
+      "en": "Ceramic Blade Cutters"
+    },
+    "descriptions": {
+      "tr": "Kıvılcımsız kesim yapan seramik uçlu kesiciler. Ürün bilgisi için bizimle iletişime geçin.",
+      "en": "Ceramic blade cutters for spark-free cutting. Contact us for product information."
+    },
+    "image": "/assets/img/products/seramik-uclu-kesiciler.jpg",
+    "aliases": {
+      "tr": [],
+      "en": []
+    },
+    "intro": {
+      "tr": null,
+      "en": null
+    }
+  }
+]

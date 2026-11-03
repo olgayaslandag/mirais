@@ -1,0 +1,90 @@
+MIRA İŞ SAĞLIĞI KATALOG DERLEME RAPORU
+========================================================================
+Kaynak CSV      : wc-product-export-26-10-2026-1793029084996.csv
+Okunan satır    : 137
+Yayınlanan      : 130
+Yayın dışı (7) : 198, 257, 396, 397, 398, 399, 400
+TR ürün         : 68
+EN ürün         : 68 (61 özgün + 7 TR fallback)
+Çeviri grubu    : 61
+Kategori        : 14
+Yönlendirme    : 192
+
+KATEGORİ HARİTASI
+------------------------------------------------------------------------
+emniyetli-bicaklar  (üst: -)  marka: Martor  TR: Emniyetli Bıçaklar | EN: Safety Knifes
+aksesuarlar  (üst: emniyetli-bicaklar)  marka: Martor  TR: Aksesuarlar | EN: Accessories
+guvenli-makaslar  (üst: emniyetli-bicaklar)  marka: Martor  TR: Güvenli Makaslar | EN: Safe Scissors
+mdp-metal-dedektorunde-algilanabilen-bicaklar  (üst: emniyetli-bicaklar)  marka: Martor  TR: MDP – Metal Dedektöründe Algılanabilen Bıçaklar | EN: Knives Detectable in Metal Detectors
+secumax-gizli-kesici-uc  (üst: emniyetli-bicaklar)  marka: Martor  TR: SECUMAX – Gizli Kesici Uç | EN: SECUMAX – Hidden Cutting Edge
+secunorm-yari-otomatik-kesici-uc-geri-cekme  (üst: emniyetli-bicaklar)  marka: Martor  TR: SECUNORM – Yarı Otomatik Kesici Uç Geri Çekme | EN: SECUNORM – Semi-Automatic Insert Retraction
+secupro-tam-otomatik-kesici-uc-geri-cekme  (üst: emniyetli-bicaklar)  marka: Martor  TR: SECUPRO – Tam Otomatik Kesici Uç Geri Çekme | EN: SECUPRO – Fully Automatic Cutter Retraction
+emniyetli-kaplar  (üst: -)  marka: Justrite  TR: Emniyetli Kaplar | EN: Safety Containers
+paslanmaz-celik-kaplar  (üst: emniyetli-kaplar)  marka: Röetzmeier  TR: Paslanmaz Çelik Kaplar | EN: Stainless Steel Containers
+hazneli-platformlar  (üst: -)  marka: Justrite  TR: Hazneli Platformlar | EN: Platforms
+varil-emniyet-urunleri  (üst: hazneli-platformlar)  marka: Justrite  TR: Varil Emniyet Ürünleri | EN: Barrel Safety Products
+guvenli-dolaplar  (üst: -)  marka: Justrite  TR: Güvenli Dolaplar | EN: Safety Cabinets
+endustriyel-kullukler  (üst: -)  marka: Justrite  TR: Endüstriyel Küllükler | EN: Industrial Ashtrays
+seramik-uclu-kesiciler  (üst: -)  marka: Martor  TR: Seramik Uçlu Kesiciler | EN: Ceramic Blade Cutters
+
+BİLİNMEYEN KATEGORİ (0)
+------------------------------------------------------------------------
+Yok.
+
+YİNELENEN ÜRÜN (1)
+------------------------------------------------------------------------
+  TR  #589 -> #591  SECUMAX OPTICUT
+
+EN ÇEVİRİSİ EKSİK (TR fallback, 7)
+------------------------------------------------------------------------
+  #155  Çelik Güvenli Dolaplar  (celik-guvenli-dolaplar)
+  #253  Güvenli Taşıma Kapları  (guvenli-tasima-kaplari)
+  #872  SECUPRO 425  (secupro-425)
+  #874  SECUMAX 370  (secumax-370)
+  #877  SECUPLUS 567 MDP  (secuplus-567-mdp)
+  #879  SECUPLUS 568  (secuplus-568)
+  #881  TOOL BELT  (tool-belt)
+
+BOŞ AÇIKLAMA METNİ (6)
+------------------------------------------------------------------------
+  #155  Çelik Güvenli Dolaplar  (spec/tab mevcut, metin yok — içerik borcu)
+  #233  Güvenli Variller  (spec/tab mevcut, metin yok — içerik borcu)
+  #249  Güvenli Kaplar  (spec/tab mevcut, metin yok — içerik borcu)
+  #253  Güvenli Taşıma Kapları  (spec/tab mevcut, metin yok — içerik borcu)
+  #823  Safety Cans  (spec/tab mevcut, metin yok — içerik borcu)
+  #824  Safe Barrels  (spec/tab mevcut, metin yok — içerik borcu)
+
+SEKMЕ PARSE HATASI (0)
+------------------------------------------------------------------------
+Yok.
+
+GÖRSELİ OLMAYAN ÜRÜN (0)
+------------------------------------------------------------------------
+Yok.
+
+MARKA ALANI BOŞ (tahmin edildi, 1)
+------------------------------------------------------------------------
+  #874  SECUMAX 370 -> Martor
+
+EN ADI BOŞ (TR adı kullanıldı, 1)
+------------------------------------------------------------------------
+  #769  SECUMAX 350  (grup pll_68ecb55549294)
+
+KATEGORİ TANITIM KAYNAKLARI (yayın dışı landing satırları)
+------------------------------------------------------------------------
+  secumax-gizli-kesici-uc  <- #396
+  secupro-tam-otomatik-kesici-uc-geri-cekme  <- #397
+  secunorm-yari-otomatik-kesici-uc-geri-cekme  <- #398
+  mdp-metal-dedektorunde-algilanabilen-bicaklar  <- #399
+  guvenli-makaslar  <- #400
+
+YÖNLENDİRME ÖZETİ
+------------------------------------------------------------------------
+  kategori : 54
+  ürün    : 124
+  sayfa   : 14
+
+NOT: Ürün permalink kalıbı product-sitemap.xml ile doğrulandı:
+     TR: /urun/<slug>/   EN: /en/urun/<slug>/
+     Yeni: TR /urun/<slug>   EN /en/product/<slug>
+

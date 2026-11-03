@@ -104,6 +104,7 @@ export default async function ProductPage({
     name: product.name,
     description: product.seoDescription || product.shortDescription || product.name,
     image: product.images,
+    url: `${locale === "tr" ? "/urun" : "/product"}/${product.slug}`,
     brand: product.brand,
   });
 

@@ -2,10 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Plus } from "lucide-react";
-import { corporateAccordion, corporateFacts } from "@/data/content";
-// Sayı animasyonu: `start` gelince 0'dan hedefe sayar ("23K+" → 23 + "K+")
-// Başlatma kararı ebeveyndeki tek observer'a ait — her sayı kendi dar
-// elementini ayrı izlemeye kalkınca bazıları tetiklenemiyordu
+
+type Fact = { value: string; label: string };
+type AccordionItem = { title: string; body: string };
+type CorporateIntroProps = {
+  eyebrow: string;
+  title: string;
+  text: string | string[];
+  facts: Fact[];
+  accordion: AccordionItem[];
+  imageAlt: string;
+};
+
 function CountUp({ value, start }: { value: string; start: boolean }) {
   const [text, setText] = useState(value);
 
@@ -33,7 +41,7 @@ function CountUp({ value, start }: { value: string; start: boolean }) {
 }
 
 // Kurumsal blok: görsel + istatistik + akordeon
-export default function CorporateIntro() {
+export default function CorporateIntro({ eyebrow, title, text, facts, accordion, imageAlt }: CorporateIntroProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const factsRef = useRef<HTMLDivElement | null>(null);
   const [factsInView, setFactsInView] = useState(false);
@@ -70,12 +78,12 @@ export default function CorporateIntro() {
         <div
           className="corporate-intro__visuals reveal"
           data-reveal="left"
-          aria-label="Mira İş Sağlığı ve Güvenliği Ekipmanları iş güvenliği ekipmanları ve güvenlik sistemleri"
+          aria-label={imageAlt}
         >
           <div className="corporate-video" aria-hidden="true">
             <img
               src="/assets/img/corporate/baretler-renkli.jpg"
-              alt=""
+              alt={imageAlt}
               loading="lazy"
               decoding="async"
             />
@@ -83,20 +91,19 @@ export default function CorporateIntro() {
           <div className="corporate-overlay" aria-hidden="true" />
         </div>
         <div className="corporate-intro__statement reveal" data-reveal="right">
-          <p className="eyebrow">KURUMSAL</p>
-          <h2 id="corporate-title">Güvencesi bizde, işinizde güvenliğiniz.</h2>
-          <p className="section-desc">
-            Mira İş Sağlığı ve Güvenliği Ekipmanları olarak, iş güvenliğinde
-            Martor, Justrite ve Röetzmeier markalarıyla Türkiye'nin ve bölgenin
-            lider iş sağlığı ve güvenlik ekipmanları distribütörüyüz.
-            Kaliteli toz boyama, izolasyon ve mekanik işlem çözümlerimizle, yapı ve
-            endüstriyel sektörlerde çalışanların iş güvenliğini sağlıyor, işletmelerin
-            risklerini en aza indiriyoruz.
-          </p>
+          <p className="eyebrow">{eyebrow}</p>
+          <h2 id="corporate-title">{title}</h2>
+          <div className="section-desc">
+            {Array.isArray(text) ? (
+              text.map((paragraph, i) => <p key={i}>{paragraph}</p>)
+            ) : (
+              <p>{text}</p>
+            )}
+          </div>
           <div className="corporate-intro__details">
             <div className="corporate-intro__content">
               <div className="corporate-intro__facts" ref={factsRef}>
-                {corporateFacts.map((fact) => (
+                {facts.map((fact) => (
                   <div key={fact.label}>
                     <CountUp value={fact.value} start={factsInView} />
                     <span>{fact.label}</span>
@@ -104,7 +111,7 @@ export default function CorporateIntro() {
                 ))}
               </div>
               <div className="corporate-accordion">
-                {corporateAccordion.map((item, i) => {
+                {accordion.map((item, i) => {
                   const open = openIndex === i;
                   return (
                     <div

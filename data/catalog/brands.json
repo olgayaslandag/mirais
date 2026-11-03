@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "martor",
+    "names": {
+      "tr": "Martor",
+      "en": "Martor"
+    },
+    "logo": "/assets/img/brands/martor.png",
+    "site": "https://www.martor.de",
+    "descriptions": {
+      "tr": "Alman menşeli Martor; emniyetli bıçak, kesici ve otomatik geri çekmeli kesici uç sistemlerinin üreticisidir.",
+      "en": "German manufacturer Martor produces safety knives, cutters and automatic blade retraction systems."
+    }
+  },
+  {
+    "slug": "justrite",
+    "names": {
+      "tr": "Justrite",
+      "en": "Justrite"
+    },
+    "logo": "/assets/img/brands/justrite.png",
+    "site": "https://www.justritemfg.com",
+    "descriptions": {
+      "tr": "Justrite; yangın ve kimyasal depolama güvenliği, emniyetli kaplar, dolaplar ve sızdırma önleme ürünleri sunar.",
+      "en": "Justrite provides fire and chemical storage safety: safety containers, cabinets and spill containment products."
+    }
+  },
+  {
+    "slug": "roetzmeier",
+    "names": {
+      "tr": "Röetzmeier",
+      "en": "Röetzmeier"
+    },
+    "logo": "/assets/img/brands/roetzmeier.png",
+    "site": "https://www.roetzmeier.de",
+    "descriptions": {
+      "tr": "Röetzmeier; paslanmaz çelik emniyetli kaplar, variller ve hijyenik depolama çözümleri üretir.",
+      "en": "Röetzmeier manufactures stainless steel safety containers, barrels and hygienic storage solutions."
+    }
+  }
+]

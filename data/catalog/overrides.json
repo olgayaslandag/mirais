@@ -1,0 +1,138 @@
+{
+  "_comment": "Elle düzeltmeler buraya yazılır ve scripts/build-catalog.mjs tarafından en son uygulanır. Anahtar: Ürün ID değeri (string).",
+  "products": {
+    "566": {
+      "specs": {
+        "columns": [
+          "ÜRÜN ADI",
+          "ÜRÜN NO",
+          "KESME UZUNLUĞU",
+          "EBATLAR (U x G x Y)",
+          "Ürün ağırlığı",
+          "Temel malzemeler"
+        ],
+        "rows": [
+          [
+            "SECUMAX 564",
+            "564001",
+            "80 mm",
+            "218 x 12 x 82 mm",
+            "93 g",
+            "Paslanmaz çelik"
+          ]
+        ]
+      }
+    },
+    "567": {
+      "specs": {
+        "columns": [
+          "ÜRÜN ADI",
+          "ÜRÜN NO",
+          "KESME UZUNLUĞU",
+          "EBATLAR (U x G x Y)",
+          "Ürün ağırlığı",
+          "Temel malzemeler"
+        ],
+        "rows": [
+          [
+            "SECUMAX 565",
+            "565001",
+            "70 mm",
+            "216 x 13 x 83 mm",
+            "122 g",
+            "Paslanmaz çelik"
+          ]
+        ]
+      }
+    },
+    "568": {
+      "specs": {
+        "columns": [
+          "ÜRÜN ADI",
+          "ÜRÜN NO",
+          "KESME UZUNLUĞU",
+          "EBATLAR (U x G x Y)",
+          "Ürün ağırlığı",
+          "Temel malzemeler"
+        ],
+        "rows": [
+          [
+            "SECUMAX 363",
+            "363001",
+            "56 mm",
+            "134 x 8 x 65.5 mm",
+            "36,8 g",
+            "Paslanmaz çelik"
+          ]
+        ]
+      }
+    },
+    "771": {
+      "specs": {
+        "columns": [
+          "ÜRÜN ADI",
+          "ÜRÜN NO",
+          "KESME UZUNLUĞU",
+          "EBATLAR (U x G x Y)",
+          "Ürün ağırlığı",
+          "Temel malzemeler"
+        ],
+        "rows": [
+          [
+            "SECUMAX 564",
+            "564001",
+            "80 mm",
+            "218 x 12 x 82 mm",
+            "93 g",
+            "Paslanmaz çelik"
+          ]
+        ]
+      }
+    },
+    "772": {
+      "specs": {
+        "columns": [
+          "ÜRÜN ADI",
+          "ÜRÜN NO",
+          "KESME UZUNLUĞU",
+          "EBATLAR (U x G x Y)",
+          "Ürün ağırlığı",
+          "Temel malzemeler"
+        ],
+        "rows": [
+          [
+            "SECUMAX 565",
+            "565001",
+            "70 mm",
+            "216 x 13 x 83 mm",
+            "122 g",
+            "Paslanmaz çelik"
+          ]
+        ]
+      }
+    },
+    "770": {
+      "specs": {
+        "columns": [
+          "ÜRÜN ADI",
+          "ÜRÜN NO",
+          "KESME UZUNLUĞU",
+          "EBATLAR (U x G x Y)",
+          "Ürün ağırlığı",
+          "Temel malzemeler"
+        ],
+        "rows": [
+          [
+            "SECUMAX 363",
+            "363001",
+            "56 mm",
+            "134 x 8 x 65.5 mm",
+            "36,8 g",
+            "Paslanmaz çelik"
+          ]
+        ]
+      }
+    }
+  },
+  "categories": {}
+}

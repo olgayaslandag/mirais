@@ -2,15 +2,28 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { heroSlides, HERO_AUTOPLAY_MS } from "@/data/content";
 import HeroVideo from "./HeroVideo";
 
-// Hero slider: slayt başına video + metin, otomatik geçiş + oklar + gösterge
-export default function Hero() {
+type HeroSlide = {
+  index: string;
+  videoId: string;
+  eyebrow: string;
+  title: string[];
+  lead: string;
+};
+
+type HeroProps = {
+  slides: HeroSlide[];
+  autoplayMs: number;
+  ctaLabel: string;
+  scrollLabel: string;
+};
+
+export default function Hero({ slides, autoplayMs, ctaLabel, scrollLabel }: HeroProps) {
   const [active, setActive] = useState(0);
   const pausedRef = useRef(false);
   const bgRef = useRef<HTMLDivElement | null>(null);
-  const count = heroSlides.length;
+  const count = slides.length;
 
   // Slayt değişiminde zemin: blur'dan nete dönüş animasyonunu yeniden tetikle
   // (HeroVideo remount edilmez, sadece kapsayıcıda animasyon restart yapılır)
@@ -38,11 +51,11 @@ export default function Hero() {
       if (!pausedRef.current && !document.hidden) {
         setActive((i) => (i + 1) % count);
       }
-    }, HERO_AUTOPLAY_MS);
+    }, autoplayMs);
     return () => window.clearInterval(timer);
   }, [count]);
 
-  const slide = heroSlides[active];
+  const slide = slides[active];
 
   return (
     <section
@@ -77,7 +90,7 @@ export default function Hero() {
           <p className="lead hero-anim" style={{ ["--d" as string]: "0.46s" }}>{slide.lead}</p>
           <span className="hero-anim hero-cta" style={{ ["--d" as string]: "0.6s" }}>
             <a className="btn btn-sm btn-primary" href="#corporate">
-              HAKKIMIZDA <ArrowRight size={16} />
+              {ctaLabel} <ArrowRight size={16} />
             </a>
           </span>
         </div>
@@ -87,7 +100,7 @@ export default function Hero() {
             aria-label="Hero slaytları"
             role="tablist"
           >
-            {heroSlides.map((s, i) =>
+            {slides.map((s, i) =>
               i === active ? (
                 <strong key={s.index} role="tab" aria-selected="true">
                   {s.index}
@@ -118,11 +131,11 @@ export default function Hero() {
       </div>
       {/* Otomatik geçiş ilerleme çizgisi + kaydır işareti */}
       <div className="hero-progress" aria-hidden="true">
-        <span key={active} className="hero-progress__bar" style={{ ["--hero-ms" as string]: `${HERO_AUTOPLAY_MS}ms` }} />
+        <span key={active} className="hero-progress__bar" style={{ ["--hero-ms" as string]: `${autoplayMs}ms` }} />
       </div>
       <a className="hero-scroll" href="#corporate" aria-label="Aşağı kaydır">
         <span className="hero-scroll__mouse"><span className="hero-scroll__wheel" /></span>
-        <span className="hero-scroll__text">KEŞFET</span>
+        <span className="hero-scroll__text">{scrollLabel}</span>
       </a>
     </section>
   );
