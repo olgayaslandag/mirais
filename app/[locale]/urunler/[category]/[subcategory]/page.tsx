@@ -127,8 +127,8 @@ export default async function SubcategoryPage({
               <div className="sibling-list">
                 <h2>{tCategory("subcategories")}</h2>
                 <ul>
-                  {siblings.map((sibling) => (
-                    <li key={sibling.slug}>
+                  {siblings.map((sibling, siblingIndex) => (
+                    <li key={`${sibling.slug}-${siblingIndex}`}>
                       <Link
                         href={categoryHref(parent.slug, sibling.slug)}
                         aria-current={sibling.slug === entry.slug ? "page" : undefined}

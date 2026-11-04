@@ -105,7 +105,7 @@ export default function Preloader() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/img/mirais-logo-white.svg"
-            alt="Mira İş Sağlığı ve Güvenliği Ekipmanları A.Ş."
+            alt="Mira"
             width={220}
             height={120}
             draggable={false}

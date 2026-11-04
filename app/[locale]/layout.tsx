@@ -18,11 +18,11 @@ import "../globals.css";
 // bilinmeyen tek segmentli yollar (ör. /xyz.png) SSR'da çökmez.
 export const dynamicParams = true;
 
-// Rubik (değişken font, latin alt kümesi) repoda yerelleştirildi:
+// Rubik (değişken font, latin + latin-ext alt kümeleri birleştirilmiş) repoda yerelleştirildi:
 // build sırasında dış font servisi çağrısı yapılmaz (ağ bağımsız, tekrarlanabilir build).
-// Latin alt kümesi Türkçe karakterleri (ç ğ ı İ ö ş ü) de kapsar.
+// latin-ext Türkçe karakterleri (ğ Ğ İ ı ş Ş) de kapsar; tek dosyada tam kapsam.
 const rubik = localFont({
-  src: "../../assets/fonts/rubik-latin.woff2",
+  src: "../../assets/fonts/rubik.woff2",
   weight: "300 800",
   style: "normal",
   display: "swap",
@@ -143,17 +143,14 @@ export default async function LocaleLayout({
                   services: t("footer.services"),
                   addresses: t("footer.addresses"),
                   contact: t("footer.contact"),
-                  about: t("footer.about"),
-                  vision: t("footer.vision"),
-                  quality: t("footer.quality"),
-                  sustainability: t("footer.sustainability"),
-                  careers: t("footer.careers"),
+                  menu: t("footer.menu"),
                   rights: t("footer.rights"),
                   kvkk: t("footer.kvkk"),
                   privacy: t("footer.privacy"),
                   terms: t("footer.terms"),
                   cookies: t("footer.cookies"),
                 }}
+                menuLinks={navLinks}
                 offices={content.offices.map((office) => ({
                   city: office.city,
                   address: office.address,
@@ -165,7 +162,7 @@ export default async function LocaleLayout({
                 email={content.contactEmail}
                 whatsappUrl={content.whatsappUrl}
                 whatsappLabel={content.whatsappLabel}
-                copyright={`© ${new Date().getFullYear()} Mira İş Sağlığı ve Güvenliği Ekipmanları A.Ş. ${t("footer.rights")}`}
+                copyright={`© ${new Date().getFullYear()} Mira ${t("footer.rights")}`}
               />
             }
           >

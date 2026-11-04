@@ -56,10 +56,10 @@ export default function CategoryNav({
   return (
     <>
       <nav className="category-nav" aria-label="Ürün kategorileri">
-        {items.map((item) => {
+        {items.map((item, index) => {
           const isActive = item.slug === activeSlug;
           return (
-            <div className="category-nav__group" key={item.slug}>
+            <div className="category-nav__group" key={`${item.slug}-${index}`}>
               <Link
                 className={`category-nav__item${isActive ? " is-active" : ""}`}
                 href={categoryHref(item.slug)}
@@ -69,10 +69,10 @@ export default function CategoryNav({
               </Link>
               {item.children.length > 0 ? (
                 <ul className="category-nav__children">
-                  {item.children.map((child) => {
+                  {item.children.map((child, childIndex) => {
                     const isChildActive = child.slug === activeChildSlug;
                     return (
-                      <li key={child.slug}>
+                      <li key={`${item.slug}-${child.slug}-${childIndex}`}>
                         <Link
                           className={`category-nav__item category-nav__item--child${
                             isChildActive ? " is-active" : ""
@@ -99,11 +99,11 @@ export default function CategoryNav({
         onChange={(e) => handleChange(e.target.value)}
       >
         <option value="">{placeholderLabel}</option>
-        {items.map((item) => (
-          <optgroup key={item.slug} label={item.name}>
+        {items.map((item, index) => (
+          <optgroup key={`${item.slug}-${index}`} label={item.name}>
             <option value={`cat:${item.slug}`}>{item.name}</option>
-            {item.children.map((child) => (
-              <option key={child.slug} value={`cat:${item.slug}:${child.slug}`}>
+            {item.children.map((child, childIndex) => (
+              <option key={`${item.slug}-${child.slug}-${childIndex}`} value={`cat:${item.slug}:${child.slug}`}>
                 {child.name}
               </option>
             ))}

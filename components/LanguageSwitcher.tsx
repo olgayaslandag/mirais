@@ -38,18 +38,18 @@ export default function LanguageSwitcher({ locale }: { locale: Locale }) {
 
   return (
     <div className="lang-switch" role="group" aria-label="Dil seçimi">
-      {(["tr", "en"] as Locale[]).map((item) => {
+      {(["tr", "en"] as Locale[]).map((item, index) => {
         const isActive = item === locale;
         return (
           <a
-            key={item}
+            key={`${item}-${index}`}
             href={hrefFor(item)}
             hrefLang={item}
             lang={item}
             aria-current={isActive ? "true" : undefined}
             className={`lang-switch__item${isActive ? " is-active" : ""}`}
           >
-            {item.toUpperCase()}
+            {item.toLocaleUpperCase('tr-TR')}
           </a>
         );
       })}

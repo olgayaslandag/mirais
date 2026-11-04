@@ -9,6 +9,7 @@ import {
   MessageCircle,
   Phone,
 } from "lucide-react";
+import { Link, type RouteHref } from "@/lib/i18n/navigation";
 
 type Office = {
   city: string;
@@ -17,10 +18,16 @@ type Office = {
   fax: string;
 };
 
+type MenuLink = {
+  label: string;
+  href: RouteHref;
+};
+
 type SiteFooterProps = {
   locale: string;
   labels: Record<string, string>;
   offices: Office[];
+  menuLinks: MenuLink[];
   productLinks: { label: string; href: string }[];
   serviceLinks: { label: string; href: string }[];
   email: string;
@@ -56,6 +63,7 @@ export default function SiteFooter({
   locale,
   labels,
   offices,
+  menuLinks,
   productLinks,
   serviceLinks,
   email,
@@ -83,16 +91,17 @@ export default function SiteFooter({
     <footer id="contact" role="contentinfo">
       <div className="container footer-grid">
         <div className="reveal" data-reveal="up" data-delay="0">
-          <h3>{labels.about}</h3>
-          <a href="#corporate">{labels.vision}</a>
-          <a href="#corporate">{labels.quality}</a>
-          <a href="#corporate">{labels.sustainability}</a>
-          <a href="#corporate">{labels.careers}</a>
+          <h3>{labels.menu}</h3>
+          {menuLinks.map((link, index) => (
+            <Link key={`${link.href}-${index}`} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
         </div>
         <div className="reveal" data-reveal="up" data-delay="80">
           <h3>{labels.products}</h3>
           {productLinks.map((link, index) => (
-            <a key={`${link.href}-${index}`} href={link.href}>
+            <a key={`${link.label}-${link.href}-${index}`} href={link.href}>
               {link.label}
             </a>
           ))}
@@ -100,15 +109,15 @@ export default function SiteFooter({
         <div className="reveal" data-reveal="up" data-delay="160">
           <h3>{labels.services}</h3>
           {serviceLinks.map((link, index) => (
-            <a key={`${link.href}-${index}`} href={link.href}>
+            <a key={`${link.label}-${link.href}-${index}`} href={link.href}>
               {link.label}
             </a>
           ))}
         </div>
         <div className="reveal" data-reveal="up" data-delay="240">
           <h3>{labels.addresses}</h3>
-          {offices.map((office) => (
-            <div key={office.city} className="office-line">
+          {offices.map((office, index) => (
+            <div key={`${office.city}-${index}`} className="office-line">
               <span>
                 <strong>{office.city}:</strong> <br /> {office.address}
               </span>

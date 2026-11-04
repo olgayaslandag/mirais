@@ -144,8 +144,8 @@ export default function ContactForm() {
             onChange={(event) => update("subject", event.target.value)}
           >
             <option value="">—</option>
-            {contactSubjects.map((subject) => (
-              <option key={subject} value={subject}>
+            {contactSubjects.map((subject, index) => (
+              <option key={`${subject}-${index}`} value={subject}>
                 {t(`subjectOptions.${subject}`)}
               </option>
             ))}

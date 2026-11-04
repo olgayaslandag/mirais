@@ -41,7 +41,7 @@ export default function Solutions({ eyebrow, title, text, categories, allLabel, 
           <div className="product-grid">
             {categories.map((category, i) => (
               <Link
-                key={category.slug}
+                key={`${category.slug}-${i}`}
                 className="product-card reveal"
                 data-reveal="deal"
                 data-delay={(i % 4) * 140}

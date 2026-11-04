@@ -41,7 +41,7 @@ export default function Services({ eyebrow, title, text, services, allLabel, cta
           <div className="service-grid">
             {services.map((service, i) => (
               <a
-                key={service.title}
+                key={`${service.title}-${i}`}
                 className="service-card reveal"
                 data-reveal="deal"
                 data-delay={i * 140}

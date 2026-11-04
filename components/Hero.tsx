@@ -80,7 +80,7 @@ export default function Hero({ slides, autoplayMs, ctaLabel, scrollLabel }: Hero
           </p>
           <h1 id="hero-title" className="hero-anim" style={{ ["--d" as string]: "0.18s" }}>
             {slide.title.map((line, i) => (
-              <span key={line}>
+              <span key={`${slide.index}-${i}`}>
                 {line}
                 {i < slide.title.length - 1 && <br />}
               </span>
@@ -102,12 +102,12 @@ export default function Hero({ slides, autoplayMs, ctaLabel, scrollLabel }: Hero
           >
             {slides.map((s, i) =>
               i === active ? (
-                <strong key={s.index} role="tab" aria-selected="true">
+                <strong key={`${s.index}-${i}`} role="tab" aria-selected="true">
                   {s.index}
                 </strong>
               ) : (
                 <button
-                  key={s.index}
+                  key={`${s.index}-${i}`}
                   type="button"
                   role="tab"
                   aria-selected="false"

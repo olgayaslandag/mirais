@@ -118,8 +118,8 @@ export default async function CategoryPage({
 {children.length > 0 ? (
               <div className="subcategory-list">
                 <h2>{tCategory("subcategories")}</h2>
-                {children.map((child) => (
-                  <span key={child.slug} className="subcategory-tag">
+                {children.map((child, childIndex) => (
+                  <span key={`${child.slug}-${childIndex}`} className="subcategory-tag">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                       <path d="M20 6L9 17l-5-5"/>
                     </svg>

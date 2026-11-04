@@ -107,8 +107,8 @@ export default async function BrandPage({
               <div className="brand-panel__categories">
                 <h3>{t("categories")}</h3>
                 <ul>
-                  {categories.map((category) => (
-                    <li key={category.slug}>
+                  {categories.map((category, catIndex) => (
+                    <li key={`${category.slug}-${catIndex}`}>
                       <Link href={categoryHref(category.slug)}>
                         {category.names[locale]}
                       </Link>

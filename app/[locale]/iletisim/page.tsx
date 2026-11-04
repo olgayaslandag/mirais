@@ -62,8 +62,8 @@ export default async function ContactPage({
         <div className="container contact-layout">
           <div className="contact-layout__offices">
             <h2>{t("offices")}</h2>
-            {content.offices.map((office) => (
-              <article className="office-card reveal" data-reveal="up" key={office.city}>
+            {content.offices.map((office, index) => (
+              <article className="office-card reveal" data-reveal="up" key={`${office.city}-${index}`}>
                 <h3>
                   <MapPin size={18} aria-hidden="true" /> {office.city}
                 </h3>

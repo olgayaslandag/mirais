@@ -12,7 +12,6 @@ const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
   images: {
     remotePatterns: [
-      { protocol: "https", hostname: "mirais.com.tr", pathname: "/wp-content/uploads/**" },
       { protocol: "https", hostname: "i.ytimg.com" },
     ],
   },

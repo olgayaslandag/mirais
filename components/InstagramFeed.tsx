@@ -39,7 +39,7 @@ export default function InstagramFeed() {
         <div className="section-heading">
           <div className="section-heading-left">
             <p className="eyebrow">SOSYAL MEDYA</p>
-            <h2 id="instagram-title">Instagram&apos;da MİRAİS</h2>
+            <h2 id="instagram-title">Instagram&apos;da Mirais</h2>
             <p className="section-desc">
               Üretimden, projelerden ve fabrika yaşamından güncel kareler
               için bizi takip edin.
@@ -51,7 +51,7 @@ export default function InstagramFeed() {
             target="_blank"
             rel="noopener"
           >
-            @MIRAİS <ArrowRight size={16} />
+            @mira <ArrowRight size={16} />
           </a>
         </div>
 
@@ -66,7 +66,7 @@ export default function InstagramFeed() {
               ))
             : posts.map((post, i) => (
                 <a
-                  key={post.id}
+                  key={`${post.id}-${i}`}
                   className="insta-card reveal"
                   data-reveal="deal"
                   style={{ ["--reveal-delay" as string]: `${(i % 6) * 140}ms` }}
@@ -78,7 +78,7 @@ export default function InstagramFeed() {
                   <div className="insta-image">
                     <img
                       src={post.image}
-                      alt={post.caption.slice(0, 120) || "Mira İş Sağlığı ve Güvenliği Ekipmanları Instagram gönderisi"}
+                      alt={post.caption.slice(0, 120) || "Mira Instagram gönderisi"}
                       loading="lazy"
                       decoding="async"
                     />

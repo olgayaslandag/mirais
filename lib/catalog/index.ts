@@ -64,12 +64,56 @@ export type Brand = {
 };
 
 /* ------------------------------------------------------------------ *
+ * Yerel asset haritası: mirais.com.tr wp-content/uploads URL'leri indirilen
+ * yerel görsellere eşlenir (scripts/lib/image-map.mjs ile aynı kural).
+ * ------------------------------------------------------------------ */
+const IMAGE_PLACEHOLDER = "/assets/img/products/hazneli-platformlar.jpg";
+
+const TR_CHAR_MAP: Record<string, string> = {
+  ç: "c", Ç: "c", ğ: "g", Ğ: "g", ı: "i", I: "i", İ: "i", i: "i",
+  ö: "o", Ö: "o", ş: "s", Ş: "s", ü: "u", Ü: "u", â: "a", Â: "a",
+  î: "i", Î: "i", û: "u", Û: "u",
+};
+
+const UPLOADS_URL_RE =
+  /^https?:\/\/(?:(?:www\.)?mirais\.com\.tr|localhost\/mirais)\/wp-content\/uploads\/(.+)$/i;
+
+function normalizeImageUrl(url: string): string {
+  if (typeof url !== "string" || !url) return IMAGE_PLACEHOLDER;
+  const match = UPLOADS_URL_RE.exec(url.trim());
+  if (!match) return url;
+  let rel = match[1].split("?")[0].split("#")[0];
+  try {
+    rel = decodeURIComponent(rel);
+  } catch {
+    /* bozuk encoding: olduğu gibi devam */
+  }
+  const extMatch = /\.([a-z0-9]+)$/i.exec(rel);
+  const ext = (extMatch?.[1] ?? "jpg").toLowerCase();
+  const stem = extMatch ? rel.slice(0, rel.length - ext.length - 1) : rel;
+  const slug = stem
+    .replace(/[çÇğĞıIİiöÖşŞüÜâÂîÎûÛ]/g, (ch) => TR_CHAR_MAP[ch] ?? ch)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return `/assets/img/products/${slug || "image"}.${ext}`;
+}
+
+/* ------------------------------------------------------------------ *
  * Ham veri (build script'i tarafından üretilmiş, elle düzeltilmiş JSON)
  * ------------------------------------------------------------------ */
+const normalizeProductImages = (products: Product[]): Product[] =>
+  products.map((product) => ({
+    ...product,
+    images: product.images.map(normalizeImageUrl),
+  }));
+
 const categories = categoriesJson as Category[];
 const productsByLocale: Record<Locale, Product[]> = {
-  tr: productsTrJson as Product[],
-  en: productsEnJson as Product[],
+  tr: normalizeProductImages(productsTrJson as Product[]),
+  en: normalizeProductImages(productsEnJson as Product[]),
 };
 const brands = brandsJson as Brand[];
 

@@ -109,7 +109,7 @@ export default function CarouselControls({
         <div className="carousel-dots" role="tablist" aria-label={label}>
           {Array.from({ length: pageCount }, (_, i) => (
             <button
-              key={i}
+              key={`dot-${i}`}
               type="button"
               role="tab"
               aria-selected={i === page}

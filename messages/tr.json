@@ -1,8 +1,8 @@
 {
   "meta": {
-    "siteName": "Mira İş Sağlığı ve Güvenliği Ekipmanları",
+    "siteName": "Mira",
     "shortName": "Mira İş Sağlığı",
-    "title": "Mira İş Sağlığı ve Güvenliği Ekipmanları | Martor, Justrite, Röetzmeier",
+    "title": "Mira | Martor, Justrite, Röetzmeier",
     "description": "Emniyetli bıçak ve kesiciler, emniyetli kaplar, güvenli dolaplar, hazneli platformlar ve endüstriyel küllükler ile iş sağlığı ve güvenliği ekipmanlarında Türkiye distribütörlüğü."
   },
   "nav": {
@@ -47,7 +47,7 @@
     "heroScroll": "KEŞFET",
     "corporateEyebrow": "KURUMSAL",
     "corporateTitle": "Güvencesi bizde, işinizde güvenliğiniz.",
-    "corporateText": "Mira İş Sağlığı ve Güvenliği Ekipmanları olarak, iş güvenliğinde Martor, Justrite ve Röetzmeier markalarıyla Türkiye'nin ve bölgenin lider iş sağlığı ve güvenlik ekipmanları distribütörüyüz. İş güvenliği ürünlerinde sorunu kaynağında çözmeye yönelik ürünler sunuyor, işletmelerin risklerini en aza indiriyoruz.",
+    "corporateText": "Mira olarak, iş güvenliğinde Martor, Justrite ve Röetzmeier markalarıyla Türkiye'nin ve bölgenin lider iş sağlığı ve güvenlik ekipmanları distribütörüyüz. İş güvenliği ürünlerinde sorunu kaynağında çözmeye yönelik ürünler sunuyor, işletmelerin risklerini en aza indiriyoruz.",
     "solutionsEyebrow": "ÇÖZÜMLER",
     "solutionsTitle": "Fonksiyonel ve kaliteli çözümler",
     "solutionsText": "Değişen müşteri ihtiyaçlarına fonksiyonel ve kaliteli ürünler sunuyor, güvenilir çözüm ortağı olmaya devam ediyoruz.",
@@ -57,7 +57,7 @@
     "brandsEyebrow": "MARKALAR",
     "brandsTitle": "Temsilciliklerimiz",
     "instagramEyebrow": "SOSYAL MEDYA",
-    "instagramTitle": "Instagram'da MİRAİS",
+    "instagramTitle": "Instagram'da Mirais",
     "instagramText": "Üretimden, projelerden ve fabrika yaşamından güncel kareler için bizi takip edin."
   },
   "products": {
@@ -68,7 +68,9 @@
     "specs": "Teknik özellikler",
     "tabs": "Sekmeler",
     "videos": "Tanıtım videoları",
+    "videoEyebrow": "Video",
     "related": "Benzer ürünler",
+    "relatedEyebrow": "Benzer ürünler",
     "brand": "Marka",
     "sku": "Ürün kodu",
     "quoteTitle": "Bu ürün için teklif alın",
@@ -153,11 +155,7 @@
     "services": "HİZMETLER",
     "addresses": "ADRESLERİMİZ",
     "contact": "İLETİŞİM",
-    "about": "Hakkımızda",
-    "vision": "Vizyon ve Misyon",
-    "quality": "Kalite Politikamız",
-    "sustainability": "Sürdürülebilirlik",
-    "careers": "Kariyer",
+    "menu": "MENÜ",
     "rights": "Tüm hakları saklıdır.",
     "kvkk": "KVKK",
     "privacy": "Gizlilik Politikası",

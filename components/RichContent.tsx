@@ -15,10 +15,13 @@ export default function RichContent({
   className?: string;
 }) {
   if (!html) return null;
+  const wrapped = html
+    .replace(/<table(\s[^>]*)?>/g, '<div class="table-responsive"><table$1>')
+    .replace(/<\/table>/g, "</table></div>");
   return (
     <div
       className={className}
-      dangerouslySetInnerHTML={{ __html: html }}
+      dangerouslySetInnerHTML={{ __html: wrapped }}
     />
   );
 }

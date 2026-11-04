@@ -42,6 +42,7 @@ export default function ProductCard({
             sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 50vw, 25vw"
             onError={() => {
               if (fallbackImage && src !== fallbackImage) setSrc(fallbackImage);
+              else setSrc(null);
             }}
           />
         ) : (

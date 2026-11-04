@@ -63,7 +63,7 @@ export default async function ProductsPage({
           <div className="product-grid">
             {categories.map((category, index) => (
               <Link
-                key={category.slug}
+                key={`${category.slug}-${index}`}
                 className="product-card reveal"
                 data-reveal="deal"
                 data-delay={(index % 4) * 140}

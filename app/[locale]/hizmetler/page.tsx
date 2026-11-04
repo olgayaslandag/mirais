@@ -78,7 +78,7 @@ export default async function ServicesPage({
           <div className="service-grid">
             {content.services.map((service, i) => (
               <a
-                key={service.title}
+                key={`${service.title}-${i}`}
                 className="service-card reveal"
                 data-reveal="deal"
                 data-delay={i * 140}
@@ -122,7 +122,7 @@ export default async function ServicesPage({
           </div>
           <ol className="process-steps">
             {content.servicesPage.steps.map((step, index) => (
-              <li className="process-step reveal" data-reveal="up" key={step.title}>
+              <li className="process-step reveal" data-reveal="up" key={`${step.title}-${index}`}>
                 <span className="process-step__index">
                   {String(index + 1).padStart(2, "0")}
                 </span>

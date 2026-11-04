@@ -75,8 +75,8 @@ return (
             </div>
           </div>
           <ol className="timeline">
-            {content.corporate.timeline.map((item) => (
-              <li className="timeline__item reveal" data-reveal="up" key={item.year}>
+            {content.corporate.timeline.map((item, index) => (
+              <li className="timeline__item reveal" data-reveal="up" key={`${item.year}-${index}`}>
                 <span className="timeline__year">{item.year}</span>
                 <p>{item.text}</p>
               </li>
@@ -109,10 +109,10 @@ return (
               <p className="section-desc">{tBrands("subtitle")}</p>
             </div>
             <div className="brands-grid reveal" data-reveal="blur">
-              {brands.map((brand) => (
+              {brands.map((brand, index) => (
                 <Link
                   className="brand-card"
-                  key={brand.slug}
+                  key={`${brand.slug}-${index}`}
                   href={brandHref(brand.slug)}
                   aria-label={brand.names[locale]}
                 >
@@ -139,8 +139,8 @@ return (
               <h2 id="offices-title">{tCommon("contactUs")}</h2>
             </div>
             <div className="office-grid">
-              {content.offices.map((office) => (
-                <article className="office-card reveal" data-reveal="up" key={office.city}>
+              {content.offices.map((office, index) => (
+                <article className="office-card reveal" data-reveal="up" key={`${office.city}-${index}`}>
                   <h3>
                     <MapPin size={18} aria-hidden="true" /> {office.city}
                   </h3>

@@ -96,8 +96,8 @@ export default async function BlogPostPage({
             ) : null}
             {post.frontmatter.tags?.length ? (
               <ul className="article__tags">
-                {post.frontmatter.tags.map((tag) => (
-                  <li key={tag}>
+{post.frontmatter.tags.map((tag, tagIndex) => (
+                <li key={`${tag}-${tagIndex}`}>
                     <Link href="/blog" className="article__tags-link">
                       {tag}
                     </Link>
@@ -148,14 +148,14 @@ export default async function BlogPostPage({
               {t("relatedPostsTitle")}
             </h3>
             <div className="blog-grid">
-              {previous && <BlogCard key={previous.slug} post={previous} locale={locale} readMoreLabel={tCommon("readMore")} />}
-              {next && <BlogCard key={next.slug} post={next} locale={locale} readMoreLabel={tCommon("readMore")} />}
+              {previous && <BlogCard key={`prev-${previous.slug}`} post={previous} locale={locale} readMoreLabel={tCommon("readMore")} />}
+              {next && <BlogCard key={`next-${next.slug}`} post={next} locale={locale} readMoreLabel={tCommon("readMore")} />}
               {allPosts
                 .filter((p) => p.slug !== post.slug && p.slug !== previous?.slug && p.slug !== next?.slug)
                 .slice(0, 3 - (previous ? 1 : 0) - (next ? 1 : 0))
-                .map((p) => (
+                .map((p, pIndex) => (
                   <BlogCard
-                    key={p.slug}
+                    key={`${p.slug}-${pIndex}`}
                     post={p}
                     locale={locale}
                     readMoreLabel={tCommon("readMore")}

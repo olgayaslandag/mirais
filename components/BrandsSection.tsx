@@ -24,8 +24,8 @@ export default function BrandsSection({ eyebrow, title, brands }: BrandsSectionP
           </div>
         </div>
         <div className="brands-grid reveal" data-reveal="blur" data-delay="150">
-          {brands.map((b) => (
-            <div key={b.name} className="brand-card">
+          {brands.map((b, i) => (
+            <div key={`${b.name}-${i}`} className="brand-card">
               <img
                 src={b.logo}
                 alt={b.name}

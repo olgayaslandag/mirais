@@ -95,7 +95,7 @@ export default function CorporateIntro({ eyebrow, title, text, facts, accordion,
           <h2 id="corporate-title">{title}</h2>
           <div className="section-desc">
             {Array.isArray(text) ? (
-              text.map((paragraph, i) => <p key={i}>{paragraph}</p>)
+              text.map((paragraph, i) => <p key={`corporate-paragraph-${i}`}>{paragraph}</p>)
             ) : (
               <p>{text}</p>
             )}
@@ -103,8 +103,8 @@ export default function CorporateIntro({ eyebrow, title, text, facts, accordion,
           <div className="corporate-intro__details">
             <div className="corporate-intro__content">
               <div className="corporate-intro__facts" ref={factsRef}>
-                {facts.map((fact) => (
-                  <div key={fact.label}>
+                {facts.map((fact, i) => (
+                  <div key={`${fact.label}-${i}`}>
                     <CountUp value={fact.value} start={factsInView} />
                     <span>{fact.label}</span>
                   </div>
@@ -115,7 +115,7 @@ export default function CorporateIntro({ eyebrow, title, text, facts, accordion,
                   const open = openIndex === i;
                   return (
                     <div
-                      key={item.title}
+                      key={`${item.title}-${i}`}
                       className={`corporate-accordion__item${
                         open ? " is-open" : ""
                       }`}

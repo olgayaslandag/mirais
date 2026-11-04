@@ -26,7 +26,7 @@ const PROFILE_URL = "https://www.instagram.com/mirais/";
 export const fallbackPosts: InstaPost[] = [
   {
     id: "fallback-1",
-    caption: "Elektrostatik toz boya tesisimizden kareler — Mira İş Sağlığı ve Güvenliği Ekipmanları kalitesiyle.",
+    caption: "Elektrostatik toz boya tesisimizden kareler — Mira kalitesiyle.",
     image: "/assets/img/services/toz-boya-1.jpg",
     permalink: PROFILE_URL,
     timestamp: "",

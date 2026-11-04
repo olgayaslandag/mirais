@@ -121,7 +121,7 @@ export function getSiteContent(locale: Locale): SiteContent {
   const en: SiteContent = {
     heroSlides: heroSlides.map((s) => ({
       ...s,
-      eyebrow: s.eyebrow.replace("MİRAİS A.Ş.", "MİRAİS A.Ş."),
+      eyebrow: s.eyebrow.replace("Mira", "Mira"),
     })),
     services: services.map((s) => ({
       ...s,
@@ -258,14 +258,14 @@ export const heroSlides: HeroSlide[] = [
   {
     index: "01",
     videoId: "gOwsZVEoWgo",
-    eyebrow: "MİRAİS A.Ş.",
+    eyebrow: "Mira İş Sağlığı ve Güvenliği Ekipmanları A.Ş.",
     title: ["Markalarımızla", "kaliteli hizmet"],
     lead: "Martor, Justrite ve Röetzmeier markalarının sunduğu güvenlik çözümleriyle iş yerlerinizde güvenliği sağlıyoruz.",
   },
   {
     index: "02",
     videoId: "n-EX1YNZYJk",
-    eyebrow: "MİRAİS A.Ş.",
+    eyebrow: "Mira İş Sağlığı ve Güvenliği Ekipmanları A.Ş.",
     title: ["İş güvenliğinde", "güvenilir çözüm"],
     lead: "Mira İş Sağlığı ve Güvenliği Ekipmanları, yapı ve endüstriyel sektörler için iş sağlığı ve güvenlik ekipmanlarında Martor, Justrite ve Röetzmeier markalarıyla hizmet verir.",
   },

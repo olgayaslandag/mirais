@@ -30,7 +30,7 @@ export default function Accordion({
         const panelId = `${idPrefix}-panel-${index + 1}`;
         return (
           <div
-            key={item.title}
+            key={`${item.title}-${index}`}
             className={`accordion__item${open ? " is-open" : ""}`}
           >
             <h3 className="accordion__heading">
@@ -54,7 +54,7 @@ export default function Accordion({
             >
               <div className="accordion__panel-inner">
                 {item.body.split("\n\n").map((paragraph, paragraphIndex) => (
-                  <p key={paragraphIndex}>{paragraph}</p>
+                  <p key={`${index}-${paragraphIndex}`}>{paragraph}</p>
                 ))}
               </div>
             </div>

@@ -77,7 +77,7 @@ export default async function ProductPage({
       .replace(/<[^>]+>/g, " ")
       .replace(/\s+/g, " ")
       .trim()
-      .toLowerCase();
+      .toLocaleLowerCase('tr-TR');
 
   // Lead paragrafı (shortDescription) descriptionHtml içinde geçiyorsa gösterme
   const showLead =
@@ -123,18 +123,6 @@ export default async function ProductPage({
               alt={product.name}
               fallbackImage={fallbackImage}
             />
-            {product.videos.length > 0 ? (
-              <div className="product-detail__videos">
-                <h2>{t("videos")}</h2>
-                {product.videos.map((videoId) => (
-                  <YouTubeEmbed
-                    key={videoId}
-                    videoId={videoId}
-                    title={product.name}
-                  />
-                ))}
-              </div>
-            ) : null}
           </div>
 
           <div className="product-detail__info">
@@ -144,7 +132,6 @@ export default async function ProductPage({
 
             {product.descriptionHtml ? (
               <div className="product-detail__description">
-                <h2>{t("description")}</h2>
                 <RichContent html={product.descriptionHtml} />
               </div>
             ) : null}
@@ -158,7 +145,7 @@ export default async function ProductPage({
             {product.tabs.length > 0 ? (
               <div className="product-detail__tabs">
                 {product.tabs.map((tab, index) => (
-                  <section className="product-tab" key={`${tab.title}-${index}`}>
+                  <section className="product-tab" key={`${tab.title}-${index}-${index}`}>
                     {tab.specs && !sameSpecs(tab.specs, product.specs) ? (
                       <SpecTable specs={tab.specs} />
                     ) : null}
@@ -185,7 +172,6 @@ export default async function ProductPage({
               ) : null}
 </dl>
 
-
             <div className="product-detail__cta">
               <Link className="btn btn-sm btn-primary" href="/iletisim">
                 {tCommon("requestQuote")} <span aria-hidden="true">→</span>
@@ -195,12 +181,34 @@ export default async function ProductPage({
         </div>
       </section>
 
+      {product.videos.length > 0 ? (
+        <section className="section product-videos-section" aria-labelledby="videos-title">
+          <div className="container">
+            <div className="section-heading">
+              <div className="section-heading-left">
+                <p className="eyebrow">{t("videoEyebrow")}</p>
+                <h2 id="videos-title">{t("videos")}</h2>
+              </div>
+            </div>
+            <div className="video-grid">
+              {product.videos.map((videoId, videoIndex) => (
+                <YouTubeEmbed
+                  key={`${videoId}-${videoIndex}`}
+                  videoId={videoId}
+                  title={product.name}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       {related.length > 0 ? (
         <section className="section related-products" aria-labelledby="related-title">
           <div className="container">
             <div className="section-heading">
               <div className="section-heading-left">
-                <p className="eyebrow">{t("related")}</p>
+                <p className="eyebrow">{t("relatedEyebrow")}</p>
                 <h2 id="related-title">{t("related")}</h2>
               </div>
             </div>

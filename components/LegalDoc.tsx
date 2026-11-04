@@ -30,7 +30,7 @@ export default function LegalDoc({
         <section className="legal-doc__section" key={`${section.heading}-${index}`}>
           <h2>{section.heading}</h2>
           {section.paragraphs.map((paragraph, paragraphIndex) => (
-            <p key={paragraphIndex}>{paragraph}</p>
+            <p key={`${index}-${paragraphIndex}`}>{paragraph}</p>
           ))}
         </section>
       ))}

@@ -20,6 +20,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { isUploadsUrl, uploadsUrlToLocalPath } from "./lib/image-map.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT_DIR = join(ROOT, "data", "catalog");
@@ -470,7 +471,14 @@ function cleanRichText(input) {
     .replace(/\\n/g, "\n")
     .replace(/http:\/\/localhost\/mirais\//g, "https://mirais.com.tr/")
     .replace(/https?:\/\/localhost\/mirais\//g, "https://mirais.com.tr/");
-  return cleanHtml(raw);
+  const cleaned = cleanHtml(raw);
+  let html = cleaned.html;
+  // WP uploads URL'leri indirilen yerel görsellere eşlenir (bkz. scripts/download-product-images.mjs)
+  html = html.replace(
+    /https?:\/\/(?:www\.)?mirais\.com\.tr\/wp-content\/uploads\/[^\s"'<>\\)]+/gi,
+    (match) => isUploadsUrl(match) ? uploadsUrlToLocalPath(match) : match,
+  );
+  return { html, videos: cleaned.videos };
 }
 
 /* ------------------------------------------------------------------ *
@@ -486,7 +494,7 @@ function slugify(input) {
     .replace(/[çÇğĞıIİiöÖşŞüÜâÂîÎûÛ]/g, (ch) => TR_MAP[ch] ?? ch)
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
+    .toLocaleLowerCase('tr-TR');
   return base
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
@@ -970,7 +978,7 @@ for (const row of csvRows.slice(1)) {
     descriptionRaw: cell(row, "Açıklama"),
     categoriesRaw: cell(row, "Kategoriler"),
     imagesRaw: cell(row, "Görseller"),
-    locale: (cell(row, "Dil") || "tr").toLowerCase() === "en" ? "en" : "tr",
+    locale: (cell(row, "Dil") || "tr").toLocaleLowerCase('tr-TR') === "en" ? "en" : "tr",
     group: cell(row, "Çeviri grubu"),
     brand: cell(row, "Marka") || cell(row, "Markalar"),
     seoDescription: cleanText(cell(row, "Meta: _yoast_wpseo_metadesc")),
@@ -1063,13 +1071,15 @@ function buildTabs(record) {
 }
 
 function buildImages(raw) {
+  // WooCommerce "Görseller" URL'leri yerel asset yoluna çevrilir; diğer URL'ler
+  // olduğu gibi kalır. Yinelenenler korunur düzeniyle elenir.
   const urls = raw
     .split(",")
     .map((value) => value.trim())
     .filter(Boolean)
-    .map((value) => value.replace(/http:\/\/localhost\/mirais\//g, "https://mirais.com.tr/"));
+    .map((value) => isUploadsUrl(value) ? uploadsUrlToLocalPath(value) : value);
   const unique = [];
-  for (const url of urls) if (!unique.includes(url)) unique.push(url);
+  for (const url of urls) if (url && !unique.includes(url)) unique.push(url);
   return unique;
 }
 
@@ -1455,7 +1465,7 @@ lines.push("-".repeat(72));
 if (report.duplicates.length === 0) lines.push("Yok.");
 for (const item of report.duplicates) {
   lines.push(
-    `  ${item.locale.toUpperCase()}  #${item.droppedId} -> #${item.keptId}  ${item.name}`,
+    `  ${item.locale.toLocaleUpperCase('tr-TR')}  #${item.droppedId} -> #${item.keptId}  ${item.name}`,
   );
 }
 lines.push("");

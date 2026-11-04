@@ -18,7 +18,7 @@ export default function ProductGrid({
     <div className={`product-grid${columns === 3 ? " product-grid--3" : ""}`}>
       {products.map((product, index) => (
         <ProductCard
-          key={product.id}
+          key={`${product.id}-${index}`}
           product={product}
           fallbackImage={fallbackImage}
           eyebrow={eyebrow}

@@ -63,7 +63,7 @@ export default async function BlogPage({
             <div className="blog-grid">
               {posts.map((post, index) => (
                 <BlogCard
-                  key={post.slug}
+                  key={`${post.slug}-${index}`}
                   post={post}
                   locale={locale}
                   readMoreLabel={tCommon("readMore")}

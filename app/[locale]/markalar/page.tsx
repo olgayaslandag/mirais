@@ -74,7 +74,7 @@ export default async function BrandsPage({
                 className="brand-panel reveal"
                 data-reveal="up"
                 data-delay={(index % 2) * 120}
-                key={brand.slug}
+                key={`${brand.slug}-${index}`}
               >
                 <div className="brand-panel__head">
                   <Image
@@ -97,8 +97,8 @@ export default async function BrandsPage({
                   <div className="brand-panel__categories">
                     <h3>{t("categories")}</h3>
                     <ul>
-                      {categories.map((category) => (
-                        <li key={category.slug}>
+                      {categories.map((category, catIndex) => (
+                        <li key={`${brand.slug}-${category.slug}-${catIndex}`}>
                           <Link href={categoryHref(category.slug)}>
                             {category.names[locale]}
                           </Link>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRevealRoot, useSmoothAnchors } from "@/hooks/useSiteEffects";
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 
 /**
  * Site kabuğu: header + içerik + footer.
@@ -22,9 +22,9 @@ export default function SiteShell({
 
   return (
     <div ref={rootRef} className="site-shell">
-      {header}
-      {children}
-      {footer}
+      <Fragment key="shell-header">{header}</Fragment>
+      <Fragment key="shell-children">{children}</Fragment>
+      <Fragment key="shell-footer">{footer}</Fragment>
     </div>
   );
 }

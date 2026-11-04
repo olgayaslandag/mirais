@@ -34,11 +34,11 @@ export default function SiteHeader({ locale, categories, navLinks }: SiteHeaderP
       className={`site-header${scrolled ? " scrolled" : ""}`}
     >
       <div className="container header-inner">
-        <a className="brand" href="/" aria-label="Mira İş Sağlığı ve Güvenliği Ekipmanları ana sayfa">
+        <a className="brand" href="/" aria-label="Mira ana sayfa">
           <Image
             className="brand-logo brand-logo-dark"
             src="/assets/img/logo.svg"
-            alt="Mira İş Sağlığı ve Güvenliği Ekipmanları"
+            alt="Mira"
             width={180}
             height={48}
             priority
@@ -46,7 +46,7 @@ export default function SiteHeader({ locale, categories, navLinks }: SiteHeaderP
           <Image
             className="brand-logo brand-logo-light"
             src="/assets/img/mirais-logo-white.svg"
-            alt="Mira İş Sağlığı ve Güvenliği Ekipmanları"
+            alt="Mira"
             width={180}
             height={48}
             priority
@@ -68,8 +68,8 @@ export default function SiteHeader({ locale, categories, navLinks }: SiteHeaderP
           aria-label="Ana menü"
           className={`main-nav${open ? " open" : ""}`}
         >
-          {navLinks.map((link) => (
-            <Link key={link.label} href={link.href}>
+          {navLinks.map((link, index) => (
+            <Link key={`${link.href}-${index}`} href={link.href}>
               {link.label}
             </Link>
           ))}

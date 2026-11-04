@@ -40,8 +40,8 @@ export default function JobList({
 
   return (
     <div className="job-list">
-      {jobs.map((job) => (
-        <article className="job-item reveal" data-reveal="up" key={job.slug}>
+      {jobs.map((job, index) => (
+        <article className="job-item reveal" data-reveal="up" key={`${job.slug}-${index}`}>
           <div className="job-item__head">
             <h3>{job.title[locale]}</h3>
             <p className="job-item__meta">
@@ -61,8 +61,8 @@ export default function JobList({
           <div className="job-item__body">
             <h4 className="job-item__skills-title">{labels.skills}</h4>
             <ul className="job-item__skills">
-              {job.skills[locale].map((skill) => (
-                <li key={skill}>{skill}</li>
+              {job.skills[locale].map((skill, skillIndex) => (
+                <li key={`${index}-${skillIndex}`}>{skill}</li>
               ))}
             </ul>
             <a
