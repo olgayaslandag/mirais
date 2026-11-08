@@ -130,10 +130,115 @@ export function getSiteContent(locale: Locale): SiteContent {
       ...s,
       eyebrow: s.eyebrow.replace("Mira", "Mira"),
     })),
-    services: services.map((s) => ({
-      ...s,
-      title: s.title.replace("ÜRÜN SATIŞI", "PRODUCT SALES"),
-    })),
+    services: services.map((s) => {
+      const base = {
+        ...s,
+      };
+      if (s.title === "ÜRÜN SATIŞI") {
+        return {
+          ...base,
+          title: "PRODUCT SALES",
+          description:
+            "We partner with Martor, Justrite and Röetzmeier to bring the best occupational health and safety products. Our catalog features thousands of products from leading brands like Martor, Justrite and Röetzmeier, covering personal protective equipment, fall protection systems, electrical safety devices, and chemical storage solutions. By carefully selecting the right equipment for your specific workplace hazards and project requirements, you can ensure full compliance with Occupational Health and Safety (OHS) regulations and create a safer working environment. We recommend reviewing the detailed product catalog or sharing your project-specific needs with our expert team to identify the most suitable safety solutions for your operation.",
+          overviewText:
+            "Martor, Justrite and Röetzmeier safety solutions to increase workplace safety. Our catalog offers thousands of products from leading brands, covering personal protective equipment, fall protection systems, electrical safety devices, and chemical storage solutions. Carefully selecting the right equipment for specific workplace hazards and project requirements ensures full compliance with OHS regulations and creates a safer working environment. We recommend reviewing the detailed product catalog or sharing project-specific needs with our expert team to identify the most suitable safety solutions for your operation.",
+          benefits: ["Quality guaranteed products", "Technical support available", "Capiente delivery service"],
+          benefitsParagraph:
+            "Martor, Justrite and Röetzmeier markalarının standartlarına uygun olarak kalite kontrol edilen ürünler ile Kalite garanti ürünler sunuyoruz. Teknik ekibimiz her adımda teknik destek ve danışmanlık sunarak projeleriniz güvenli bir şekilde yönetiliyor. Large ölçekli entrega hizmetleri ile projeleriniz zamanında tamamlanacak Kapasiteli entrega hizmeti.",
+          benefitsWithIcons: [
+            { title: "Quality guaranteed products", body: "Martor, Justrite ve Röetzmeier standartlarına uygun olarak kalite kontrol edilmiştir." },
+            { title: "Technical support available", body: "Technical support and consultancy services throughout your project." },
+            { title: "Capiente delivery service", body: "Your projects will be completed on time with large-scale delivery services." },
+          ],
+          processSteps: [
+            { title: "Product Selection", body: "Determine the most suitable products for your needs." },
+            { title: "Place Order", body: "Order the required equipment." },
+            { title: "Delivery", body: "Your products will be delivered on time." },
+          ],
+          metaDescription:
+            "Mira product sales service - Increase your safety with Martor, Justrite and Röetzmeier safety solutions. Thousands of products available in the catalog.",
+        };
+      }
+      if (s.title === "TEKNİK DESTEK") {
+        return {
+          ...base,
+          title: "TECHNICAL SUPPORT",
+          description:
+            "Our expert team provides support for the installation, maintenance and resolution of technical issues with our products. Our professional technical staff provides full support during product installation, periodic maintenance till fault resolution processes. Correct setup and regular maintenance are critical to prevent premature breakdowns that may result from incorrect use. All operations are performed in accordance with TBB standards and product performance is continuously monitored through quality control processes. Since all catalog products are manufactured in accordance with Martor, Justrite and Röetzmeier standards, you can extend your equipment lifespan and improve occupational safety by implementing correct maintenance programs.",
+          overviewText:
+            "Our expert team provides support for the installation, maintenance and resolution of technical issues with our products. Our professional technical staff provides full support during product installation, periodic maintenance till fault resolution processes. Correct setup and regular maintenance are critical to prevent premature breakdowns that may result from incorrect use. All operations are performed in accordance with TBB standards and product performance is continuously monitored through quality control processes. Since all catalog products are manufactured in accordance with Martor, Justrite and Röetzmeier standards, you can extend your equipment lifespan and improve occupational safety by implementing correct maintenance programs.",
+          benefits: ["Extended product lifespan", "Premature breakdowns prevented", "Operational efficiency increased"],
+          benefitsParagraph:
+            "Ürün ömrünüzü Professional bakım ile uzatırız Premature breakdown'lar önlemek için hızlı müdahale ile teknik sorunlar çözülür. Operasyonel verimlilik artırılarak Optimized product performance ile iş süreçleriniz daha verimli olur. TBB standartlarına uygun destek ile uzman ekibimiz her adımda yanınızda.",
+          benefitsWithIcons: [
+            { title: "Extended product lifespan", body: "Professional bakım ile ürün ömrünüz uzar." },
+            { title: "Premature breakdowns prevented", body: "Hızlı müdahale ile teknik sorunlar çözülür." },
+            { title: "Operational efficiency increased", body: "Operasyonel verimlilik artırılmış iş süreçleriniz." },
+          ],
+          processSteps: [
+            { title: "Professional Installation", body: "Professional installation by our expert team." },
+            { title: "Periodic Maintenance", body: "Regular maintenance processes." },
+            { title: "Fault Resolution", body: "Resolution of technical issues by technical staff." },
+            { title: "Performance Monitoring", body: "Continuous monitoring of product performance." },
+          ],
+          metaDescription:
+            "Mira technical support service - Product installation, maintenance and fault resolution with our expert team. TBB standard-compliant support and technical services.",
+        };
+      }
+      if (s.title === "RİSK ANALİZİ") {
+        return {
+          ...base,
+          title: "RISK ANALYSIS",
+          description:
+            "We conduct risk analyses at your workplace to improve occupational safety. Potential risks in your work environment are identified through Risk Identification, evaluated based on probability and impact through Risk Evaluation, and systematically examined through the Risk Mitigation phase with appropriate protective equipment and processes. Risk assessments are carried out in accordance with TBB (Occupational Health and Safety Regulations) standards, minimizing potential accidents and maximizing workplace safety. The complete process from risk identification to measure implementation is critical for both legal compliance and human health protection. Detailed risk analysis reports allow your business to close security gaps and prevent costly accidents in the future.",
+          overviewText:
+            "We conduct risk analyses at your workplace to improve occupational safety. Potential risks in your work environment are identified through Risk Identification, evaluated based on probability and impact through Risk Evaluation, and systematically examined through the Risk Mitigation phase with appropriate protective equipment and processes. Risk assessments are carried out in accordance with TBB (Occupational Health and Safety Regulations) standards, minimizing potential accidents and maximizing workplace safety. The complete process from risk identification to measure implementation is critical for both legal compliance and human health protection. Detailed risk analysis reports allow your business to close security gaps and prevent costly accidents in the future.",
+          benefits: ["Occupational safety increased", "Potential accidents reduced", "TBB compliance provided"],
+          benefitsParagraph:
+            "Çalışma ortamında riskler tespit edilerek Risk Identification sağlanıyor. Risklerin olasılık ve etkisi üzerinden Risk Evaluation yapılıyor. Uygun koruyucu ekipman ve süreçler ile Risk Mitigation önlemleri öneriliyor. TBB uyum sağlanarak tüm işler TBB standardına uygun olarak yapılıyor. Mazic kazalar uygun koruyucu ekipman ve süreçlerle önleniyor.",
+          benefitsWithIcons: [
+            { title: "Occupational safety increased", body: "Riskler tespit edilerek güvenlik artırılmış ortam." },
+            { title: "Potential accidents reduced", body: "Uygun koruyucu ekipman ve süreçlerle önlenir." },
+            { title: "TBB compliance provided", body: "TBB standardına uygun risk değerlendirmeleri." },
+          ],
+          processSteps: [
+            { title: "Risk Identification", body: "Potential risks in the work environment are identified." },
+            { title: "Risk Evaluation", body: "Probability and impact of risks are evaluated." },
+            { title: "Protective Equipment", body: "Recommended protective equipment and processes." },
+            { title: "Risk Mitigation", body: "Systematic minimization of potential accidents." },
+          ],
+          metaDescription:
+            "Mira risk analysis service - Workplace risk identification and evaluation. TBB-compliant risk reduction and safer working environment.",
+        };
+      }
+      if (s.title === "EĞİTİM VE DANIŞMANLIK") {
+        return {
+          ...base,
+          title: "TRAINING AND CONSULTANCY",
+          description:
+            "We provide occupational health and safety training programs and consultancy services. TBB-approved training programs increase employee awareness, strategic consultancy prevents TBB violations, and a healthy working environment is provided afterwards. Training is delivered with personalized content arranged in accordance with TBB standards, Articulating employee safety awareness. Continuous support after training ensures a healthy working environment in the long term. Enterprises require regular training and consultancy services for TBB compliance and are obligated to create healthy and safe working conditions to prevent accidents.",
+          overviewText:
+            "We provide occupational health and safety training programs and consultancy services. TBB-approved training programs increase employee awareness, strategic consultancy prevents TBB violations, and a healthy working environment is provided afterwards. Training is delivered with personalized content arranged in accordance with TBB standards, Articulating employee safety awareness. Continuous support after training ensures a healthy working environment in the long term. Enterprises require regular training and consultancy services for TBB compliance and are obligated to create healthy and safe working conditions to prevent accidents.",
+          benefits: ["Employee awareness increased", "TBB violations prevented", "Safe working environment provided"],
+          benefitsParagraph:
+            "TBB onaylı eğitim programları ile Personel bilinç artırılıyor. Stratejik danışmanlık ile TBB ihlalleri önleniyor. Eğitim sonrası güvenli çalışma ortamı sağlanarak Kalite ortam sürdürülüyor. Kişilendirilebilir eğitim seçenekleri ile continuously destek sağlanıyor.",
+          benefitsWithIcons: [
+            { title: "Employee awareness increased", body: "TBB onaylı eğitimlerle bilinç artırılır." },
+            { title: "TBB violations prevented", body: "Stratejik danışmanlık ile ihlaller önlenir." },
+            { title: "Safe working environment provided", body: "Quality working conditions for enterprises." },
+          ],
+          processSteps: [
+            { title: "Training Program", body: "TBB-approved training programs." },
+            { title: "Consultancy", body: "Strategic TBB consultancy services." },
+            { title: "Training Follow-up", body: "Post-training support and follow-up." },
+            { title: "Sustainable Quality", body: "Long-term quality environment maintained." },
+          ],
+          metaDescription:
+            "Mira training and consultancy service - TBB-approved training and strategic consultancy. Employee awareness increase and safer working environment.",
+        };
+      }
+      return base;
+    }),
     corporate: {
       title:
         "Safety is our commitment, your workplace is our priority.",
