@@ -11,6 +11,7 @@ import { getSiteContent } from "@/data/content";
 import { buildMetadata } from "@/lib/seo";
 import { locales, type Locale } from "@/lib/i18n/routing";
 import { resolveLocale } from "@/lib/i18n/resolve-locale";
+import { Link, asRouteHref } from "@/lib/i18n/navigation";
 
 
 export function generateStaticParams() {
@@ -77,12 +78,12 @@ export default async function ServicesPage({
           <div className="service-wrap">
           <div className="service-grid">
             {content.services.map((service, i) => (
-              <a
+              <Link
                 key={`${service.title}-${i}`}
                 className="service-card reveal"
                 data-reveal="deal"
                 data-delay={i * 140}
-                href={service.href}
+                href={asRouteHref(service.href)}
                 aria-label={service.title}
               >
                 <div className="service-image">
@@ -100,7 +101,7 @@ export default async function ServicesPage({
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
           <CarouselControls

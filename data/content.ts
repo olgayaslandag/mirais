@@ -27,9 +27,16 @@ export type SiteContent = {
   services: {
     title: string;
     description: string;
+    overviewText: string;
     image: string;
     alt: string;
     href: string;
+    slug?: string;
+    metaDescription?: string;
+    benefitsWithIcons: { title: string; body: string }[];
+    processSteps: { title: string; body: string }[];
+    benefitsParagraph: string;
+    brands: { name: string; logo: string }[];
   }[];
   servicesPage: {
     steps: { title: string; body: string }[];
@@ -240,9 +247,17 @@ export type ProductSubGroup = {
 export type Service = {
   title: string;
   description: string;
+  overviewText: string;
   image: string;
   alt: string;
+  benefits: string[];
+  benefitsParagraph: string;
   href: string;
+  slug?: string;
+  metaDescription?: string;
+  benefitsWithIcons: { title: string; body: string }[];
+  processSteps: { title: string; body: string }[];
+  brands: { name: string; logo: string }[];
 };
 
 // Hero slaytları: mirais.com.tr ana sayfa slider metinleri
@@ -395,33 +410,124 @@ export const services: Service[] = [
     title: "ÜRÜN SATIŞI",
     description:
       "İş sağlığı ve güvenlik ekipmanlarında Martor, Justrite ve Röetzmeier markalarıyla iş birliği yaparak en iyi ürünleri sunuyoruz.",
+    overviewText:
+      "Martor, Justrite ve Röetzmeier markalarının güvenlik çözümleriyle işyerinizdeki iş güvencesini artırın. Katalogumuzda thousands of products are available from leading brands like Martor, Justrite and Röetzmeier, covering personal protective equipment, fall protection systems, electrical safety devices, and chemical storage solutions. By carefully selecting the right equipment for your specific workplace hazards and project requirements, you can ensure full compliance with Occupational Health and Safety (OHS) regulations and create a safer working environment. We recommend reviewing the detailed product catalog or sharing your project-specific needs with our expert team to identify the most suitable safety solutions for your operation.",
     image: "/assets/img/services/toz-boya-1.jpg",
     alt: "Ürün satışı hizmeti",
-    href: "#",
+    benefits: ["Kalite garanti ürünler", "Teknik destek mevcut", "Kapasiteli entrega hizmeti"],
+    benefitsParagraph:
+      "Martor, Justrite ve Röetzmeier markalarının standartlarına uygun olarak kalite kontrol edilen ürünler ile Kalite garanti ürünler sunuyoruz. Teknik ekibimiz her adımda teknik destek ve danışmanlık sunarak projeleriniz güvenli bir şekilde yönetiliyor. Large ölçekli entrega hizmetleri ile projeleriniz zamanında tamamlanacak Kapasiteli entrega hizmeti.",
+    href: "/hizmetler/urun-satisi",
+    slug: "urun-satisi",
+    metaDescription: "Mira ürün satış hizmeti - Martor, Justrite ve Röetzmeier markalarının güvenlik çözümleriyle çalışan güvenliğini artırın. Kataloğuzdan thousands of products available.",
+    benefitsWithIcons: [
+      { title: "Kalite garanti ürünler", body: "Martor, Justrite ve Röetzmeier standartlarına uygun olarak kalite kontrol edilmiştir." },
+      { title: "Teknik destek mevcut", body: "Projeleriniz boyunca teknik destek ve danışmanlık hizmetleri." },
+      { title: "Kapasiteli entrega hizmeti", body: "Projeleriniz zamanında tamamlanacakLarge ölçekli entrega hizmeti." },
+    ],
+    processSteps: [
+      { title: "Ürün Seçimi", body: "İş ihtiyaçlarınız için en uygun ürünleri belirleyin." },
+      { title: "Sipariş Verme", body: "Gerekli ekipmanları sipariş verin." },
+      { title: "Teslimat", body: "Ürünleriniz zamanlı teslim edilir." },
+    ],
+    brands: [
+      { name: "Martor", logo: "/assets/img/brands/martor.png" },
+      { name: "Justrite", logo: "/assets/img/brands/justrite.png" },
+      { name: "Röetzmeier", logo: "/assets/img/brands/roetzmeier.png" },
+    ],
   },
   {
     title: "TEKNİK DESTEK",
     description:
       "Ürünlerimizin kurulumu, bakımı ve teknik sorunlarının çözümünde uzman ekibimizle destek oluyoruz.",
+    overviewText:
+      "Ürünlerimizin kurulumu, bakımı ve teknik sorunlarının çözümünde uzman ekibimizle destek oluyoruz. Profesel teknik personelimiz, ürün kurulumundan periodic maintenance till fault resolution süreçlerinde tam destek sunar. Yanlış kullanımla sonuçlanabileceli premature breakdown'lar önlemek için doğru ayar ve düzenli bakım kritiktir. Tüm operasyonlar TBB standartlarına uygun olarak yapılır ve kalite kontrol süreçleri ile ürün performansı sürekli izlenir. Katalogdaki tüm ürünler Martor, Justrite ve Röetzmeier standartlarına uygun olarak üretildiği için, ekipman ömrünüzü uzatmak ve iş güvenliğinizi artırmak için doğru bakım programlarını uygulayabilirsiniz.",
     image: "/assets/img/services/profil-ebatlama.jpg",
     alt: "Teknik destek hizmeti",
-    href: "#",
+    benefits: ["Ürüm ömrü uzatılır", "Premature breakdown'lar önlenir", "Operasyonel verimlilik artırılır"],
+    benefitsParagraph:
+      "Ürün ömrünüzü Professional bakım ile uzatırız Premature breakdown'lar önlemek için hızlı müdahale ile teknik sorunlar çözülür. Operasyonel verimlilik artırılarak Optimized product performance ile iş süreçleriniz daha verimli olur. TBB standartlarına uygun destek ile uzman ekibimiz her adımda yanınızda.",
+    href: "/hizmetler/teknik-destek",
+    slug: "teknik-destek",
+    metaDescription: "Mira teknik destek hizmeti - Ürün kurulumu, bakım ve arızaların çözümünde uzman ekibimizle destek. TBB standartlarına uygun destek ve teknik hizmetler.",
+benefitsWithIcons: [
+      { title: "Ürüm ömrü uzatılır", body: "Professional bakım ile ürün ömrünüz uzar." },
+      { title: "Premature breakdown'lar önlenir", body: "Hızlı müdahale ile teknik sorunlar çözülür." },
+      { title: "Operasyonel verimlilik artırılır", body: "Operasyonel verimlilik artırılmış iş süreçleriniz." },
+    ],
+    processSteps: [
+      { title: "Ürün Kurulumu", body: "Uzman ekip tarafından profesyonel kurulum." },
+      { title: "Periodic Bakım", body: "Düzenli bakım süreçleri." },
+      { title: "Arıza Çözümü", body: "Teknik personel ile arızaların çözümü." },
+      { title: "Performans İzleme", body: "Ürün performansı sürekli izlenir." },
+    ],
+    brands: [
+      { name: "Martor", logo: "/assets/img/brands/martor.png" },
+      { name: "Justrite", logo: "/assets/img/brands/justrite.png" },
+      { name: "Röetzmeier", logo: "/assets/img/brands/roetzmeier.png" },
+    ],
   },
   {
     title: "RİSK ANALİZİ",
     description:
       "İş yerlerinizde gerçekleştirdiğimiz risk analizleriyle iş güvenliğinizi artırıyoruz.",
+    overviewText:
+      "İş yerlerinizde gerçekleştirdiğimiz risk analizleriyle iş güvenliğinizi artırıyoruz. Çalışma ortamındaki potensiyel riskler tespit edilerek Risk Identification, risklerin olasılık ve etkisi üzerinden Risk Evaluation, ve uygun koruyucu ekipman ve süreçler önerilerek Risk Mitigation aşamasıyla systematically incelenir. TBB (Türevli İş Çeşitleri/Uyum) standartlarına uygun olarak risk değerlendirmeleri yapılarak, mazic kazalar minimize edilerek çalışma ortamı güvenliği maksimize edilir. Risk tespitinden önlem uygulamasına kadar tamamlanmış süreç, hem yasal uyum hem de insan sağlığının koruması açısından kritik önemeidir. Detaylı risk analiz raporları ile işletmenizdeki güvenlik açığı kapatılabilir ve ilerideki maliyetli kazalar önlenebilir.",
     image: "/assets/img/services/izomat-1.jpg",
     alt: "Risk analizi hizmeti",
-    href: "#",
+    benefits: ["İş güvenliği artırılır", "Mazik kazalar azaltılır", "TBB uyum sağlanır"],
+    benefitsParagraph:
+      "Çalışma ortamında riskler tespit edilerek Risk Identification sağlanıyor. Risklerin olasılık ve etkisi üzerinden Risk Evaluation yapılıyor. Uygun koruyucu ekipman ve süreçler ile Risk Mitigation önlemleri öneriliyor. TBB uyum sağlanarak tüm işler TBB standardına uygun olarak yapılıyor. Mazic kazalar uygun koruyucu ekipman ve süreçlerle önleniyor.",
+    href: "/hizmetler/risk-analizi",
+    slug: "risk-analizi",
+    metaDescription: "Mira risk analizi hizmeti - Çalışma ortamı riskleri tespiti ve değerlendirme. TBB uyumlu risk azaltma ve güvenlik artırılmış çalışma ortamı.",
+benefitsWithIcons: [
+      { title: "İş güvenliği artırılır", body: "Riskler tespit edilerek güvenlik artırılmış ortam." },
+      { title: "Mazik kazalar azaltılır", body: "Uygun koruyucu ekipman ve süreçlerle önlenir." },
+      { title: "TBB uyum sağlanır", body: "TBB standardına uygun risk değerlendirmeleri." },
+    ],
+    processSteps: [
+      { title: "Risk Tespiti", body: "Çalışma ortamındaki riskler tespit edilerek." },
+      { title: "Risk Değerlendirme", body: "Risklerin olasılık ve etkisi değerlendirilir." },
+      { title: "Koruyucu Ekipman", body: "Uygun koruyucu ekipman önerilir." },
+      { title: "Risk Mitigation", body: "Sistematik olarak riskler minimize edilerek." },
+    ],
+    brands: [
+      { name: "Martor", logo: "/assets/img/brands/martor.png" },
+      { name: "Justrite", logo: "/assets/img/brands/justrite.png" },
+      { name: "Röetzmeier", logo: "/assets/img/brands/roetzmeier.png" },
+    ],
   },
   {
     title: "EĞİTİM VE DANIŞMANLIK",
     description:
       "İş sağlığı ve güvenlik konusunda eğitim programları ve danışmanlık hizmetleri sunuyoruz.",
+    overviewText:
+      "İş sağlığı ve güvenlik konusunda eğitim programları ve danışmanlık hizmetleri sunuyoruz. TBB onaylı eğitim programları ile personel bilinç artırılması, stratejik danışmanlık ile TBB ihlallerinin önlenmesi ve sonrasında sağlıklı çalışma ortamının sağlanması kritiktir. Eğitimler TBB standartlarına uygun olarak yapılandırılarak, personel güvenlik bilincini artırmak için kişilendirilebilir içeriklerle sunulur. Eğitim sonrası takip ve sürekli destek ile güvenli çalışma ortamının uzun phraseskorunması sağlanır. Kurumsalar, TBB uyumluluğu için düzenli eğitim ve danışmanlık hizmetlerine ihtiyaç duyar ve bizzat sağlık ve güvenliği öncelikli çalışma koşulları ile kazalar önlemek zorundadir.",
     image: "/assets/img/services/proje-hizmet-1.png",
     alt: "Eğitim ve danışmanlık hizmeti",
-    href: "#",
+    benefits: ["Personel bilinç artırılır", "TBB ihlalleri önlenir", "Güvenli çalışma ortamı sağlanır"],
+    benefitsParagraph:
+      "TBB onaylı eğitim programları ile Personel bilinç artırılıyor. Stratejik danışmanlık ile TBB ihlalleri önleniyor. Eğitim sonrası güvenli çalışma ortamı sağlanarak Kalite ortam sürdürülüyor. Kişilendirilebilir eğitim seçenekleri ile continuously destek sağlanıyor.",
+    href: "/hizmetler/egitim-danismanlik",
+    slug: "egitim-danismanlik",
+    metaDescription: "Mira eğitim ve danışmanlık hizmeti - TBB onaylı eğitimler ve stratejik danışmanlık. Personel bilinç artırımı ve güvenli çalışma ortamı sağlama.",
+benefitsWithIcons: [
+      { title: "Personel bilinç artırılır", body: "TBB onaylı eğitimlerle bilinç artırılır." },
+      { title: "TBB ihlalleri önlenir", body: "Stratejik danışmanlık ile ihlaller önlenir." },
+      { title: "Güvenli çalışma ortamı sağlanır", body: "Kurumsalar için kaliteli çalışma koşulları." },
+    ],
+    processSteps: [
+      { title: "Eğitim Programı", body: "TBB onaylı eğitim programları." },
+      { title: "Danışmanlık", body: "Stratejik TBB danışmanlık hizmetleri." },
+      { title: "Eğitim Takibi", body: "Eğitim sonrası takip ve destek." },
+      { title: "Kalite Sürdürülebilir", body: "Uzun süreli kalite ortamı sağlanması." },
+    ],
+    brands: [
+      { name: "Martor", logo: "/assets/img/brands/martor.png" },
+      { name: "Justrite", logo: "/assets/img/brands/justrite.png" },
+      { name: "Röetzmeier", logo: "/assets/img/brands/roetzmeier.png" },
+    ],
   },
 ];
 

@@ -172,6 +172,17 @@
   "services": {
     "title": "Services",
     "subtitle": "From product sales to training, we are with you throughout your occupational safety processes.",
+    "overviewEyebrow": "SERVICE DETAIL",
+    "overviewTitle": "Service Overview",
+    "featuresEyebrow": "BENEFITS",
+    "featuresTitle": "Key Features",
+    "processEyebrow": "PROCESS",
+    "benefitsEyebrow": "STANDARDS",
+    "benefitsTitle": "Quality and Standards",
+    "brandsEyebrow": "BRANDS",
+    "brandsTitle": "Supported Brands",
+    "ctaTitle": "Benefit From Our Services",
+    "ctaText": "Contact our expert team for your occupational health and safety needs.",
     "processTitle": "How we work",
     "faqTitle": "Frequently asked questions",
     "steps": {

@@ -172,6 +172,17 @@
   "services": {
     "title": "Hizmetler",
     "subtitle": "Ürün satışından eğitime, iş güvenliğinizin tüm süreçlerinde yanınızdayız.",
+    "overviewEyebrow": "HİZMET DETAYI",
+    "overviewTitle": "Hizmet Genel Bakışı",
+    "featuresEyebrow": "AVANTAJLAR",
+    "featuresTitle": "Öne Çıkan Özellikler",
+    "processEyebrow": "SÜREÇ",
+    "benefitsEyebrow": "STANDARTLAR",
+    "benefitsTitle": "Kalite ve Standartlar",
+    "brandsEyebrow": "MARKALAR",
+    "brandsTitle": "Desteklenen Markalar",
+    "ctaTitle": "Hizmetlerimizden Faydalanın",
+    "ctaText": "İş sağlığı ve güvenliği ihtiyaçlarınız için uzman ekibimizle iletişime geçin.",
     "processTitle": "Nasıl çalışıyoruz?",
     "faqTitle": "Sıkça sorulan sorular",
     "steps": {

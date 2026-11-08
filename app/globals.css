@@ -47,11 +47,19 @@ img{max-width:100%}
 
 /* ---------- Process Steps ---------- */
 .process-steps{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   list-style: none;
   padding: 0;
 }
 .process-steps > li{
   margin-bottom: 2rem;
+}
+@media (max-width: 62rem) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
 }
 .process-steps > li > .process-step__index {
   font-weight: bold;
@@ -202,6 +210,25 @@ img{max-width:100%}
 .site-header:not(.scrolled) .brand,
 .site-header:not(.scrolled) .main-nav a,
 .site-header:not(.scrolled) .menu-toggle{color:#fff}
+
+/* ---------- Features Grid ---------- */
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:2rem;
+}
+.feature-card{
+  display:flex;flex-direction:column;align-items:center;gap:1rem;
+  padding:1.5rem;background:#fff;border:1px solid var(--line);border-radius:0.25rem;
+  transition:transform .3s ease,box-shadow .3s ease;
+  text-decoration:none;color:var(--navy);
+}
+.feature-card:hover{
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:0 .8rem 1.6rem rgba(20,40,68,.14);
+}
+.feature-card h3{font-size:1rem;font-weight:700;margin:0}
+.feature-card p{color:var(--muted);font-size:0.9rem;line-height:1.5;margin:0}
 
 /* ---------- Sections ---------- */
 .section{padding:6.5rem 0}
@@ -1079,6 +1106,9 @@ img{transition:filter .4s ease}
 .product-detail__tabs{
 margin-top: 2rem;
 }
+.product-detail__specs{
+margin-top: 1rem;
+}
 .product-gallery{margin:0}
 .product-gallery__main{aspect-ratio:1/1;margin:0}
 .product-gallery__main img{display:block;width:100%;height:100%;object-fit:cover;border-radius:0.25rem}
@@ -1127,7 +1157,19 @@ margin-top: 2rem;
 .job-item__head{border-bottom:1px solid var(--line);padding:1rem 1.5rem;background:#f8fafd}
 .job-item__body{padding:1rem 1.5rem}
 .job-item .btn-primary{margin-top:0.5rem}
-.job-item__meta{color:var(--muted);font-size:0.85rem;margin:0.5rem 0}
+.job-item__meta{
+    color:var(--muted);
+    font-size:0.85rem;
+    margin:0.5rem 0;
+    display:flex;
+    flex-direction:column;
+    gap:0.25rem;
+}
+.job-item__meta span{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+}
 .job-item__skills-title{font-size:0.85rem;font-weight:600;margin:0.5rem 0}
 .job-item__skills{margin:0;padding:0;list-style:none}
 .job-item__skills li{margin:0 0.5rem 0 0}
