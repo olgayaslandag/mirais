@@ -15,11 +15,9 @@ type ServicesProps = {
   title: string;
   text: string;
   services: Service[];
-  allLabel: string;
-  ctaLabel: string;
 };
 
-export default function Services({ eyebrow, title, text, services, allLabel, ctaLabel }: ServicesProps) {
+export default function Services({ eyebrow, title, text, services }: ServicesProps) {
   return (
     <section
       className="section services"
@@ -33,10 +31,7 @@ export default function Services({ eyebrow, title, text, services, allLabel, cta
             <h2 id="services-title">{title}</h2>
             <p className="section-desc">{text}</p>
           </div>
-          <a className="text-link" href="#contact">
-            {allLabel} <ArrowRight size={16} />
-          </a>
-        </div>
+          </div>
         <div className="service-wrap">
           <div className="service-grid">
             {services.map((service, i) => (
@@ -66,11 +61,6 @@ export default function Services({ eyebrow, title, text, services, allLabel, cta
               </a>
             ))}
           </div>
-          <CarouselControls
-            targetSelector=".service-grid"
-            label="Hizmet navigasyonu"
-            itemCount={services.length}
-          />
         </div>
       </div>
     </section>

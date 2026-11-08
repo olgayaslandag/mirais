@@ -99,8 +99,6 @@ export default async function HomePage({
         title={t("solutionsTitle")}
         text={t("solutionsText")}
         categories={solutionCategories}
-        allLabel={tCommon("allSolutions")}
-        ctaLabel={tCommon("allServices")}
       />
       <CatalogBand />
       <Services
@@ -114,8 +112,6 @@ export default async function HomePage({
           alt: service.alt,
           href: "/hizmetler",
         }))}
-        allLabel={tCommon("allServices")}
-        ctaLabel={tCommon("allServices")}
       />
       <InstagramFeed />
       <BrandsSection

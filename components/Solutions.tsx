@@ -1,6 +1,5 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link, categoryHref } from "@/lib/i18n/navigation";
-import CarouselControls from "@/components/CarouselControls";
 
 type Product = {
   title: string[];
@@ -15,11 +14,9 @@ type SolutionsProps = {
   title: string;
   text: string;
   categories: { slug: string; parent: string | null; name: string; description: string; image: string }[];
-  allLabel: string;
-  ctaLabel: string;
 };
 
-export default function Solutions({ eyebrow, title, text, categories, allLabel, ctaLabel }: SolutionsProps) {
+export default function Solutions({ eyebrow, title, text, categories }: SolutionsProps) {
   return (
     <section
       className="section solutions"
@@ -33,9 +30,6 @@ export default function Solutions({ eyebrow, title, text, categories, allLabel, 
             <h2 id="solutions-title">{title}</h2>
             <p className="section-desc">{text}</p>
           </div>
-          <a className="text-link" href="#contact">
-            {allLabel} <ArrowRight size={16} />
-          </a>
         </div>
         <div className="product-wrap">
           <div className="product-grid">
@@ -65,11 +59,6 @@ export default function Solutions({ eyebrow, title, text, categories, allLabel, 
               </Link>
             ))}
           </div>
-          <CarouselControls
-            targetSelector=".product-grid"
-            label="Çözüm navigasyonu"
-            itemCount={categories.length}
-          />
         </div>
       </div>
     </section>
