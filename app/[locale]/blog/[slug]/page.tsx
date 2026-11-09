@@ -11,6 +11,7 @@ import QuoteStrip from "@/components/QuoteStrip";
 import { Link, blogHref } from "@/lib/i18n/navigation";
 import { formatDate, getAllPosts, getPost, getPostSlugs } from "@/lib/mdx";
 import { articleJsonLd, buildMetadata, localizedPath, siteUrl } from "@/lib/seo";
+import { getBlogCounterpart } from "@/lib/i18n/slugs";
 import { locales, type Locale } from "@/lib/i18n/routing";
 import { resolveLocale } from "@/lib/i18n/resolve-locale";
 
@@ -178,12 +179,6 @@ export default async function BlogPostPage({
         text={t("subtitle")}
         buttonLabel={tCommon("contactUs")}
         href="/iletisim"
-      />
-
-      <script
-        type="application/ld+json"
-        // Blog verisi repo içindeki MDX dosyalarından gelir
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
     </main>
   );

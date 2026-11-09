@@ -9,7 +9,7 @@ import RichContent from "@/components/RichContent";
 import SpecTable from "@/components/SpecTable";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import QuoteStrip from "@/components/QuoteStrip";
-import { categoryHref, Link } from "@/lib/i18n/navigation";
+import { categoryHref, Link, productHref } from "@/lib/i18n/navigation";
 import {
   getCategory,
   getCategoryImage,
@@ -19,8 +19,9 @@ import {
   getRelatedProducts,
   type SpecTable as SpecTableData,
 } from "@/lib/catalog";
-import { buildMetadata, localizedPath, productJsonLd, siteUrl } from "@/lib/seo";
-import { locales, type Locale } from "@/lib/i18n/routing";
+import { buildMetadata, productJsonLd, siteUrl, absoluteUrl, localizedPath } from "@/lib/seo";
+import { getProductCounterpart } from "@/lib/i18n/slugs";
+import { locales, type Locale as LocaleFromRouting } from "@/lib/i18n/routing";
 import { resolveLocale } from "@/lib/i18n/resolve-locale";
 
 export function generateStaticParams() {
@@ -32,14 +33,25 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale; slug: string }>;
-}) {
+  params: Promise<{ locale: LocaleFromRouting; slug: string }>;
+}): Promise<Metadata> {
   const { locale, slug } = await params;
   const product = getProduct(slug, locale);
   if (!product) return {};
   const t = await getTranslations({ locale, namespace: "products" });
   const description =
     product.seoDescription || product.shortDescription || t("description");
+
+  // Counterpart slug'ı bul (ters dilde aynı/benzer ürün)
+  const counterpartSlug = getProductCounterpart(slug, locale, locale === "tr" ? "en" : "tr");
+
+  // Alternates: counterpart varsa o dilin path'i; yoksa sadece canonical
+  const alternates: Record<string, string | null> = {};
+  if (counterpartSlug) {
+    const counterpartHref = { pathname: "/urun/[slug]", params: { slug: counterpartSlug } } as never;
+    alternates[locale === "tr" ? "en" : "tr"] = localizedPath(locale === "tr" ? "en" : "tr", counterpartHref);
+  }
+
   return buildMetadata({
     locale,
     href: { pathname: "/urun/[slug]", params: { slug } },
@@ -47,6 +59,7 @@ export async function generateMetadata({
     description,
     image: product.images[0] ?? null,
     type: "website",
+    alternates: Object.keys(alternates).length > 0 ? alternates : undefined,
   });
 }
 
@@ -54,7 +67,7 @@ export async function generateMetadata({
 export default async function ProductPage({
   params,
 }: {
-  params: Promise<{ locale: Locale; slug: string }>;
+  params: Promise<{ locale: LocaleFromRouting; slug: string }>;
 }) {
   const { locale, slug } = await params;
   const activeLocale = resolveLocale(locale);
@@ -104,7 +117,10 @@ export default async function ProductPage({
     name: product.name,
     description: product.seoDescription || product.shortDescription || product.name,
     image: product.images,
-    url: `${locale === "tr" ? "/urun" : "/product"}/${product.slug}`,
+    url: absoluteUrl(localizedPath(locale, {
+      pathname: "/urun/[slug]",
+      params: { slug: product.slug },
+    } as never)),
     brand: product.brand,
   });
 

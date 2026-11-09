@@ -11,11 +11,6 @@ import {
 import { getAllPosts, getPostSlugs } from "@/lib/mdx";
 import { siteUrl } from "@/lib/seo";
 
-/**
- * Sitemap: tüm sayfalar, kategoriler, markalar, ürünler ve blog yazıları.
- * Her kayıt hreflang çiftleri (tr/en/x-default) içerir.
- * lastModified sabit bir tarihtir (deterministik üretim için).
- */
 const LAST_MODIFIED = new Date("2026-10-27T00:00:00.000Z");
 
 function entry(
@@ -63,7 +58,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Kategoriler (üst + alt)
   for (const category of getRootCategories()) {
-    entries.push(entry("/urunler/[category]", { category: category.slug }));
+    entries.push(
+      entry("/urunler/[category]", { category: category.slug }),
+    );
     for (const child of getChildCategories(category.slug)) {
       entries.push(
         entry("/urunler/[category]/[subcategory]", {
@@ -79,45 +76,49 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     entries.push(entry("/markalar/[brand]", { brand: brand.slug }));
   }
 
-  // Ürünler (her locale kendi slug'ıyla)
-  for (const locale of routing.locales) {
+  // Ürünler - her locale için kendi slug'siyle
+  for (const locale of routing.locales as ["tr", "en"]) {
     for (const product of getProducts(locale)) {
-      const tr = getPathname({
-        locale: "tr",
-        href: { pathname: "/urun/[slug]", params: { slug: product.slug } } as never,
-      });
-      const en = getPathname({
-        locale: "en",
-        href: { pathname: "/urun/[slug]", params: { slug: product.slug } } as never,
-      });
+      // Duplicate *-2 slug'ları atla
+      if (product.slug.endsWith("-2")) continue;
+      const href = { pathname: "/urun/[slug]", params: { slug: product.slug } } as never;
+      const tr = getPathname({ locale: "tr", href });
+      const en = getPathname({ locale: "en", href });
       entries.push({
-        url: `${siteUrl}${locale === "tr" ? tr : en}`,
+        url: `${locale === "tr" ? tr : en}`,
         lastModified: LAST_MODIFIED,
         changeFrequency: "monthly",
         priority: 0.6,
-        alternates: { languages: { tr, en, "x-default": tr } },
+        alternates: {
+          languages: {
+            tr,
+            en,
+            "x-default": tr,
+          },
+        },
       });
     }
   }
 
-  // Blog yazıları
-  for (const locale of routing.locales) {
+  // Blog yazıları - eşleşmemiş yazılar tek locale girişi
+  for (const locale of routing.locales as ["tr", "en"]) {
     const slugs = await getPostSlugs(locale);
     for (const slug of slugs) {
-      const tr = getPathname({
-        locale: "tr",
-        href: { pathname: "/blog/[slug]", params: { slug } } as never,
-      });
-      const en = getPathname({
-        locale: "en",
-        href: { pathname: "/blog/[slug]", params: { slug } } as never,
-      });
+      const href = { pathname: "/blog/[slug]", params: { slug } } as never;
+      const tr = getPathname({ locale: "tr", href });
+      const en = getPathname({ locale: "en", href });
       entries.push({
-        url: `${siteUrl}${locale === "tr" ? tr : en}`,
+        url: `${locale === "tr" ? tr : en}`,
         lastModified: LAST_MODIFIED,
         changeFrequency: "monthly",
         priority: 0.5,
-        alternates: { languages: { tr, en, "x-default": tr } },
+        alternates: {
+          languages: {
+            tr,
+            en,
+            "x-default": tr,
+          },
+        },
       });
     }
   }

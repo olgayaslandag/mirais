@@ -9,6 +9,26 @@ export function localizedPath(locale: Locale, href: RouteHref): string {
   return getPathname({ locale, href: href as never });
 }
 
+/**
+ * Metadata için alternates (hreflang) yapılandırması.
+ *
+ * - `alternates` verilirse: canonical + ilgili dil(ler) için hreflang;
+ *   hiç çift yoksa sadece canonical;
+ *   "none" verilirse hreflang tamamen çıkar.
+ *
+ - `alternates` verilmezse (varsayımcı davranış): her sayfada tr + en + x-default.
+ */
+type BuildMetadataAlternates =
+  | {
+      /** Hedef dilin localized path'i; counterpart yoksa null */
+      [K in Locale]?: string | null;
+    }
+  | "none"
+  | undefined;
+
+/**
+ * buildMetadata args tipi - alternates eklenebilir.
+ */
 type BuildMetadataArgs = {
   locale: Locale;
   href: RouteHref;
@@ -17,11 +37,14 @@ type BuildMetadataArgs = {
   image?: string | null;
   type?: "website" | "article";
   publishedTime?: string;
+  alternates?: BuildMetadataAlternates;
 };
 
 /**
  * Locale bazlı metadata üretir: canonical + hreflang (tr/en/x-default).
- * Kaynak slug'lar iki dilde aynı olduğu için hreflang çiftleri her zaman tutarlıdır.
+ *
+ * Varsayılan davranış (alternates undefined): her sayfada tr + en + x-default.
+ * alternates verilmişse: sadece çift olan diller; "none" ise canonical sadece.
  */
 export function buildMetadata({
   locale,
@@ -31,22 +54,48 @@ export function buildMetadata({
   image,
   type = "website",
   publishedTime,
+  alternates,
 }: BuildMetadataArgs): Metadata {
   const canonical = localizedPath(locale, href);
-  const trPath = localizedPath("tr", href);
-  const enPath = localizedPath("en", href);
-  const ogImage = image ? absoluteUrl(image) : `${siteUrl}/og-image.png`;
+
+  // Alternates yapılandırması belirleniyor
+  const languages: Record<string, string> = {};
+
+  if (alternates === "none") {
+    // Hreflang çıkarıyor canonical tek başına yeterli
+  } else if (alternates) {
+    // Belirtilen alternates kullanıyor
+    for (const [key, value] of Object.entries(alternates) as [string, string | null][]) {
+      if (value !== null && typeof value === "string") {
+        languages[key] = value;
+      }
+    }
+    // Eğer x-default belirtilmemiş ve en az bir dil varsa x-default ekle
+    if (!("x-default" in languages) && Object.keys(languages).length > 0) {
+      languages["x-default"] =
+        languages["tr"] || languages["en"] || canonical;
+    }
+  } else {
+    // Varsayılan: tr + en + x-default
+    const trPath = localizedPath("tr", href);
+    const enPath = localizedPath("en", href);
+    languages.tr = trPath;
+    languages.en = enPath;
+    languages["x-default"] = trPath;
+  }
+
+  const ogImage = image ? `${siteUrl}` + (typeof image === "string" && image.startsWith("/") ? image : `/${image}`) : `${siteUrl}/og-image.png`;
 
   return {
     title,
     description,
     alternates: {
       canonical,
-      languages: {
-        tr: trPath,
-        en: enPath,
-        "x-default": trPath,
-      },
+      ...(Object.keys(languages).length > 0
+        ? {
+            languages: languages as Record<string, string>,
+          }
+        : {}),
     },
     openGraph: {
       title,
@@ -62,14 +111,9 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      images: [{ url: ogImage }],
     },
   };
-}
-
-export function absoluteUrl(path: string): string {
-  if (/^https?:\/\//i.test(path)) return path;
-  return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
 /* ------------------------------------------------------------------ *
@@ -113,10 +157,16 @@ export function organizationJsonLd(locale: Locale) {
 export function breadcrumbJsonLd(
   items: { name: string; url: string }[],
 ) {
+  // Breadcrumb URL'lerini absoluteUrl'a çevir (göreli URL'lerin önlenmesi)
+  const itemsWithAbsoluteUrl = items.map((item) => ({
+    ...item,
+    url: item.url.startsWith("http") ? item.url : `${siteUrl}${item.url}`,
+  }));
+
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
+    itemListElement: itemsWithAbsoluteUrl.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
@@ -139,7 +189,7 @@ export function productJsonLd(args: {
     name: args.name,
     description: args.description,
     image: args.image.map(absoluteUrl),
-    url: args.url,
+    url: absoluteUrl(args.url),
     brand: { "@type": "Brand", name: args.brand },
     ...(args.sku ? { sku: args.sku } : {}),
     // Fiyat alanları CSV'de boş: teklif tabanlı katalog, offers bilinçli olarak yok.
@@ -159,7 +209,7 @@ export function articleJsonLd(args: {
     headline: args.title,
     description: args.description,
     datePublished: args.date,
-    mainEntityOfPage: args.url,
+    mainEntityOfPage: absoluteUrl(args.url),
     ...(args.image ? { image: absoluteUrl(args.image) } : {}),
     publisher: {
       "@type": "Organization",
@@ -167,4 +217,12 @@ export function articleJsonLd(args: {
       logo: { "@type": "ImageObject", url: `${siteUrl}/assets/img/logo.svg` },
     },
   };
+}
+
+/* ------------------------------------------------------------------ *
+ * Absolute URL helper
+ * ------------------------------------------------------------------ */
+export function absoluteUrl(path: string): string {
+  if (/^https?:\/\//i.test(path)) return path;
+  return `${siteUrl}${path.startsWith("/") ? path : `/${path}`}`;
 }

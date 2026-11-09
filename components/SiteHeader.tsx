@@ -4,7 +4,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "@/lib/i18n/navigation";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import type { RouteHref } from "@/lib/i18n/navigation";
+import type { Locale } from "@/lib/i18n/routing";
 
 type NavLink = {
   label: string;
@@ -12,7 +14,7 @@ type NavLink = {
 };
 
 type SiteHeaderProps = {
-  locale: string;
+  locale: Locale;
   categories: any[];
   navLinks: NavLink[];
 };
@@ -73,6 +75,7 @@ export default function SiteHeader({ locale, categories, navLinks }: SiteHeaderP
               {link.label}
             </Link>
           ))}
+          <LanguageSwitcher locale={locale} />
         </nav>
       </div>
     </header>

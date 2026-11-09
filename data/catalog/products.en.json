@@ -3421,7 +3421,7 @@
   },
   {
     "id": 885,
-    "slug": "plunger",
+    "slug": "plunger-2",
     "aliases": [],
     "brand": "Justrite",
     "brandSlug": "justrite",
@@ -4327,7 +4327,7 @@
   },
   {
     "id": 902,
-    "slug": "secumax-564",
+    "slug": "secumax-564-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4370,7 +4370,7 @@
   },
   {
     "id": 903,
-    "slug": "secumax-565",
+    "slug": "secumax-565-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4413,7 +4413,7 @@
   },
   {
     "id": 904,
-    "slug": "secumax-363",
+    "slug": "secumax-363-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4456,7 +4456,7 @@
   },
   {
     "id": 905,
-    "slug": "secumax-320-mdp",
+    "slug": "secumax-320-mdp-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4501,7 +4501,7 @@
   },
   {
     "id": 906,
-    "slug": "secunorm-handy-mdp",
+    "slug": "secunorm-handy-mdp-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4546,7 +4546,7 @@
   },
   {
     "id": 907,
-    "slug": "secunorm-smartcut-mdp",
+    "slug": "secunorm-smartcut-mdp-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4591,7 +4591,7 @@
   },
   {
     "id": 908,
-    "slug": "secumax-145-mdp",
+    "slug": "secumax-145-mdp-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4636,7 +4636,7 @@
   },
   {
     "id": 909,
-    "slug": "secumax-150-mdp",
+    "slug": "secumax-150-mdp-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4726,7 +4726,7 @@
   },
   {
     "id": 911,
-    "slug": "secunorm-profi25-mdp",
+    "slug": "secunorm-profi25-mdp-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4771,7 +4771,7 @@
   },
   {
     "id": 912,
-    "slug": "secunorm-profi40-mdp",
+    "slug": "secunorm-profi40-mdp-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4816,7 +4816,7 @@
   },
   {
     "id": 913,
-    "slug": "secumax-salvex-sos",
+    "slug": "secumax-salvex-sos-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4861,7 +4861,7 @@
   },
   {
     "id": 914,
-    "slug": "secumax-opticut",
+    "slug": "secumax-opticut-3",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4906,7 +4906,7 @@
   },
   {
     "id": 915,
-    "slug": "secumax-plasticut",
+    "slug": "secumax-plasticut-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4951,7 +4951,7 @@
   },
   {
     "id": 916,
-    "slug": "secumax-easysafe",
+    "slug": "secumax-easysafe-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -4996,7 +4996,7 @@
   },
   {
     "id": 917,
-    "slug": "secumax-145",
+    "slug": "secumax-145-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5041,7 +5041,7 @@
   },
   {
     "id": 918,
-    "slug": "secumax-350",
+    "slug": "secumax-350-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5086,7 +5086,7 @@
   },
   {
     "id": 919,
-    "slug": "secumax-cardycut",
+    "slug": "secumax-cardycut-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5131,7 +5131,7 @@
   },
   {
     "id": 920,
-    "slug": "secumax-320",
+    "slug": "secumax-320-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5176,7 +5176,7 @@
   },
   {
     "id": 921,
-    "slug": "secunorm-multisafe",
+    "slug": "secunorm-multisafe-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5221,7 +5221,7 @@
   },
   {
     "id": 922,
-    "slug": "secunorm-mizar",
+    "slug": "secunorm-mizar-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5266,7 +5266,7 @@
   },
   {
     "id": 923,
-    "slug": "secunorm-handy",
+    "slug": "secunorm-handy-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5311,7 +5311,7 @@
   },
   {
     "id": 924,
-    "slug": "secunorm-380",
+    "slug": "secunorm-380-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5356,7 +5356,7 @@
   },
   {
     "id": 925,
-    "slug": "secunorm-500",
+    "slug": "secunorm-500-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5401,7 +5401,7 @@
   },
   {
     "id": 926,
-    "slug": "secunorm-540",
+    "slug": "secunorm-540-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5446,7 +5446,7 @@
   },
   {
     "id": 927,
-    "slug": "secupro-625",
+    "slug": "secupro-625-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5491,7 +5491,7 @@
   },
   {
     "id": 928,
-    "slug": "secupro-martego",
+    "slug": "secupro-martego-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5536,7 +5536,7 @@
   },
   {
     "id": 929,
-    "slug": "secupro-megasafe",
+    "slug": "secupro-megasafe-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5581,7 +5581,7 @@
   },
   {
     "id": 930,
-    "slug": "secupro-merak",
+    "slug": "secupro-merak-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5626,7 +5626,7 @@
   },
   {
     "id": 931,
-    "slug": "secupro-maxisafe",
+    "slug": "secupro-maxisafe-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5671,7 +5671,7 @@
   },
   {
     "id": 932,
-    "slug": "secunorm-610-xdr",
+    "slug": "secunorm-610-xdr-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5722,7 +5722,7 @@
   },
   {
     "id": 933,
-    "slug": "secumax-polycut",
+    "slug": "secumax-polycut-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5769,7 +5769,7 @@
   },
   {
     "id": 934,
-    "slug": "secuplus-rippex-210",
+    "slug": "secuplus-rippex-210-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -5812,7 +5812,7 @@
   },
   {
     "id": 935,
-    "slug": "secuplus-rippex-220",
+    "slug": "secuplus-rippex-220-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",
@@ -6113,7 +6113,7 @@
   },
   {
     "id": 942,
-    "slug": "tool-retractor",
+    "slug": "tool-retractor-2",
     "aliases": [],
     "brand": "Martor",
     "brandSlug": "martor",

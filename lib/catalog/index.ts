@@ -64,9 +64,17 @@ export type Brand = {
 };
 
 /* ------------------------------------------------------------------ *
- * Yerel asset haritası: mirais.com.tr wp-content/uploads URL'leri indirilen
- * yerel görsellere eşlenir (scripts/lib/image-map.mjs ile aynı kural).
+ * Sabit kategori sıralaması: ana sayfa ve ürünler sayfası için 8 ürün grubu
  * ------------------------------------------------------------------ */
+export const HOME_CATEGORY_ORDER: string[] = [
+  "emniyetli-bicaklar",
+  "emniyetli-kaplar",
+  "hazneli-platformlar",
+  "guvenli-dolaplar",
+  "varil-emniyet-urunleri",
+  "endustriyel-kullukler",
+];
+
 const IMAGE_PLACEHOLDER = "/assets/img/products/hazneli-platformlar.jpg";
 
 const TR_CHAR_MAP: Record<string, string> = {
@@ -298,14 +306,11 @@ export function countProductsByBrand(brandSlug: string, locale: Locale): number 
   ).length;
 }
 
-/** Kategori kapak görseli: kategori görseli, yoksa ilk ürün kapak görseli */
+/** Kategori kapak görseli: kategori görseli öncelikli, yoksa placeholder */
 export function getCategoryImage(
   category: Category,
   locale: Locale,
 ): string | null {
   if (category.image) return category.image;
-  const product = getProductsByCategory(category.slug, locale).find(
-    (candidate) => candidate.images.length > 0,
-  );
-  return product?.images[0] ?? null;
+  return "/assets/img/products/placeholder-category.png";
 }

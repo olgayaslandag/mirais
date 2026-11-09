@@ -14,21 +14,10 @@ import {
   getCategoryImage,
 } from "@/lib/catalog";
 import type { Category } from "@/lib/catalog";
+import { HOME_CATEGORY_ORDER } from "@/lib/catalog";
 import { resolveLocale } from "@/lib/i18n/resolve-locale";
 import type { Locale } from "@/lib/i18n/routing";
 import { buildMetadata } from "@/lib/seo";
-
-/** Kaynak: mirais.com.tr navbardaki ürün kategorileri (eski WP menüsünün 8 terimi) */
-const HOME_CATEGORY_ORDER: string[] = [
-  "emniyetli-bicaklar",
-  "emniyetli-kaplar",
-  "hazneli-platformlar",
-  "guvenli-dolaplar",
-  "varil-emniyet-urunleri",
-  "endustriyel-kullukler",
-  "paslanmaz-celik-kaplar",
-  "seramik-uclu-kesiciler",
-];
 
 export async function generateMetadata({
   params,

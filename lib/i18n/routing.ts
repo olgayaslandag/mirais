@@ -13,6 +13,8 @@ export const routing = defineRouting({
   locales,
   defaultLocale,
   localePrefix: "as-needed",
+  localeDetection: false,
+  localeCookie: false,
   pathnames: {
     "/": { tr: "/", en: "/" },
     "/kurumsal": { tr: "/kurumsal", en: "/corporate" },
@@ -26,7 +28,7 @@ export const routing = defineRouting({
     },
     "/urun/[slug]": { tr: "/urun/[slug]", en: "/product/[slug]" },
     "/hizmetler": { tr: "/hizmetler", en: "/services" },
-    "/hizmetler/[slug]": { tr: "/hizmetler/[slug]", en: "/hizmetler/[slug]" },
+    "/hizmetler/[slug]": { tr: "/hizmetler/[slug]", en: "/services/[slug]" },
     "/blog": { tr: "/blog", en: "/blog" },
     "/blog/[slug]": { tr: "/blog/[slug]", en: "/blog/[slug]" },
     "/kariyer": { tr: "/kariyer", en: "/careers" },

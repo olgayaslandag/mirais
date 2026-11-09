@@ -80,7 +80,7 @@ export function resolveRoute(
   //    Dış yol aktif dilin YERELLEŞTİRİLMİŞ şablonunu kullanır
   //    (EN: "/en/products/[category]"), üretim (SSG) sırasında ise dahili yol
   //    görünür ("/tr/urunler/[category]") — her iki biçim de eşleştirilir.
-  const candidates = [pathname];
+  const candidates: string[] = [pathname];
   for (const prefix of localePrefixes) {
     if (pathname === prefix) {
       candidates.push("/");
@@ -89,7 +89,20 @@ export function resolveRoute(
     }
   }
 
+  // Homepage özel eşleştirme: pathname'in zaten bir locale öneki olduğu durumu
+  // tespit ederek, "/" template'i ile karışımını önlemek için orijinal pathname'i de dene
+  const isHomepageCandidate = (p: string) =>
+    p === "/" || p === `/${locale}` || p === `/${locale}/`;
+
   for (const candidate of candidates) {
+    // Homepage short-circuit: doğrudan locale'nin homepage template'ine eşleştir
+    if (isHomepageCandidate(candidate)) {
+      const homepageTemplate = localizedTemplate("/", locale);
+      const homepageRegex = templateToRegex(homepageTemplate);
+      if (homepageRegex.test(candidate)) {
+        return { template: homepageTemplate, params: {} };
+      }
+    }
     for (const entry of ROUTE_TEMPLATES) {
       const patterns = [
         entry.template,

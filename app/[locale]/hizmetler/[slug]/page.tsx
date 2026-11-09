@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { asRouteHref, Link } from "@/lib/i18n/navigation";
+import { asRouteHref, Link, getPathname } from "@/lib/i18n/navigation";
 import PageHero from "@/components/PageHero";
 import Breadcrumb from "@/components/Breadcrumb";
 import QuoteStrip from "@/components/QuoteStrip";
 import { getSiteContent } from "@/data/content";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, localizedPath } from "@/lib/seo";
+import { getServiceCounterpart } from "@/lib/i18n/slugs";
 import { locales, type Locale } from "@/lib/i18n/routing";
 import { resolveLocale } from "@/lib/i18n/resolve-locale";
 
@@ -42,12 +43,23 @@ export async function generateMetadata({
     };
   }
 
+  // Counterpart slug'ı bul (ters dilde aynı hizmet)
+  const counterpartSlug = getServiceCounterpart(slug, locale, locale === "tr" ? "en" : "tr");
+
+  // Alternates: counterpart varsa o dilin path'i; yoksa undefined (only canonical)
+  const alternates: Record<string, string | null> = {};
+  if (counterpartSlug) {
+    const counterpartHref = { pathname: "/hizmetler/[slug]", params: { slug: counterpartSlug } } as never;
+    alternates[locale === "tr" ? "en" : "tr"] = localizedPath(locale === "tr" ? "en" : "tr", counterpartHref);
+  }
+
   return buildMetadata({
     locale,
     href: { pathname: "/hizmetler/[slug]", params: { slug } },
     title: service.title,
     description: service.metaDescription || service.description,
     image: service.image,
+    alternates: Object.keys(alternates).length > 0 ? alternates : undefined,
   });
 }
 
@@ -71,7 +83,7 @@ export default async function ServiceDetailPage({
 
   const breadcrumbItems = [
     { name: tCommon("home"), href: asRouteHref("/") },
-    { name: t("title"), href: asRouteHref(`/hizmetler/${slug}`) },
+    { name: t("title"), href: asRouteHref("/hizmetler") },
     { name: service.title },
   ];
 
@@ -222,7 +234,7 @@ export default async function ServiceDetailPage({
         title={t("ctaTitle")}
         text={t("ctaText")}
         buttonLabel={tCommon("requestQuote")}
-        href={asRouteHref(`/hizmetler/${service.slug}`)}
+        href={asRouteHref("/hizmetler")}
       />
     </main>
   );

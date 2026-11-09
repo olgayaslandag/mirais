@@ -6,9 +6,10 @@ import PageHero from "@/components/PageHero";
 import Breadcrumb from "@/components/Breadcrumb";
 import QuoteStrip from "@/components/QuoteStrip";
 import { Link, categoryHref } from "@/lib/i18n/navigation";
-import { getCategoryImage, getRootCategories } from "@/lib/catalog";
+import { getCategoryImage, getCategory, HOME_CATEGORY_ORDER } from "@/lib/catalog";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/routing";
+import type { Category } from "@/lib/catalog";
 import { locales } from "@/lib/i18n/routing";
 import { resolveLocale } from "@/lib/i18n/resolve-locale";
 
@@ -40,7 +41,20 @@ export default async function ProductsPage({
   const tNav = await getTranslations({ locale: activeLocale, namespace: "nav" });
   const tCommon = await getTranslations({ locale: activeLocale, namespace: "common" });
 
-  const categories = getRootCategories();
+  const solutionCategories = HOME_CATEGORY_ORDER.map((slug) =>
+    getCategory(slug),
+  )
+    .filter((category): category is Category => category !== undefined)
+    .map((category) => ({
+      slug: category.slug,
+      parent: category.parent,
+      names: category.names,
+      descriptions: category.descriptions,
+      brand: category.brand,
+      aliases: category.aliases,
+      intro: category.intro,
+      image: getCategoryImage(category, locale) ?? "/placeholder-category.png",
+    }));
 
   return (
     <main id="top">
@@ -61,7 +75,7 @@ export default async function ProductsPage({
         </div>
         <div className="container">
           <div className="product-grid">
-            {categories.map((category, index) => (
+            {solutionCategories.map((category, index) => (
               <Link
                 key={`${category.slug}-${index}`}
                 className="product-card reveal"
