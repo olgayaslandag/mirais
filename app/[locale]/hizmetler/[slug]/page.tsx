@@ -24,8 +24,8 @@ export function generateStaticParams() {
 }
 
 const serviceSlugs = {
-  tr: ["urun-satisi", "teknik-destek", "risk-analizi", "egitim-danismanlik"],
-  en: ["product-sales", "technical-support", "risk-analysis", "training-consultancy"],
+tr: ["urun-satisi", "teknik-destek"],
+   en: ["product-sales", "technical-support"],
 };
 
 export async function generateMetadata({

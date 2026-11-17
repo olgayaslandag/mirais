@@ -4,9 +4,10 @@ import Hero from "@/components/Hero";
 import CorporateIntro from "@/components/CorporateIntro";
 import Solutions from "@/components/Solutions";
 import CatalogBand from "@/components/CatalogBand";
-import Services from "@/components/Services";
 import InstagramFeed from "@/components/InstagramFeed";
 import BrandsSection from "@/components/BrandsSection";
+import Accordion from "@/components/Accordion";
+import QuoteStrip from "@/components/QuoteStrip";
 import { getSiteContent, HERO_AUTOPLAY_MS } from "@/data/content";
 import {
   getBrands,
@@ -37,7 +38,7 @@ export async function generateMetadata({
 }
 
 /**
- * Ana sayfa: bölüm sırası orijinal sitedeki sırayı korur.
+ * Ana sayfa: bölüm sırası: Hero → CorporateIntro → Solutions → CatalogBand → FAQ → QuoteStrip → InstagramFeed → Brands.
  * Tüm içerik server component olarak hazırlanır; yalnızca etkileşimli
  * bileşenler (Hero, CorporateIntro, InstagramFeed) client'tır.
  */
@@ -90,17 +91,24 @@ export default async function HomePage({
         categories={solutionCategories}
       />
       <CatalogBand />
-      <Services
-        eyebrow={tCommon("servicesEyebrow")}
-        title={t("servicesTitle")}
-        text={t("servicesText")}
-        services={content.services.map((service) => ({
-          title: service.title,
-          description: service.description,
-          image: service.image,
-          alt: service.alt,
-          href: "/hizmetler",
-        }))}
+      <section className="section" aria-labelledby="home-faq-title">
+        <div className="container narrow">
+          <div className="section-heading">
+            <div className="section-heading-left">
+              <p className="eyebrow">{t("faqEyebrow")}</p>
+              <h2 id="home-faq-title">{t("faqTitle")}</h2>
+            </div>
+          </div>
+          <Accordion
+            items={content.servicesPage.faq.map((item) => ({ title: item.question, body: item.answer }))}
+            idPrefix="home-faq"
+          />
+        </div>
+      </section>
+      <QuoteStrip
+        title={t("ctaTitle")}
+        text={t("ctaText")}
+        buttonLabel={tCommon("requestQuote")}
       />
       <InstagramFeed />
       <BrandsSection

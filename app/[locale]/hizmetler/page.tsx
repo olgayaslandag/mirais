@@ -48,10 +48,8 @@ export default async function ServicesPage({
   const content = getSiteContent(activeLocale);
 
   const anchors = [
-    "urun-satisi",
-    "teknik-destek",
-    "risk-analizi",
-    "egitim-danismanlik",
+"urun-satisi",
+"teknik-destek",
   ];
 
   return (

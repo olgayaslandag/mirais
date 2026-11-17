@@ -48,12 +48,16 @@
     "corporateEyebrow": "CORPORATE",
     "corporateTitle": "Safety is our commitment, your workplace is our priority.",
     "corporateText": "As Mira Occupational Health and Safety Equipment, we are the leading distributor of occupational health and safety equipment in Türkiye and the region, working with Martor, Justrite and Röetzmeier. We always take care to offer products that solve the problem at its source.",
-    "solutionsEyebrow": "SOLUTIONS",
+"solutionsEyebrow": "SOLUTIONS",
     "solutionsTitle": "Functional and high quality solutions",
     "solutionsText": "We offer functional and high quality products for changing customer needs, and remain a reliable solution partner.",
     "servicesEyebrow": "TAILORED FOR YOU",
     "servicesTitle": "Services",
-    "servicesText": "Product sales, technical support, risk analysis and training consultancy to strengthen your occupational safety.",
+    "servicesText": "Product sales and technical support for process-based product selection to strengthen your occupational safety.",
+    "faqEyebrow": "FAQ",
+    "faqTitle": "Frequently asked questions",
+    "ctaTitle": "Let's choose the right equipment for your workplace together",
+    "ctaText": "Our expert team supports you with product selection, supply and technical support.",
     "brandsEyebrow": "BRANDS",
     "brandsTitle": "Our brands",
     "instagramEyebrow": "SOCIAL MEDIA",
@@ -171,7 +175,7 @@
   },
   "services": {
     "title": "Services",
-    "subtitle": "From product sales to training, we are with you throughout your occupational safety processes.",
+    "subtitle": "We support you throughout your occupational safety processes with technical assistance for process-based product selection.",
     "overviewEyebrow": "SERVICE DETAIL",
     "overviewTitle": "Service Overview",
     "featuresEyebrow": "BENEFITS",
@@ -189,7 +193,7 @@
       "analysis": "Needs analysis",
       "proposal": "Product and solution proposal",
       "supply": "Supply and implementation",
-      "support": "Technical support and training"
+      "support": "Technical support for process-based product selection"
     }
   },
   "preloader": {

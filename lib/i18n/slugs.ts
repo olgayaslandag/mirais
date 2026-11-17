@@ -12,10 +12,6 @@ export const SERVICE_SLUG_MAP: Record<string, string> = {
   "product-sales": "urun-satisi",
   "teknik-destek": "technical-support",
   "technical-support": "teknik-destek",
-  "risk-analizi": "risk-analysis",
-  "risk-analysis": "risk-analizi",
-  "egitim-danismanlik": "training-consultancy",
-  "training-consultancy": "egitim-danismanlik",
 };
 
 /**

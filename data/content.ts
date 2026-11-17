@@ -112,15 +112,14 @@ export function getSiteContent(locale: Locale): SiteContent {
     servicesPage: {
       steps: [
         { title: "Ürün Satışı", body: "Martor, Justrite ve Röetzmeier markalarından en iyi iş sağlık ve güvenliği ürünleri sunuyoruz." },
-        { title: "Teknik Destek", body: "Ekibimizle ürün kurulumu, bakımı ve teknik sorunların çözümünde destek oluyoruz." },
-        { title: "Risk Analizi", body: "Çalışanızda gerçekleştirdiğimiz risk analiziyle iş güvenliğinizi artırıyoruz." },
-        { title: "Eğitim ve Danışmanlık", body: "İş sağlığı ve güvenliği konusunda eğitim programları ve danışmanlık hizmetleri sunuyoruz." },
+        { title: "Teknik Destek", body: "Teknik desteği yalnızca proses bazlı ürün seçimi konusunda sağlıyoruz." },
       ],
       faq: [
-        { question: "Hangı ürünler sunuyorsunuz?", answer: "Martor, Justrite ve Röetzmeier markalarından iş sağlık ve güvenliği ekipmanları sunuyoruz." },
-        { question: "Teknik destek sağlıyor musunuz?", answer: "Evet, ekibimiz ürün kurulumu, bakımı ve teknik sorunların çözümünde destek olur." },
-        { question: "Risk nasıl analiz ediyorsunuz?", answer: "Çalışanızda risk analizi yaparak iş güvenliğinizi artırırız." },
-        { question: "Hangı eğitimler sunuyorsunuz?", answer: "İş sağlığı ve güvenliği eğitim programları ve danışmanlık hizmetleri sunuyoruz." },
+        { question: "Hangi ürünler sunuyorsunuz?", answer: "Martor, Justrite ve Röetzmeier markalarından iş sağlık ve güvenliği ekipmanları sunuyoruz." },
+        { question: "Hangi markaların ürünlerini tedarik ediyorsunuz?", answer: "Martor, Justrite ve Röetzmeier markalarının iş sağlığı ve güvenliği ekipmanlarını tedarik ediyoruz. Ürün kataloğumuz kesiciden kimyasal depolamaya, yüksekte çalışmadan elektrik güvenliğine geniş bir yelpazeyi kapsıyor." },
+        { question: "Teknik destek sağlıyor musunuz?", answer: "Evet, teknik desteği yalnızca proses bazlı ürün seçimi konusunda veriyoruz." },
+        { question: "Siparişler ne kadar sürede teslim edilir?", answer: "Stoktaki ürünlerde teslimat kısa süre içinde planlanır; proje bazlı ve hacimli siparişlerde teslim takvimi ihtiyaçlarınıza göre netleştirilir. İstanbul ve İzmir şubelerimizle bölgesel hız sağlıyoruz." },
+        { question: "Teklif almadan önce nelere dikkat etmeliyim?", answer: "İhtiyaç duyulan ekipmanın kullanım alanı ve ilgili riskler netleştirilmelidir. Sürecinizi paylaşmanız hâlinde uzman ekibimiz proses bazlı doğru ürün seçiminde yönlendirme yapar." },
       ],
     },
   };
@@ -191,61 +190,9 @@ export function getSiteContent(locale: Locale): SiteContent {
           ],
           metaDescription:
             "Mira technical support service - Product installation, maintenance and fault resolution with our expert team. TBB standard-compliant support and technical services.",
-        };
-      }
-      if (s.title === "RİSK ANALİZİ") {
-        return {
-          ...base,
-          title: "RISK ANALYSIS",
-          description:
-            "Workplace risk analysis and evaluation service.",
-          overviewText:
-            "We conduct risk analyses at your workplace to improve occupational safety. Potential risks in your work environment are identified through Risk Identification, evaluated based on probability and impact through Risk Evaluation, and systematically examined through the Risk Mitigation phase with appropriate protective equipment and processes. Risk assessments are carried out in accordance with TBB (Occupational Health and Safety Regulations) standards, minimizing potential accidents and maximizing workplace safety. The complete process from risk identification to measure implementation is critical for both legal compliance and human health protection. Detailed risk analysis reports allow your business to close security gaps and prevent costly accidents in the future.",
-          benefits: ["Occupational safety increased", "Potential accidents reduced", "TBB compliance provided"],
-          benefitsParagraph:
-            "Çalışma ortamında riskler tespit edilerek Risk Identification sağlanıyor. Risklerin olasılık ve etkisi üzerinden Risk Evaluation yapılıyor. Uygun koruyucu ekipman ve süreçler ile Risk Mitigation önlemleri öneriliyor. TBB uyum sağlanarak tüm işler TBB standardına uygun olarak yapılıyor. Mazic kazalar uygun koruyucu ekipman ve süreçlerle önleniyor.",
-          benefitsWithIcons: [
-            { title: "Occupational safety increased", body: "Riskler tespit edilerek güvenlik artırılmış ortam." },
-            { title: "Potential accidents reduced", body: "Uygun koruyucu ekipman ve süreçlerle önlenir." },
-            { title: "TBB compliance provided", body: "TBB standardına uygun risk değerlendirmeleri." },
-          ],
-          processSteps: [
-            { title: "Risk Identification", body: "Potential risks in the work environment are identified." },
-            { title: "Risk Evaluation", body: "Probability and impact of risks are evaluated." },
-            { title: "Protective Equipment", body: "Recommended protective equipment and processes." },
-            { title: "Risk Mitigation", body: "Systematic minimization of potential accidents." },
-          ],
-          metaDescription:
-            "Mira risk analysis service - Workplace risk identification and evaluation. TBB-compliant risk reduction and safer working environment.",
-        };
-      }
-      if (s.title === "EĞİTİM VE DANIŞMANLIK") {
-        return {
-          ...base,
-          title: "TRAINING AND CONSULTANCY",
-          description:
-            "TBB-approved training and consultancy services.",
-          overviewText:
-            "We provide occupational health and safety training programs and consultancy services. TBB-approved training programs increase employee awareness, strategic consultancy prevents TBB violations, and a healthy working environment is provided afterwards. Training is delivered with personalized content arranged in accordance with TBB standards, Articulating employee safety awareness. Continuous support after training ensures a healthy working environment in the long term. Enterprises require regular training and consultancy services for TBB compliance and are obligated to create healthy and safe working conditions to prevent accidents.",
-          benefits: ["Employee awareness increased", "TBB violations prevented", "Safe working environment provided"],
-          benefitsParagraph:
-            "TBB onaylı eğitim programları ile Personel bilinç artırılıyor. Stratejik danışmanlık ile TBB ihlalleri önleniyor. Eğitim sonrası güvenli çalışma ortamı sağlanarak Kalite ortam sürdürülüyor. Kişilendirilebilir eğitim seçenekleri ile continuously destek sağlanıyor.",
-          benefitsWithIcons: [
-            { title: "Employee awareness increased", body: "TBB onaylı eğitimlerle bilinç artırılır." },
-            { title: "TBB violations prevented", body: "Stratejik danışmanlık ile ihlaller önlenir." },
-            { title: "Safe working environment provided", body: "Quality working conditions for enterprises." },
-          ],
-          processSteps: [
-            { title: "Training Program", body: "TBB-approved training programs." },
-            { title: "Consultancy", body: "Strategic TBB consultancy services." },
-            { title: "Training Follow-up", body: "Post-training support and follow-up." },
-            { title: "Sustainable Quality", body: "Long-term quality environment maintained." },
-          ],
-          metaDescription:
-            "Mira training and consultancy service - TBB-approved training and strategic consultancy. Employee awareness increase and safer working environment.",
-        };
-      }
-      return base;
+          };
+        }
+        return base;
     }),
     corporate: {
       title:
@@ -330,15 +277,14 @@ export function getSiteContent(locale: Locale): SiteContent {
     servicesPage: {
       steps: [
         { title: "Product Sales", body: "We offer the best occupational health and safety products from Martor, Justrite and Röetzmeier brands." },
-        { title: "Technical Support", body: "Our expert team provides installation, maintenance, and technical issue resolution for our products." },
-        { title: "Risk Analysis", body: "We conduct risk analyses at your workplace to improve occupational safety." },
-        { title: "Training and Consultancy", body: "We provide occupational health and safety training programs and consultancy services." },
+        { title: "Technical Support", body: "We provide technical support only for process-based product selection." },
       ],
       faq: [
         { question: "What products do you offer?", answer: "We offer occupational health and safety equipment from Martor, Justrite and Röetzmeier brands." },
-        { question: "Do you provide technical support?", answer: "Yes, our expert team provides installation, maintenance, and technical issue resolution services." },
-        { question: "How do you conduct risk analysis?", answer: "We conduct risk analyses at your workplace to identify hazards and improve occupational safety." },
-        { question: "What training programs do you offer?", answer: "We provide occupational health and safety training programs and consultancy services." },
+        { question: "Which brands do you supply?", answer: "We supply Martor, Justrite and Röetzmeier occupational health and safety equipment. Our catalog ranges from cutting tools to chemical storage, fall protection and electrical safety." },
+        { question: "Do you provide technical support?", answer: "Yes, we provide technical support only for process-based product selection." },
+        { question: "How long does delivery take?", answer: "In-stock products are delivered promptly; for project-based and bulk orders the schedule is planned around your needs. Our Istanbul and İzmir offices provide regional speed." },
+        { question: "What should I consider before requesting a quote?", answer: "Clarify the application area and the relevant risks of the equipment you need. Once you share your process, our expert team guides you toward the right product selection." },
       ],
     },
   };
@@ -552,89 +498,26 @@ export const services: Service[] = [
   {
     title: "TEKNİK DESTEK",
     description:
-      "Ürün kurulumu, bakım ve teknik sorun çözümü için uzman ekip desteği.",
+      "Ürün kurulumu ve teknik destek sadece proses bazlı ürün seçimi için sağlıyoruz.",
     overviewText:
-      "Ürünlerimizin kurulumu, bakımı ve teknik sorunlarının çözümünde uzman ekibimizle destek oluyoruz. Profesel teknik personelimiz, ürün kurulumundan fault resolution süreçlerinde tam destek sunar. Yanlış kullanımla sonuçlanabileceği premature breakdown'lar önlemek için doğru ayar ve düzenli bakım kritiktir. Tüm operasyonlar TBB standartlarına uygun olarak yapılır ve kalite kontrol süreçleri ile ürün performansı sürekli izlenir. Katalogdaki tüm ürünler Martor, Justrite ve Röetzmeier standartlarına uygun olarak üretildiği için, ekipman ömrünüzü uzatmak ve iş güvenliğinizi artırmak için doğru bakım programlarını uygulayabilirsiniz.",
+      "Ürünlerinizin kurulumu, bakımı ve teknik sorunları için sadece proses bazlı ürün seçimi gerektiriyorsa, uzman ekibimiz sadece bu bağlamda destek olur. TBB standartlarına uygun süreç tespiti ve risk analizi ile ürün seçimi ve kurulum süreçleri optimize edilir. Teknik destek, seçilen prosesin uygunluğunu ve güvenliğini sağlamak üzere kullanılabilir.",
     image: "/assets/img/services/profil-ebatlama.jpg",
     alt: "Teknik destek hizmeti",
-    benefits: ["Ürüm ömrü uzatılır", "Premature breakdown'lar önlenir", "Operasyonel verimlilik artırılır"],
+    benefits: ["Proses uyumu", "Risk azaltma", "Süreç destekli kurulum"],
     benefitsParagraph:
-      "Ürün ömrünüzü Professional bakım ile uzatırız. Premature breakdown'lar önlemek için hızlı müdahale ile teknik sorunlar çözülür. Operasyonel verimlilik artırılarak Optimized product performance ile iş süreçleriniz daha verimli olur. TBB standartlarına uygun destek ile uzman ekibimiz her adımda yanınızda.",
+      "Ürün seçimi ve kurulum süreci, TBB standartlarına uygun şekilde planlanır ve uygulanır. Proses analizleriyle riskler azaltılır, operasyonel verimlilik artırılır. Teknik destek, seçilen prosesin güvenliğini ve verimliliğini sağlar.",
     href: "/hizmetler/teknik-destek",
     slug: "teknik-destek",
-    metaDescription: "Mira teknik destek hizmeti - Ürün kurulumu, bakım ve arıza çözümünde uzman ekibimizle destek. TBB standartlarına uygun destek ve teknik hizmetler.",
+    metaDescription: "Mira teknik destek hizmeti - Sadece proses bazlı ürün seçimi için teknik destek sağlıyoruz.",
     benefitsWithIcons: [
-      { title: "Ürüm ömrü uzatılır", body: "Professional bakım ile ürün ömrünüz uzar." },
-      { title: "Premature breakdown'lar önlenir", body: "Hızlı müdahale ile teknik sorunlar çözülür." },
-      { title: "Operasyonel verimlilik artırılır", body: "Operasyonel verimlilik artırılmış iş süreçleriniz." },
+      { title: "Proses uyumu", body: "TBB standartlarına uygun süreç tespiti ve risk analizi." },
+      { title: "Risk azaltma", body: "Süreç analizleriyle potansiyel riskler önlenir." },
+      { title: "Süreç destekli kurulum", body: "Teknik ekip, seçilen proses boyunca kurulum ve destek sağlar." },
     ],
     processSteps: [
-      { title: "Ürün Kurulumu", body: "Uzman ekip tarafından profesyonel kurulum." },
-      { title: "Periodic Bakım", body: "Düzenli bakım süreçleri." },
-      { title: "Arıza Çözümü", body: "Teknik personel ile arızaların çözümü." },
-      { title: "Performans İzleme", body: "Ürün performansı sürekli izlenir." },
-    ],
-    brands: [
-      { name: "Martor", logo: "/assets/img/brands/martor.png" },
-      { name: "Justrite", logo: "/assets/img/brands/justrite.png" },
-      { name: "Röetzmeier", logo: "/assets/img/brands/roetzmeier.png" },
-    ],
-  },
-  {
-    title: "RİSK ANALİZİ",
-    description:
-      "İş yerinde risk tespiti ve değerlendirme hizmeti.",
-    overviewText:
-      "İş yerlerinizde gerçekleştirdiğimiz risk analizleriyle iş güvenliğinizi artırıyoruz. Çalışma ortamındaki potensiyel riskler Risk Identification ile tespit edilerek, olasılık ve etkisi üzerinden Risk Evaluation yapılarak uygun koruyucu ekipman ve süreçler önerilerek Risk Mitigation aşamasıyla systematically incelenir. TBB standartlarına uygun risk değerlendirmeleriyle mazic kazalar minimize edilerek çalışma ortamı güvenliği maksimize edilir. Risk tespitinden önlem uygulamasına kadar tamamlanmış süreç, hem yasal uyum hem de insan sağlığının koruması açısından kritik önemeidir. Detaylı risk analiz raporları ile işletmenizdeki güvenlik açığı kapatılabilir ve ilerideki maliyetli kazalar önlenebilir.",
-    image: "/assets/img/services/izomat-1.jpg",
-    alt: "Risk analizi hizmeti",
-    benefits: ["İş güvenliği artırılır", "Mazik kazalar azaltılır", "TBB uyum sağlanır"],
-    benefitsParagraph:
-      "Çalışma ortamında riskler tespit edilerek Risk Identification sağlanıyor. Risklerin olasılık ve etkisi üzerinden Risk Evaluation yapılıyor. Uygun koruyucu ekipman ve süreçler ile Risk Mitigation önlemleri öneriliyor. TBB uyum sağlanarak tüm işler TBB standardına uygun olarak yapılıyor. Mazic kazalar uygun koruyucu ekipman ve süreçlerle önleniyor.",
-    href: "/hizmetler/risk-analizi",
-    slug: "risk-analizi",
-    metaDescription: "Mira risk analizi hizmeti - Çalışma ortamı riskleri tespiti ve değerlendirme. TBB uyumlu risk azaltma ve güvenlik artırılmış çalışma ortamı.",
-    benefitsWithIcons: [
-      { title: "İş güvenliği artırılır", body: "Riskler tespit edilerek güvenlik artırılmış ortam." },
-      { title: "Mazik kazalar azaltılır", body: "Uygun koruyucu ekipman ve süreçlerle önlenir." },
-      { title: "TBB uyum sağlanır", body: "TBB standardına uygun risk değerlendirmeleri." },
-    ],
-    processSteps: [
-      { title: "Risk Tespiti", body: "Çalışma ortamındaki riskler tespit edilerek." },
-      { title: "Risk Değerlendirme", body: "Risklerin olasılık ve etkisi değerlendirilir." },
-      { title: "Koruyucu Ekipman", body: "Uygun koruyucu ekipman önerilir." },
-      { title: "Risk Mitigation", body: "Sistematik olarak riskler minimize edilerek." },
-    ],
-    brands: [
-      { name: "Martor", logo: "/assets/img/brands/martor.png" },
-      { name: "Justrite", logo: "/assets/img/brands/justrite.png" },
-      { name: "Röetzmeier", logo: "/assets/img/brands/roetzmeier.png" },
-    ],
-  },
-  {
-    title: "EĞİTİM VE DANIŞMANLIK",
-    description:
-      "TBB onaylı eğitimler ve danışmanlık hizmetleri.",
-    overviewText:
-      "İş sağlığı ve güvenlik konusunda eğitim programları ve danışmanlık hizmetleri sunuyoruz. TBB onaylı eğitim programları ile personel bilinç artırılması, stratejik danışmanlık ile TBB ihlallerinin önlenmesi ve sağlıklı çalışma ortamının sağlanması kritiktir. Eğitimler TBB standartlarına uygun olarak yapılandırılarak, personel güvenlik bilincini artırmak için kişilendirilebilir içeriklerle sunulur. Eğitim sonrası takip ve sürekli destek ile uzun süreli kalite ortamı sağlanır. Kurumsalar, TBB uyumluluğu için düzenli eğitim ve danışmanlık hizmetlerine ihtiyaç duyar ve bizzat sağlık ve güvenliği öncelikli çalışma koşulları ile kazalar önlemek zorundadir.",
-    image: "/assets/img/services/proje-hizmet-1.png",
-    alt: "Eğitim ve danışmanlık hizmeti",
-    benefits: ["Personel bilinç artırılır", "TBB ihlalleri önlenir", "Güvenli çalışma ortamı sağlanır"],
-    benefitsParagraph:
-      "TBB onaylı eğitim programları ile Personel bilinç artırılıyor. Stratejik danışmanlık ile TBB ihlalleri önleniyor. Eğitim sonrası güvenli çalışma ortamı sağlanarak Kalite ortam sürdürülüyor. Kişilendirilebilir eğitim seçenekleri ile continuously destek sağlanıyor.",
-    href: "/hizmetler/egitim-danismanlik",
-    slug: "egitim-danismanlik",
-    metaDescription: "Mira eğitim ve danışmanlık hizmeti - TBB onaylı eğitimler ve stratejik danışmanlık. Personel bilinç artırımı ve güvenli çalışma ortamı sağlama.",
-    benefitsWithIcons: [
-      { title: "Personel bilinç artırılır", body: "TBB onaylı eğitimlerle bilinç artırılır." },
-      { title: "TBB ihlalleri önlenir", body: "Stratejik danışmanlık ile ihlaller önlenir." },
-      { title: "Güvenli çalışma ortamı sağlanır", body: "Kurumsalar için kaliteli çalışma koşulları." },
-    ],
-    processSteps: [
-      { title: "Eğitim Programı", body: "TBB onaylı eğitim programları." },
-      { title: "Danışmanlık", body: "Stratejik TBB danışmanlık hizmetleri." },
-      { title: "Eğitim Takibi", body: "Eğitim sonrası takip ve destek." },
-      { title: "Kalite Sürdürülebilir", body: "Uzun süreli kalite ortamı sağlanması." },
+      { title: "Process Selection", body: "İş ihtiyaçlarına uygun proses seçimi." },
+      { title: "Order Placement", body: "Gerekli ekipman sipariş verilir." },
+      { title: "Delivery & Setup", body: "Ürünler zamanında teslim ve kurulum." },
     ],
     brands: [
       { name: "Martor", logo: "/assets/img/brands/martor.png" },
