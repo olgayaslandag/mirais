@@ -108,17 +108,17 @@ export default async function LocaleLayout({
   }));
 
   const navLinks: { label: string; href: RouteHref }[] = [
-    { label: t("nav.kurumsal"), href: "/kurumsal" },
-    { label: t("nav.markalar"), href: "/markalar" },
-    { label: t("nav.urunler"), href: "/urunler" },
-    { label: t("nav.hizmetler"), href: "/hizmetler" },
-    { label: t("nav.blog"), href: "/blog" },
-    { label: t("nav.kariyer"), href: "/kariyer" },
-    { label: t("nav.iletisim"), href: "/iletisim" },
+    { label: toTitleCase(t("nav.kurumsal"), activeLocale), href: "/kurumsal" },
+    { label: toTitleCase(t("nav.markalar"), activeLocale), href: "/markalar" },
+    { label: toTitleCase(t("nav.urunler"), activeLocale), href: "/urunler" },
+    { label: toTitleCase(t("nav.hizmetler"), activeLocale), href: "/hizmetler" },
+    { label: toTitleCase(t("nav.blog"), activeLocale), href: "/blog" },
+    { label: toTitleCase(t("nav.kariyer"), activeLocale), href: "/kariyer" },
+    { label: toTitleCase(t("nav.iletisim"), activeLocale), href: "/iletisim" },
   ];
 
   const footerProductLinks: { label: string; href: string }[] = getRootCategories().map((category) => ({
-    label: category.names[activeLocale],
+    label: toTitleCase(category.names[activeLocale], activeLocale),
     href: getPathname({ locale: activeLocale, href: categoryHref(category.slug) as never }),
   }));
 
