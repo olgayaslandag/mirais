@@ -473,16 +473,16 @@ export const services: Service[] = [
       "Martor, Justrite ve Röetzmeier markalarının güvenlik çözümleriyle işyerinizdeki iş güvencesini artırın. Katalogumuzda binlerce product, personal protective equipment, fall protection systems, electrical safety devices ve chemical storage solutions içermektedir. İş ihtiyaçlarınız ve proje gerekliliklerine göre doğru ekipman seçerek OHS düzenlemelerine uyum sağlayabilir ve daha güvenli bir çalışma ortamı oluşturabilirsiniz. Detaylı katalog incelemesi ya da proje-specifik ihtiyaçlarınız ile ilgili danışmanlık için uzman ekibimizle iletişime geçebilirsiniz.",
     image: "/assets/img/services/toz-boya-1.jpg",
     alt: "Ürün satışı hizmeti",
-    benefits: ["Kalite garanti ürünler", "Teknik destek mevcut", "Kapasiteli entrega hizmeti"],
+    benefits: ["Kalite Garanti Ürünler", "Teknik Destek Mevcut", "Kapasiteli Entrega Hizmeti"],
     benefitsParagraph:
       "Martor, Justrite ve Röetzmeier markalarının standartlarına uygun olarak kalite kontrol edilen ürünler ile Kalite garanti ürünler sunuyoruz. Teknik ekibimiz her adımda teknik destek ve danışmanlık sunarak projeleriniz güvenli bir şekilde yönetiliyor. Large ölçekli entrega hizmetleri ile projeleriniz zamanında tamamlanacak Kapasiteli entra hizm.",
     href: "/hizmetler/urun-satisi",
     slug: "urun-satisi",
     metaDescription: "Mira ürün satış hizmeti - Martor, Justrite ve Röetzmeier markalarının güvenlik çözümleriyle çalışan güvenliğini artırın. Kataloğuzdan thousands of products available.",
     benefitsWithIcons: [
-      { title: "Kalite garanti ürünler", body: "Martor, Justrite ve Röetzmeier standartlarına uygun olarak kalite kontrol edilmiştir." },
-      { title: "Teknik destek mevcut", body: "Projeleriniz boyunca teknik destek ve danışmanlık hizmetleri." },
-      { title: "Kapasiteli entrega hizmeti", body: "Projeleriniz zamanında tamamlanacak Large ölçekli entrega hizmeti." },
+      { title: "Kalite Garanti Ürünler", body: "Martor, Justrite ve Röetzmeier standartlarına uygun olarak kalite kontrol edilmiştir." },
+      { title: "Teknik Destek Mevcut", body: "Projeleriniz boyunca teknik destek ve danışmanlık hizmetleri." },
+      { title: "Kapasiteli Entrega Hizmeti", body: "Projeleriniz zamanında tamamlanacak Large ölçekli entrega hizmeti." },
     ],
     processSteps: [
       { title: "Ürün Seçimi", body: "İş ihtiyaçlarınız için en uygun ürünleri belirleyin." },
@@ -503,16 +503,16 @@ export const services: Service[] = [
       "Ürünlerinizin kurulumu, bakımı ve teknik sorunları için sadece proses bazlı ürün seçimi gerektiriyorsa, uzman ekibimiz sadece bu bağlamda destek olur. TBB standartlarına uygun süreç tespiti ve risk analizi ile ürün seçimi ve kurulum süreçleri optimize edilir. Teknik destek, seçilen prosesin uygunluğunu ve güvenliğini sağlamak üzere kullanılabilir.",
     image: "/assets/img/services/profil-ebatlama.jpg",
     alt: "Teknik destek hizmeti",
-    benefits: ["Proses uyumu", "Risk azaltma", "Süreç destekli kurulum"],
+    benefits: ["Proses Uyumu", "Risk Azaltma", "Süreç Destekli Kurulum"],
     benefitsParagraph:
       "Ürün seçimi ve kurulum süreci, TBB standartlarına uygun şekilde planlanır ve uygulanır. Proses analizleriyle riskler azaltılır, operasyonel verimlilik artırılır. Teknik destek, seçilen prosesin güvenliğini ve verimliliğini sağlar.",
     href: "/hizmetler/teknik-destek",
     slug: "teknik-destek",
     metaDescription: "Mira teknik destek hizmeti - Sadece proses bazlı ürün seçimi için teknik destek sağlıyoruz.",
     benefitsWithIcons: [
-      { title: "Proses uyumu", body: "TBB standartlarına uygun süreç tespiti ve risk analizi." },
-      { title: "Risk azaltma", body: "Süreç analizleriyle potansiyel riskler önlenir." },
-      { title: "Süreç destekli kurulum", body: "Teknik ekip, seçilen proses boyunca kurulum ve destek sağlar." },
+      { title: "Proses Uyumu", body: "TBB standartlarına uygun süreç tespiti ve risk analizi." },
+      { title: "Risk Azaltma", body: "Süreç analizleriyle potansiyel riskler önlenir." },
+      { title: "Süreç Destekli Kurulum", body: "Teknik ekip, seçilen proses boyunca kurulum ve destek sağlar." },
     ],
     processSteps: [
       { title: "Process Selection", body: "İş ihtiyaçlarına uygun proses seçimi." },
