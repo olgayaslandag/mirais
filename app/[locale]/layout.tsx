@@ -15,6 +15,15 @@ import { getSiteContent } from "@/data/content";
 import { siteUrl } from "@/lib/seo";
 import "../globals.css";
 
+// TR/EN uyumlu title-case: toLocaleLowerCase locale'i İ/I sorununu çözer
+function toTitleCase(value: string, locale: string): string {
+  return value
+    .toLocaleLowerCase(locale)
+    .split(" ")
+    .map((word) => (word ? word[0].toLocaleUpperCase(locale) + word.slice(1) : word))
+    .join(" ");
+}
+
 // tr/en dışındaki [locale] segmentleri render başlamadan 404 alır:
 // bilinmeyen tek segmentli yollar (ör. /xyz.png) SSR'da çökmez.
 export const dynamicParams = true;
@@ -115,7 +124,7 @@ export default async function LocaleLayout({
 
   const footerServiceLinks: { label: string; href: string }[] =
     content.services.map((service) => ({
-      label: service.title,
+      label: toTitleCase(service.title, activeLocale),
       href: "/hizmetler",
     }));
 
