@@ -5,6 +5,7 @@ import { ArrowRight, Instagram } from "lucide-react";
 import { fallbackPosts, type InstaPost } from "@/lib/instagram";
 
 const PROFILE_URL = "https://www.instagram.com/mirais/";
+const MAX_POSTS = 6; // Masaüstünde tek sırada gösterilemez azami gönderi sayısı
 
 // Instagram akışı: canlı API, yoksa yedek gönderiler
 export default function InstagramFeed() {
@@ -57,14 +58,14 @@ export default function InstagramFeed() {
 
         <div className="insta-grid" aria-live="polite">
           {loading
-            ? Array.from({ length: 12 }).map((_, i) => (
+            ? Array.from({ length: MAX_POSTS }).map((_, i) => (
                 <div
                   key={`skeleton-${i}`}
                   className="insta-card insta-skeleton"
                   aria-hidden="true"
                 />
               ))
-            : posts.map((post, i) => (
+            : posts.slice(0, MAX_POSTS).map((post, i) => (
                 <a
                   key={`${post.id}-${i}`}
                   className="insta-card reveal"
