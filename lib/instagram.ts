@@ -20,96 +20,50 @@ type RawMedia = {
   media_type?: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
 };
 
-const PROFILE_URL = "https://www.instagram.com/mirais/";
+const PROFILE_URL = "https://www.instagram.com/martor_world/";
 
 // Token tanımlanmadan önce gösterilen yedek gönderiler
 export const fallbackPosts: InstaPost[] = [
   {
-    id: "fallback-1",
-    caption: "Elektrostatik toz boya tesisimizden kareler — Mira kalitesiyle.",
-    image: "/assets/img/services/toz-boya-1.jpg",
-    permalink: PROFILE_URL,
+    id: "martor-1",
+    caption: "Martor'dan: Profesyonel seguridad kesici ürünlerimizden kareler — mühendislik ve kalite.",
+    image: "/assets/img/instagram/martor-1.jpg",
+    permalink: "https://www.instagram.com/p/DZ76QOjlnW2/",
     timestamp: "",
   },
   {
-    id: "fallback-2",
-    caption: "Göktürk Konutları — WAT55 pencere ve kapı sistem uygulaması.",
-    image:
-      "/assets/img/projects/Referanslar_0036_47_0001_Gokturk_KONUTLARI-3_WA55_KHR-2.jpg",
-    permalink: PROFILE_URL,
+    id: "martor-2",
+    caption: "Martor'dan: Yeni seri Knife-Hacks gösterme — pratik ve güvenli kesme çözümleri.",
+    image: "/assets/img/instagram/martor-2.jpg",
+    permalink: "https://www.instagram.com/p/Dfj2y8ND_X9/",
     timestamp: "",
   },
   {
-    id: "fallback-3",
-    caption: "Profil ebatlama ve mekanik işlemler — Lüleburgaz fabrikamızdan.",
-    image: "/assets/img/services/profil-ebatlama.jpg",
-    permalink: PROFILE_URL,
+    id: "martor-3",
+    caption: "Martor'dan: Profesyonel paslanmaz çelik kesici keskinleştirme — törpü teknolojisi.",
+    image: "/assets/img/instagram/martor-3.jpg",
+    permalink: "https://www.instagram.com/p/DfW-0oAo7lT/",
     timestamp: "",
   },
   {
-    id: "fallback-4",
-    caption: "Bizi Instagram'da takip edin: @mirais",
-    image: "/assets/img/projects/asdasd1.png",
-    permalink: PROFILE_URL,
+    id: "martor-4",
+    caption: "Martor'dan: Ergonomic safety grip collection — güvenli ve rahat kesim deneyimi.",
+    image: "/assets/img/instagram/martor-4.jpg",
+    permalink: "https://www.instagram.com/p/DfR1OjzEcJu/",
     timestamp: "",
   },
   {
-    id: "fallback-5",
-    caption: "İzomat üretim hattımızdan kareler — Mira kalitesiyle.",
-    image: "/assets/img/services/izomat-1.jpg",
-    permalink: PROFILE_URL,
+    id: "martor-5",
+    caption: "Martor'dan: Professional training program — secure cutting techniques ve iş güvenliği.",
+    image: "/assets/img/instagram/martor-5.jpg",
+    permalink: "https://www.instagram.com/p/DfKpMAUiBeu/",
     timestamp: "",
   },
   {
-    id: "fallback-6",
-    caption: "GSA130 — özel proje üretimlerimizden bir kare.",
-    image: "/assets/img/projects/gsa130.jpg",
-    permalink: PROFILE_URL,
-    timestamp: "",
-  },
-  {
-    id: "fallback-7",
-    caption: "Mekanik işlemler atölyemizden — hassas işçilik, Mira kalitesi.",
-    image: "/assets/img/services/mekanik-islemler.jpg",
-    permalink: PROFILE_URL,
-    timestamp: "",
-  },
-  {
-    id: "fallback-8",
-    caption: "Safiport Ticari — WAT55 pencere ve kapı sistem uygulaması.",
-    image:
-      "/assets/img/projects/Referanslar_0036_47_0003_wa-55-safiport-ticari.jpg",
-    permalink: PROFILE_URL,
-    timestamp: "",
-  },
-  {
-    id: "fallback-9",
-    caption: "Elektrostatik toz boya hattımızdan kareler — renk ve dayanıklılık bir arada.",
-    image: "/assets/img/services/toz-boya-2.jpg",
-    permalink: PROFILE_URL,
-    timestamp: "",
-  },
-  {
-    id: "fallback-10",
-    caption: "KTAMS — WA55 ve SLA60 sistem uygulaması.",
-    image:
-      "/assets/img/projects/Referanslar_0036_47_0006_KTAMS_WA55_SLA60.jpg",
-    permalink: PROFILE_URL,
-    timestamp: "",
-  },
-  {
-    id: "fallback-11",
-    caption: "Proje ve hizmet sürecimiz — fikirden teslimata.",
-    image: "/assets/img/services/proje-hizmet-1.png",
-    permalink: PROFILE_URL,
-    timestamp: "",
-  },
-  {
-    id: "fallback-12",
-    caption: "Bahçeşehir Koleji Halkalı — WAT55 sistem uygulaması.",
-    image:
-      "/assets/img/projects/Referanslar_0036_47_0032_BahcesehirKoleji_Halkali_wat55-4.jpg",
-    permalink: PROFILE_URL,
+    id: "martor-6",
+    caption: "Martor'dan: R&D innovation showcase — yeni güvenlik kesici teknolojileri.",
+    image: "/assets/img/instagram/martor-6.jpg",
+    permalink: "https://www.instagram.com/p/DfKADUIjvI1/",
     timestamp: "",
   },
 ];

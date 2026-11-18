@@ -34,7 +34,7 @@
     "notFoundText": "Bağlantı değişmiş veya sayfa kaldırılmış olabilir. Ürün kategorilerine göz atarak devam edebilirsiniz.",
     "notFoundCta": "Ürünlere göz at",
     "backToTop": "Yukarı çık",
-"loading": "Yükleniyor",
+    "loading": "Yükleniyor",
     "external": "harici bağlantı",
     "contactEyebrow": "BİZE ULAŞIN",
     "careersEyebrow": "İNSAN KAYNAKLARI",
@@ -195,6 +195,13 @@
       "supply": "Tedarik ve uygulama",
       "support": "Teknik destek ve eğitim"
     }
+  },
+  "cookieConsent": {
+    "title": "Çerezleri kullanıyoruz",
+    "text": "Sitemizin güvenli ve doğru şekilde çalışması için gerekli çerezleri kullanıyoruz. <policyLink>Gizlilik Politikası</policyLink> hakkında bilgi alabilirsiniz.",
+    "accept": "Onaylıyorum",
+    "reject": "Reddediyorum",
+    "ariaLabel": "Çerez bildirimi"
   },
   "preloader": {
     "loading": "Sayfa yükleniyor"

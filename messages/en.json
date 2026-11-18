@@ -33,7 +33,7 @@
     "notFoundText": "The link may have changed or the page may have been removed. Browse our product categories to continue.",
     "notFoundCta": "Browse products",
     "backToTop": "Back to top",
-"loading": "Loading",
+    "loading": "Loading",
     "external": "external link",
     "contactEyebrow": "Contact us",
     "careersEyebrow": "Human Resources",
@@ -48,7 +48,7 @@
     "corporateEyebrow": "CORPORATE",
     "corporateTitle": "Safety is our commitment, your workplace is our priority.",
     "corporateText": "As Mira Occupational Health and Safety Equipment, we are the leading distributor of occupational health and safety equipment in Türkiye and the region, working with Martor, Justrite and Röetzmeier. We always take care to offer products that solve the problem at its source.",
-"solutionsEyebrow": "SOLUTIONS",
+    "solutionsEyebrow": "SOLUTIONS",
     "solutionsTitle": "Functional and high quality solutions",
     "solutionsText": "We offer functional and high quality products for changing customer needs, and remain a reliable solution partner.",
     "servicesEyebrow": "TAILORED FOR YOU",
@@ -195,6 +195,13 @@
       "supply": "Supply and implementation",
       "support": "Technical support for process-based product selection"
     }
+  },
+  "cookieConsent": {
+    "title": "We use cookies",
+    "text": "We use necessary cookies to ensure our site works securely and correctly. Read our <policyLink>Privacy Policy</policyLink> for more information.",
+    "accept": "I accept",
+    "reject": "I decline",
+    "ariaLabel": "Cookie notification"
   },
   "preloader": {
     "loading": "Loading page"

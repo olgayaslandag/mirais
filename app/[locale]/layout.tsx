@@ -9,6 +9,7 @@ import SiteShell from "@/components/SiteShell";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import Preloader from "@/components/Preloader";
+import CookieConsent from "@/components/CookieConsent";
 import { getCategories, getRootCategories, getChildCategories } from "@/lib/catalog";
 import { getSiteContent } from "@/data/content";
 import { siteUrl } from "@/lib/seo";
@@ -126,6 +127,7 @@ export default async function LocaleLayout({
             {t("nav.skipToContent")}
           </a>
           <Preloader />
+          <CookieConsent />
           <SiteShell
             header={
               <SiteHeader
