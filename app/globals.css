@@ -910,6 +910,9 @@ img{transition:filter .4s ease}
   .hero-copy{max-width:100%}
   .slide-index{flex-direction:row;justify-content:center;gap:1.5rem}
   .hero-side{align-items:center}
+
+/* Hero metni bu eşikte ortalanıyor; sabit genişlikli çizgi de ortalanmalı */
+.hero-copy .rule{margin-left:auto;margin-right:auto}
   .corporate-intro{padding:4rem 0}
   .corporate-intro__grid{grid-template-columns:1fr}
   .corporate-intro__visuals{min-height:24rem;margin:0 0 2rem}
@@ -930,17 +933,19 @@ img{transition:filter .4s ease}
   .corporate-intro__facts{gap:1.25rem}
   .corporate-intro__facts strong{font-size:1.4rem}
   .corporate-intro__facts span{font-size:.72rem}
-  .hero h1{font-size:2rem}
-  .lead{font-size:1rem}
-  .desktop-only{display:none}
-  .product-grid,.service-grid,.insta-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
-  .product-card,.service-card,.insta-card{min-width:0}
-  /* Mobilde noktalar gizli, oklar yeterli */
-  .carousel-dots{display:none}
-  .card-image,.service-image{height:180px}
-  .footer-grid{grid-template-columns:1fr;gap:2rem}
-  .footer-bottom{flex-direction:column;text-align:center}
-  .back-top{margin-left:0}
+   .hero h1{font-size:2rem}
+   .lead{font-size:1rem}
+   .desktop-only{display:none}
+   /* Mobile: .hero-copy .hero-anim (eyebrow + lead) gizli */
+   .hero-copy p.hero-anim{display:none}
+   .product-grid,.service-grid,.insta-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
+   .product-card,.service-card,.insta-card{min-width:0}
+   /* Mobilde noktalar gizli, oklar yeterli */
+   .carousel-dots{display:none}
+   .card-image,.service-image{height:180px}
+   .footer-grid{grid-template-columns:1fr;gap:2rem}
+   .footer-bottom{flex-direction:column;text-align:center}
+   .back-top{margin-left:0}
 }
 @media(max-width:62rem){
   .hero-scroll{display:none}
